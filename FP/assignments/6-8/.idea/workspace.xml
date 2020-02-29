@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="761a38ed-889b-4343-86a9-3d1c3e7fe813" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="175" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Unit Test" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1TbtKRtDNJAVX0yCCmFN9fjVYAy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../6-9" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="PyCoverageOptionsProvider">
+    <option name="myUseBundledCoveragePy" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Modules/Repositories" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="6-8" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/envs/denv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for Tests.DisciplineHandlerTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="6-8" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Modules/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Tests.DisciplineHandlerTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for Tests.DisciplineHandlerTest.test__add_discipline__unique_id__no_exception" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="6-8" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Modules/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Tests.DisciplineHandlerTest.test__add_discipline__unique_id__no_exception&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for Tests.StudentHandlerTest.test__add_student__existing_id__exception" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="6-8" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/envs/denv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Modules/Tests" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_pattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Tests.StudentHandlerTest.test__add_student__existing_id__exception&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in Tests.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="6-8" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Modules/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Modules/Tests/Tests.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python tests.Unittests for Tests.DisciplineHandlerTest" />
+      <item itemvalue="Python tests.Unittests in Tests.py" />
+      <item itemvalue="Python tests.Unittests for Tests.StudentHandlerTest.test__add_student__existing_id__exception" />
+      <item itemvalue="Python tests.Unittests for Tests.DisciplineHandlerTest.test__add_discipline__unique_id__no_exception" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Unittests in Tests.py" />
+        <item itemvalue="Python tests.Unittests for Tests.DisciplineHandlerTest.test__add_discipline__unique_id__no_exception" />
+        <item itemvalue="Python tests.Unittests for Tests.DisciplineHandlerTest" />
+        <item itemvalue="Python tests.Unittests for Tests.StudentHandlerTest.test__add_student__existing_id__exception" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="761a38ed-889b-4343-86a9-3d1c3e7fe813" name="Default Changelist" comment="" />
+      <created>1573740558819</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573740558819</updated>
+      <workItem from="1573740560056" duration="9339000" />
+      <workItem from="1573917518847" duration="20007000" />
+      <workItem from="1574170943117" duration="1533000" />
+      <workItem from="1574424971424" duration="4898000" />
+      <workItem from="1574628229569" duration="9759000" />
+      <workItem from="1574942076439" duration="25871000" />
+      <workItem from="1575240117460" duration="4214000" />
+      <workItem from="1575494077816" duration="619000" />
+      <workItem from="1575633603332" duration="1580000" />
+      <workItem from="1575817124125" duration="14279000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="654" y="329" width="646" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575828929439">
+      <screen x="0" y="27" width="1920" height="996" />
+    </state>
+    <state x="654" y="329" width="646" height="390" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.996@0.27.1920.996" timestamp="1575828929439" />
+    <state x="743" y="282" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575874589241">
+      <screen x="0" y="27" width="1920" height="996" />
+    </state>
+    <state x="743" y="282" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.996@0.27.1920.996" timestamp="1575874589241" />
+    <state width="1874" height="336" key="GridCell.Tab.0.bottom" timestamp="1575874477448">
+      <screen x="0" y="27" width="1920" height="996" />
+    </state>
+    <state width="1874" height="336" key="GridCell.Tab.0.bottom/0.27.1920.996@0.27.1920.996" timestamp="1575874477448" />
+    <state width="1874" height="336" key="GridCell.Tab.0.center" timestamp="1575874477448">
+      <screen x="0" y="27" width="1920" height="996" />
+    </state>
+    <state width="1874" height="336" key="GridCell.Tab.0.center/0.27.1920.996@0.27.1920.996" timestamp="1575874477448" />
+    <state width="1874" height="336" key="GridCell.Tab.0.left" timestamp="1575874477448">
+      <screen x="0" y="27" width="1920" height="996" />
+    </state>
+    <state width="1874" height="336" key="GridCell.Tab.0.left/0.27.1920.996@0.27.1920.996" timestamp="1575874477448" />
+    <state width="1874" height="336" key="GridCell.Tab.0.right" timestamp="1575874477448">
+      <screen x="0" y="27" width="1920" height="996" />
+    </state>
+    <state width="1874" height="336" key="GridCell.Tab.0.right/0.27.1920.996@0.27.1920.996" timestamp="1575874477448" />
+    <state x="623" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1575823976411">
+      <screen x="0" y="27" width="1920" height="996" />
+    </state>
+    <state x="623" y="243" width="672" height="678" key="search.everywhere.popup/0.27.1920.996@0.27.1920.996" timestamp="1575823976411" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/6_8$Unittests_for_Tests_DisciplineHandlerTest_test__add_discipline__unique_id__no_exception.coverage" NAME="Unittests for Tests.DisciplineHandlerTest.test__add_discipline__unique_id__no_exception Coverage Results" MODIFIED="1575266914708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Modules/Tests" />
+    <SUITE FILE_PATH="coverage/6_8$main.coverage" NAME="main Coverage Results" MODIFIED="1575874456040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/6_8$Unittests_for_Tests_StudentHandlerTest.coverage" NAME="Unittests for Tests.StudentHandlerTest Coverage Results" MODIFIED="1574662291011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Modules/Tests" />
+    <SUITE FILE_PATH="coverage/6_8$Unittests_in_Tests_py.coverage" NAME="Unittests in Tests.py Coverage Results" MODIFIED="1575267352660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Modules/Tests" />
+    <SUITE FILE_PATH="coverage/6_8$Unittests_for_Tests_DisciplineHandlerTest.coverage" NAME="Unittests for Tests.DisciplineHandlerTest Coverage Results" MODIFIED="1575240193667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Modules/Tests" />
+  </component>
+</project>

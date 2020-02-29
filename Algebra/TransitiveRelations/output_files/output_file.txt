@@ -1,0 +1,4 @@
+{(0, 0), }
+{EMPTY SET
+Set used: {1, }
+Total number of transitive relations is: 2

@@ -1,0 +1,43 @@
+   | a1 a2
+----------
+a1 | a1 a1
+a2 | a1 a1
+
+   | a1 a2
+----------
+a1 | a1 a1
+a2 | a1 a2
+
+   | a1 a2
+----------
+a1 | a1 a1
+a2 | a2 a2
+
+   | a1 a2
+----------
+a1 | a1 a2
+a2 | a1 a2
+
+   | a1 a2
+----------
+a1 | a1 a2
+a2 | a2 a1
+
+   | a1 a2
+----------
+a1 | a1 a2
+a2 | a2 a2
+
+   | a1 a2
+----------
+a1 | a2 a1
+a2 | a1 a2
+
+   | a1 a2
+----------
+a1 | a2 a2
+a2 | a2 a2
+
+Total number of associative operations on the set:
+{a0, a1}
+is 8

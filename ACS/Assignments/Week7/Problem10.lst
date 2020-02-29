@@ -1,0 +1,56 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13 00000000 2B32326238365838            S1 DB '+22b86X8'
+    14                                      len_1 EQU $ - S1
+    15 00000008 613435                      S2 DB 'a45'
+    16                                      len_2 EQU $ - S2
+    17 0000000B 00<rept>                    D times (len_1 / 2 + len_2) DB 0
+    18                                  
+    19                                  ; our code starts here
+    20                                  segment code use32 class=code
+    21                                      start:
+    22                                          ; Two character strings S1 and S2 are given. Obtain the string D by concatenating the elements of S2 in reverse order and the elements found on even positions in S1
+    23                                      
+    24 00000000 B903000000                      mov ecx, len_2
+    25 00000005 BE[0A000000]                    mov esi, S2 + len_2 - 1
+    26 0000000A BF[0B000000]                    mov edi, D
+    27                                          
+    28 0000000F BA00000000                      mov edx, 0
+    29                                      
+    30 00000014 FD                              std  ; DF = 1 so that we parse S2 from right to left
+    31                                          first_loop:
+    32 00000015 AC                                  lodsb  ; AL = next character from S2
+    33                                              
+    34 00000016 FC                                  cld ; DF = 0, because we need to store characters from left to right in the destination string
+    35 00000017 AA                                  stosb
+    36 00000018 FD                                  std ; DF = 1 for the next iteration
+    37                                              
+    38 00000019 E2FA                                loop first_loop
+    39                                              
+    40 0000001B BE[00000000]                    mov esi, S1
+    41 00000020 B908000000                      mov ecx, len_1
+    42 00000025 FC                              cld ; S1 is parsed from left to right
+    43                                          
+    44                                          second_loop:
+    45 00000026 AC                                  lodsb ; AL = next character from S1
+    46                                              
+    47 00000027 F7C101000000                        test ecx, 00000001b  ; ZF = 1 if the index is even, and ZF = 0 if the index in odd
+    48 0000002D 7401                                jz next_iter  ; if ZF = 0 (odd index), go to the next iteration
+    49 0000002F AA                                  stosb ; otherwise, store the character to the destination
+    50                                              
+    51                                              next_iter:
+    52 00000030 E2F4                                loop second_loop
+    53                                      
+    54                                          ; exit(0)
+    55 00000032 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    56 00000034 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

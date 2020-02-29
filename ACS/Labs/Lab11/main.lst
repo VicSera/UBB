@@ -1,0 +1,39 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, printf, scanf               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import printf msvcrt.dll
+    11                                  import scanf msvcrt.dll
+    12                                                            
+    13                                  ;%include "factorial.asm"
+    14                                  extern factorial
+    15                                  
+    16                                  ; our data is declared here (the variables needed by our program)
+    17                                  segment data use32 class=data
+    18 00000000 256400                      format db "%d", 0
+    19 00000003 00000000                    n dd 0
+    20                                  
+    21                                  ; our code starts here
+    22                                  segment code use32 class=code
+    23                                      start:
+    24 00000000 68[03000000]                    push n
+    25 00000005 68[00000000]                    push format
+    26 0000000A FF15[00000000]                  call [scanf]
+    27 00000010 83C408                          add esp, 4 * 2
+    28                                          
+    29 00000013 FF35[03000000]                  push dword [n]
+    30 00000019 E8(00000000)                    call factorial
+    31                                          
+    32 0000001E 50                              push eax
+    33 0000001F 68[00000000]                    push format
+    34 00000024 FF15[00000000]                  call [printf]
+    35 0000002A 83C408                          add esp, 4 * 2
+    36                                      
+    37                                          ; exit(0)
+    38 0000002D 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    39 0000002F FF15[00000000]                  call    [exit]       ; call exit to terminate the program

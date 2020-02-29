@@ -1,0 +1,41 @@
+LODSB:
+al <- [esi]
+if DF == 0
+	inc ESI
+else
+	dec ESI
+
+LODSW:
+ax <- [esi]
+if DF == 0
+	ESI += 2
+else
+	ESI -= 2
+
+LODSD:
+eax <- [esi]
+if DF == 0
+	ESI += 4
+else
+	ESI -= 4
+
+STOSB:
+al -> [edi]
+if DF == 0
+	inc EDI
+else
+	dec EDI
+
+STOSW:
+ax -> [edi]
+if DF == 0
+	EDI += 2
+else
+	EDI -= 2
+
+STOSD:
+eax -> [edi]
+if DF == 0
+	EDI += 4
+else
+	EDI -= 4

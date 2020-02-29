@@ -1,0 +1,28 @@
+Partition:
+{{1, 2, 3}}
+Equivalence relation:
+{(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3)}
+
+Partition:
+{{1, 2}, {3}}
+Equivalence relation:
+{(1, 1), (1, 2), (2, 1), (2, 2), (3, 3)}
+
+Partition:
+{{1, 3}, {2}}
+Equivalence relation:
+{(1, 1), (1, 3), (3, 1), (3, 3), (2, 2)}
+
+Partition:
+{{1}, {2, 3}}
+Equivalence relation:
+{(1, 1), (2, 2), (2, 3), (3, 2), (3, 3)}
+
+Partition:
+{{1}, {2}, {3}}
+Equivalence relation:
+{(1, 1), (2, 2), (3, 3)}
+
+---------------
+Found 5 partitions.
+Set used: {1, 2, 3}

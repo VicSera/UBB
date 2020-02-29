@@ -1,0 +1,2 @@
+Set used: {1, 2, 3, 4, 5}
+Total number of transitive relations is: 154303

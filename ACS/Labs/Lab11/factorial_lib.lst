@@ -1,0 +1,20 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global factorial 
+     5                                  
+     6                                  segment code use32 public code
+     7                                      ; factorial (int n) => n!
+     8                                      factorial:
+     9 00000000 55                              push ebp
+    10 00000001 89E5                            mov ebp, esp
+    11                                          
+    12 00000003 B801000000                      mov eax, 1
+    13 00000008 8B4D08                          mov ecx, [ebp + 8] ; n
+    14                                          
+    15                                          next_multiply:
+    16 0000000B F7E1                                mul ecx
+    17 0000000D E2FC                                loop next_multiply
+    18                                          
+    19 0000000F 5D                              pop ebp
+    20 00000010 C20400                          ret 4 ; STDCALL Convention

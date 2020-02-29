@@ -1,0 +1,6 @@
+2,Vic Sera,11,8
+3,Johnny John,10,10
+1,Paul Qwerty,6,8
+4,Tyu Pos,9,10
+5,Michael Tqwe,6,9
+6,Qwe Rty,4,7

@@ -1,0 +1,3 @@
+/home/victor/Desktop/Programming/UBB/OOP/LiviaNewDates/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/victor/Desktop/Programming/UBB/OOP/LiviaNewDates/cmake-build-debug/CMakeFiles/LiviaNewDates.dir
+/home/victor/Desktop/Programming/UBB/OOP/LiviaNewDates/cmake-build-debug/CMakeFiles/edit_cache.dir

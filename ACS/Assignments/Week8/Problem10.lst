@@ -1,0 +1,57 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13 00000000 341278562514                A DW 1234h, 5678h, 1425h
+    14                                      len_A EQU ($ - A) / 2
+    15                                      
+    16 00000006 00<rept>                    B1 times len_A DB 0
+    17 00000009 00<rept>                    B2 times len_A DB 0
+    18                                  
+    19                                  ; our code starts here
+    20                                  segment code use32 class=code
+    21                                      start:
+    22                                          ; Given an array A of words, build two arrays of bytes:  
+    23                                          ;   - array B1 contains as elements the higher part of the words from A
+    24                                          ;   - array B2 contains as elements the lower part of the words from A
+    25                                      
+    26                                          ; prepare to parse the string
+    27 00000000 BE[00000000]                    mov esi, A
+    28 00000005 B903000000                      mov ecx, len_A
+    29 0000000A FC                              cld
+    30                                          
+    31 0000000B BF[09000000]                    mov edi, B2
+    32 00000010 BB[06000000]                    mov ebx, B1
+    33                                          
+    34                                          my_loop:
+    35 00000015 66AD                                lodsw  ; AX = A[i]
+    36                                              
+    37                                              ; get the low part (AL)
+    38 00000017 AA                                  stosb  ; B2[i] = AL
+    39                                              
+    40                                              ; change the destination
+    41 00000018 57                                  push edi
+    42 00000019 89DF                                mov edi, ebx  ; get the current offset in B1
+    43                                              
+    44                                              ; swap AH and AL
+    45 0000001B 66C1C808                            ror ax, 8
+    46 0000001F AA                                  stosb  ; B1[i] = AL (which was originally AH)
+    47                                              
+    48                                              ; save the current offset in B1, and set EDI back to the current offset in B2
+    49 00000020 89FB                                mov ebx, edi
+    50 00000022 5F                                  pop edi
+    51                                              
+    52 00000023 E2F0                                loop my_loop
+    53                                              
+    54                                      
+    55                                          ; exit(0)
+    56 00000025 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    57 00000027 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

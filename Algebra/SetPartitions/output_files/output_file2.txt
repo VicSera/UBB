@@ -1,0 +1,13 @@
+Partition:
+{{1, 2}}
+Equivalence relation:
+{(1, 1), (1, 2), (2, 1), (2, 2)}
+
+Partition:
+{{1}, {2}}
+Equivalence relation:
+{(1, 1), (2, 2)}
+
+---------------
+Found 2 partitions.
+Set used: {1, 2}

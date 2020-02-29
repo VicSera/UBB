@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f4be49ea-2d5b-4eb5-866f-fb05c7010f75" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WG5PiimEvKF45dcAEhWf75IxCr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../6-9" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../6-9/Modules" />
+      <recent name="$PROJECT_DIR$/Tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="6-9" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../6-9" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../6-9/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for Tests.CustomListTests.CustomListTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="DataStructures" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../6-9/Modules/DataStructures/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Tests.CustomListTests.CustomListTests&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for Tests.CustomListTests.CustomListTests.test__filter__all_fail__count_0" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="DataStructures" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../6-9/Modules/DataStructures/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Tests.CustomListTests.CustomListTests.test__filter__all_fail__count_0&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for Tests.RepositoryTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="6-9" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../6-9/Modules/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Tests.RepositoryTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in Tests.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="6-9" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../6-9/Modules/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/../6-9/Modules/Tests/Tests.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Unittests for Tests.RepositoryTest" />
+        <item itemvalue="Python tests.Unittests in Tests.py" />
+        <item itemvalue="Python tests.Unittests for Tests.CustomListTests.CustomListTests" />
+        <item itemvalue="Python tests.Unittests for Tests.CustomListTests.CustomListTests.test__filter__all_fail__count_0" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f4be49ea-2d5b-4eb5-866f-fb05c7010f75" name="Default Changelist" comment="" />
+      <created>1578763069127</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578763069127</updated>
+      <workItem from="1578763070493" duration="9381000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="743" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1578778350887">
+      <screen x="0" y="27" width="1920" height="996" />
+    </state>
+    <state x="743" y="297" width="424" height="484" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.996@0.27.1920.996" timestamp="1578778350887" />
+    <state width="1874" height="287" key="GridCell.Tab.0.bottom" timestamp="1578780374624">
+      <screen x="0" y="27" width="1920" height="996" />
+    </state>
+    <state width="1874" height="287" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.996@0.27.1920.996" timestamp="1578780374624" />
+    <state width="1874" height="287" key="GridCell.Tab.0.center" timestamp="1578780374624">
+      <screen x="0" y="27" width="1920" height="996" />
+    </state>
+    <state width="1874" height="287" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.996@0.27.1920.996" timestamp="1578780374624" />
+    <state width="1874" height="287" key="GridCell.Tab.0.left" timestamp="1578780374624">
+      <screen x="0" y="27" width="1920" height="996" />
+    </state>
+    <state width="1874" height="287" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.996@0.27.1920.996" timestamp="1578780374624" />
+    <state width="1874" height="287" key="GridCell.Tab.0.right" timestamp="1578780374624">
+      <screen x="0" y="27" width="1920" height="996" />
+    </state>
+    <state width="1874" height="287" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.996@0.27.1920.996" timestamp="1578780374624" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DataStructures$Unittests_for_CustomListTests_CustomListTests_test__sort__unsorted_list__descending.coverage" NAME="Unittests for CustomListTests.CustomListTests.test__sort__unsorted_list__descending Coverage Results" MODIFIED="1578767858533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+    <SUITE FILE_PATH="coverage/DataStructures$Unittests_for_Tests_RepositoryTest.coverage" NAME="Unittests for Tests.RepositoryTest Coverage Results" MODIFIED="1578779004072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../6-9/Modules/Tests" />
+    <SUITE FILE_PATH="coverage/DataStructures$Unittests_for_CustomListTests_CustomListTests_test__iter__3_elements_before_delete__2_iterations.coverage" NAME="Unittests for CustomListTests.CustomListTests.test__iter__3_elements_before_delete__2_iterations Coverage Results" MODIFIED="1578767424293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+    <SUITE FILE_PATH="coverage/DataStructures$Unittests_for_CustomListTests_CustomListTests.coverage" NAME="Unittests for CustomListTests.CustomListTests Coverage Results" MODIFIED="1578778295459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+    <SUITE FILE_PATH="coverage/DataStructures$main.coverage" NAME="main Coverage Results" MODIFIED="1578780364367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../6-9" />
+    <SUITE FILE_PATH="coverage/DataStructures$Unittests_for_CustomListTests_CustomListTests_test__sort__unsorted_list__ascending.coverage" NAME="Unittests for CustomListTests.CustomListTests.test__sort__unsorted_list__ascending Coverage Results" MODIFIED="1578767831872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+    <SUITE FILE_PATH="coverage/DataStructures$Unittests_for_CustomListTests_CustomListTests_test__filter__all_pass__count_same.coverage" NAME="Unittests for CustomListTests.CustomListTests.test__filter__all_pass__count_same Coverage Results" MODIFIED="1578767973937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+    <SUITE FILE_PATH="coverage/DataStructures$Unittests_for_CustomListTests_CustomListTests_test__filter__all_fail__count_0.coverage" NAME="Unittests for CustomListTests.CustomListTests.test__filter__all_fail__count_0 Coverage Results" MODIFIED="1578778288655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+    <SUITE FILE_PATH="coverage/DataStructures$Unittests_in_Tests_py.coverage" NAME="Unittests in Tests.py Coverage Results" MODIFIED="1578778991925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../6-9/Modules/Tests" />
+    <SUITE FILE_PATH="coverage/DataStructures$Unittests_for_CustomListTests_CustomListTests_test__setitem__non_existing_index__index_error.coverage" NAME="Unittests for CustomListTests.CustomListTests.test__setitem__non_existing_index__index_error Coverage Results" MODIFIED="1578767549343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+    <SUITE FILE_PATH="coverage/DataStructures$Unittests_for_CustomListTests_CustomListTests_test__delitem__existing_index__element_returned.coverage" NAME="Unittests for CustomListTests.CustomListTests.test__delitem__existing_index__element_returned Coverage Results" MODIFIED="1578766657864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+    <SUITE FILE_PATH="coverage/DataStructures$Unittests_for_CustomListTests_CustomListTests_test__get_item__empty_list__exception.coverage" NAME="Unittests for CustomListTests.CustomListTests.test__get_item__empty_list__exception Coverage Results" MODIFIED="1578765074360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CustomList" />
+    <SUITE FILE_PATH="coverage/DataStructures$Unittests_for_CustomListTests_CustomListTests_test__delitem__non_existing_index__exception.coverage" NAME="Unittests for CustomListTests.CustomListTests.test__delitem__non_existing_index__exception Coverage Results" MODIFIED="1578767175153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+    <SUITE FILE_PATH="coverage/DataStructures$Unittests_for_CustomListTests_CustomListTests_test__iter__5_elements__5_iterations.coverage" NAME="Unittests for CustomListTests.CustomListTests.test__iter__5_elements__5_iterations Coverage Results" MODIFIED="1578767367897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+    <SUITE FILE_PATH="coverage/DataStructures$Unittests_for_CustomListTests_CustomListTests_test__sort__wrong_list_type__exception.coverage" NAME="Unittests for CustomListTests.CustomListTests.test__sort__wrong_list_type__exception Coverage Results" MODIFIED="1578767910477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+  </component>
+</project>

@@ -1,0 +1,8 @@
+Partition:
+{{1}}
+Equivalence relation:
+{(1, 1)}
+
+---------------
+Found 1 partitions.
+Set used: {1}
