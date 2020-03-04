@@ -1,25 +1,24 @@
 #pragma once
+#define _CRT_SECURE_NO_WARNINGS
+
 #include "Item.h"
+#include <stdlib.h>
 
 typedef struct _ItemRepository 
 {
-	Item* items;
+	Item** items;
 	unsigned int count;
 	unsigned int maxSize;
 } ItemRepository;
 
 ItemRepository* createRepository(unsigned int initialSize);
 
-int addItem(ItemRepository* itemRepository, Item* item);
+int add(ItemRepository* itemRepository, Item* item);
 
-int deleteItem(ItemRepository* itemRepository, unsigned int catalogueNumber);
+int removeItem(ItemRepository* itemRepository, unsigned int catalogueNumber);
 
-void updateItem(ItemRepository* itemRepository, Item* item);
+int update(ItemRepository* itemRepository, Item* item);
 
 Item* getById(ItemRepository* itemRepository, unsigned int catalogueNumber);
 
 unsigned int getIndexById(ItemRepository* itemRepository, unsigned int catalogueNumber);
-
-Item* getItems(ItemRepository* itemRepository);
-
-Item* getItemsByType(ItemRepository* itemRepository, char* type);

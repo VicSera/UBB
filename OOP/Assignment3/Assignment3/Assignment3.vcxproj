@@ -150,10 +150,14 @@
     <ClCompile Include="Assignment3.c" />
     <ClCompile Include="Item.c" />
     <ClCompile Include="ItemRepository.c" />
+    <ClCompile Include="ItemService.c" />
+    <ClCompile Include="UI.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Item.h" />
     <ClInclude Include="ItemRepository.h" />
+    <ClInclude Include="ItemService.h" />
+    <ClInclude Include="UI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

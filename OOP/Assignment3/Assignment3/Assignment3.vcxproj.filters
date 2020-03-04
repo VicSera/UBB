@@ -27,12 +27,24 @@
     <ClCompile Include="ItemRepository.c">
       <Filter>Source Files\Modules</Filter>
     </ClCompile>
+    <ClCompile Include="ItemService.c">
+      <Filter>Source Files\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.c">
+      <Filter>Source Files\Modules</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Item.h">
       <Filter>Source Files\Modules</Filter>
     </ClInclude>
     <ClInclude Include="ItemRepository.h">
+      <Filter>Source Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemService.h">
+      <Filter>Source Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
       <Filter>Source Files\Modules</Filter>
     </ClInclude>
   </ItemGroup>

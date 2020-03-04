@@ -5,12 +5,12 @@ ItemRepository* createRepository(unsigned int initialSize)
 	ItemRepository* repository = (ItemRepository*)malloc(sizeof(ItemRepository));
 	repository->maxSize = initialSize;
 	repository->count = 0;
-	repository->items = (Item*)malloc(initialSize * sizeof(Item));
+	repository->items = (Item**)malloc(initialSize * sizeof(Item*));
 
 	return repository;
 }
 
-int addItem(ItemRepository* itemRepository, Item* item)
+int add(ItemRepository* itemRepository, Item* item)
 {
 	Item* itemWithSameId = getById(itemRepository, item->catalogueNumber);
 
@@ -28,13 +28,28 @@ int addItem(ItemRepository* itemRepository, Item* item)
 		return -2;
 	}
 
-	itemRepository->items[itemRepository->count] = *item;
+	itemRepository->items[itemRepository->count] = item;
 	++(itemRepository->count);
 
 	return 0;
 }
 
-int deleteItem(ItemRepository* itemRepository, unsigned int catalogueNumber)
+int update(ItemRepository* itemRepository, Item* item)
+{
+	unsigned int existingIndex = getIndexById(itemRepository, item->catalogueNumber);
+
+	if (existingIndex == -1)
+	{
+		// There is no existing value to update
+		return -1;
+	}
+
+	free(itemRepository->items[existingIndex]);
+	itemRepository->items[existingIndex] = item;
+	return 0;
+}
+
+int removeItem(ItemRepository* itemRepository, unsigned int catalogueNumber)
 {
 	unsigned int itemIndex = getIndexById(itemRepository, catalogueNumber);
 
@@ -44,10 +59,13 @@ int deleteItem(ItemRepository* itemRepository, unsigned int catalogueNumber)
 		return -1;
 	}
 
+	// Free the used memory
+	free(itemRepository->items[itemIndex]);
+
 	// Shift all the other items one spot to the left
 	for (unsigned int index = itemIndex; index < itemRepository->count - 1; ++index)
 	{
-		itemRepository[index] = itemRepository[index + 1];
+		itemRepository->items[index] = itemRepository->items[index + 1];
 	}
 
 	--(itemRepository->count);
@@ -59,7 +77,7 @@ Item* getById(ItemRepository* itemRepository, unsigned int catalogueNumber)
 {
 	for (unsigned int iterator = 0; iterator < itemRepository->count; ++iterator)
 	{
-		if (itemRepository->items[iterator].catalogueNumber == catalogueNumber)
+		if (itemRepository->items[iterator]->catalogueNumber == catalogueNumber)
 		{
 			return itemRepository->items + iterator;
 		}
@@ -72,7 +90,7 @@ unsigned int getIndexById(ItemRepository* itemRepository, unsigned int catalogue
 {
 	for (unsigned int iterator = 0; iterator < itemRepository->count; ++iterator)
 	{
-		if (itemRepository->items[iterator].catalogueNumber == catalogueNumber)
+		if (itemRepository->items[iterator]->catalogueNumber == catalogueNumber)
 		{
 			return iterator;
 		}
