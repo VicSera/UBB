@@ -1,0 +1,7 @@
+﻿  Assignment3.c
+  ItemRepository.c
+D:\Programming\UBB\OOP\Assignment3\Assignment3\ItemRepository.c(5,54): warning C4013: 'malloc' undefined; assuming extern returning int
+  Generating Code...
+ItemRepository.obj : error LNK2019: unresolved external symbol _getById referenced in function _addItem
+ItemRepository.obj : error LNK2019: unresolved external symbol _getIndexById referenced in function _deleteItem
+D:\Programming\UBB\OOP\Assignment3\Debug\Assignment3.exe : fatal error LNK1120: 2 unresolved externals
