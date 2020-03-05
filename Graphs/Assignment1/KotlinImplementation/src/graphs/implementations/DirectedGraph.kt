@@ -10,16 +10,16 @@ class DirectedGraph(
     val numberOfVertices: Int
         get() = vertices.size
     private val vertices = emptySet<Vertex>().toMutableSet()
-    private var incoming = emptyMap<Vertex, MutableSet<Vertex>>().toMutableMap()
-    private var outgoing = emptyMap<Vertex, MutableSet<Vertex>>().toMutableMap()
+    private var inbound = emptyMap<Vertex, MutableSet<Vertex>>().toMutableMap()
+    private var outbound = emptyMap<Vertex, MutableSet<Vertex>>().toMutableMap()
     private var cost = emptyMap<Edge, Int>().toMutableMap()
 
     init {
         for (vertexNumber in 1.._numberOfVertices) {
             val vertex = factory.createVertex()
             vertices.add(vertex)
-            incoming[vertex] = emptySet<Vertex>().toMutableSet()
-            outgoing[vertex] = emptySet<Vertex>().toMutableSet()
+            inbound[vertex] = emptySet<Vertex>().toMutableSet()
+            outbound[vertex] = emptySet<Vertex>().toMutableSet()
         }
     }
 
@@ -45,15 +45,15 @@ class DirectedGraph(
     }
 
     override fun getIncomingEdgeIterator(vertex: Vertex): IIterator<Vertex> {
-        return VertexIterator(incoming[vertex]!!)
+        return VertexIterator(inbound[vertex]!!)
     }
 
     override fun getOutgoingEdgeIterator(vertex: Vertex): IIterator<Vertex> {
-        return VertexIterator(outgoing[vertex]!!)
+        return VertexIterator(outbound[vertex]!!)
     }
 
     override fun isEdge(vertex1: Vertex, vertex2: Vertex): Boolean {
-        return vertex2 in outgoing[vertex1]!!
+        return vertex2 in outbound[vertex1]!!
     }
 
     override fun addEdge(vertex1: Vertex, vertex2: Vertex, vertexCost: Int) {
@@ -61,8 +61,8 @@ class DirectedGraph(
             throw Exception("Edge $vertex1-$vertex2 already exists")
         }
 
-        outgoing[vertex1]?.add(vertex2)
-        incoming[vertex2]?.add(vertex1)
+        outbound[vertex1]?.add(vertex2)
+        inbound[vertex2]?.add(vertex1)
         cost[Edge(vertex1, vertex2)] = vertexCost
     }
 
@@ -71,10 +71,10 @@ class DirectedGraph(
         cost.remove(Edge(vertex1, vertex2))
 
         // Remove vertex2 from vertex1's outbound edges
-        outgoing[vertex1]!!.remove(vertex2)
+        outbound[vertex1]!!.remove(vertex2)
 
         // Remove vertex1 from vertex2's inbound edges
-        incoming[vertex2]!!.remove(vertex1)
+        inbound[vertex2]!!.remove(vertex1)
     }
 
     override fun addVertex() {
@@ -89,24 +89,24 @@ class DirectedGraph(
         }.toMutableMap()
 
         // Remove all inbound edges
-        incoming[vertex]!!.forEach { sourceVertex ->
-            outgoing[sourceVertex]!!.remove(vertex)
+        inbound[vertex]!!.forEach { sourceVertex ->
+            outbound[sourceVertex]!!.remove(vertex)
         }
-        incoming.remove(vertex)
+        inbound.remove(vertex)
 
         // Remove all outbound edges
-        outgoing[vertex]!!.forEach { destinationVertex ->
-            incoming[destinationVertex]!!.remove(vertex)
+        outbound[vertex]!!.forEach { destinationVertex ->
+            inbound[destinationVertex]!!.remove(vertex)
         }
-        outgoing.remove(vertex)
+        outbound.remove(vertex)
     }
 
     override fun inDegree(vertex: Vertex): Int {
-        return incoming[vertex]!!.size
+        return inbound[vertex]!!.size
     }
 
     override fun outDegree(vertex: Vertex): Int {
-        return outgoing[vertex]!!.size
+        return outbound[vertex]!!.size
     }
 
     override fun getCost(vertex1: Vertex, vertex2: Vertex): Int {
