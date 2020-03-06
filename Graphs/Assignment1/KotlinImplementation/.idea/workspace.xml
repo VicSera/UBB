@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f6cc282-5c7f-42ad-ac0f-ecae1636f15b" name="Default Changelist" comment="Added graph from file functionality">
-      <change afterPath="$PROJECT_DIR$/graph.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphs/interfaces/IGraphFactory.kt" afterDir="false" />
+    <list default="true" id="4f6cc282-5c7f-42ad-ac0f-ecae1636f15b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/implementations/DirectedGraph.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/implementations/DirectedGraph.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/implementations/Vertex.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/implementations/Vertex.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/interfaces/IGraph.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/interfaces/IGraph.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/interfaces/IIterator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/interfaces/IIterator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/implementations/AbstractMenu.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/implementations/AbstractMenu.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/implementations/Menu.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/implementations/Menu.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +90,7 @@
       <workItem from="1582879787267" duration="4055000" />
       <workItem from="1583319040431" duration="7597000" />
       <workItem from="1583395163532" duration="2551000" />
-      <workItem from="1583425318602" duration="4489000" />
+      <workItem from="1583425318602" duration="4532000" />
     </task>
     <task id="LOCAL-00001" summary="Added more graph functionality">
       <created>1583329285591</created>
@@ -115,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583396470323</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added graph from file functionality">
+      <created>1583491615643</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583491615643</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,11 +134,11 @@
       <screen x="0" y="27" width="1920" height="996" />
     </state>
     <state x="713" y="165" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.27.1920.996@0.27.1920.996" timestamp="1582543123934" />
-    <state x="475" y="93" width="1149" height="918" key="CommitChangelistDialog2" timestamp="1583491598577">
+    <state x="475" y="93" width="1149" height="918" key="CommitChangelistDialog2" timestamp="1583491615490">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="475" y="93" width="1149" height="918" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583396470221" />
-    <state x="475" y="93" width="1027" height="918" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1583491598577" />
+    <state x="475" y="93" width="1027" height="918" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1583491615490" />
     <state width="1807" height="622" key="GridCell.Tab.0.bottom" timestamp="1583491572702">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
