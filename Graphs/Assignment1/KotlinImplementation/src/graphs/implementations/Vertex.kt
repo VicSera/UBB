@@ -2,7 +2,7 @@ package graphs.implementations
 
 typealias Vertex = Int
 
-class Factory {
+class VertexFactory {
     private var currentId = 1
 
     fun createVertex(): Vertex {

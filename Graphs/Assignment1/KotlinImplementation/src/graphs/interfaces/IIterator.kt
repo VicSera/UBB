@@ -1,9 +1,7 @@
 package graphs.interfaces
 
 interface IIterator<dataType> {
-    fun next()
+    fun next(): dataType
 
-    fun isValid(): Boolean
-
-    fun getCurrent(): dataType
+    fun hasNext(): Boolean
 }

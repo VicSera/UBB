@@ -3,6 +3,8 @@ package graphs.interfaces
 import graphs.implementations.Vertex
 
 interface IGraph {
+    val numberOfVertices: Int
+
     fun isEdge(vertex1: Vertex, vertex2: Vertex): Boolean
 
     fun getVertexIterator(): IIterator<Vertex>

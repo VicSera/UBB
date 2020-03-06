@@ -1,14 +1,18 @@
 package graphs.implementations
 
+import graphs.interfaces.IGraph
+import graphs.interfaces.IGraphFactory
 import graphs.interfaces.IIterator
 import graphs.interfaces.IMutableGraph
+import java.io.File
 
 class DirectedGraph(
-    private val factory: Factory,
+    private val vertexFactory: VertexFactory,
     _numberOfVertices: Int
 ) : IMutableGraph {
-    val numberOfVertices: Int
+    override val numberOfVertices: Int
         get() = vertices.size
+
     private val vertices = emptySet<Vertex>().toMutableSet()
     private var inbound = emptyMap<Vertex, MutableSet<Vertex>>().toMutableMap()
     private var outbound = emptyMap<Vertex, MutableSet<Vertex>>().toMutableMap()
@@ -16,27 +20,43 @@ class DirectedGraph(
 
     init {
         for (vertexNumber in 1.._numberOfVertices) {
-            val vertex = factory.createVertex()
+            val vertex = vertexFactory.createVertex()
             vertices.add(vertex)
             inbound[vertex] = emptySet<Vertex>().toMutableSet()
             outbound[vertex] = emptySet<Vertex>().toMutableSet()
         }
     }
 
+    companion object GraphFactory: IGraphFactory {
+        override fun buildFromFile(fileName: String): IMutableGraph {
+            val file = File(fileName)
+            val firstLine = file.bufferedReader().readLine()
+            val args = firstLine.split(" ")
+            val vertices = args[0].toInt()
+
+            val graph = DirectedGraph(VertexFactory(), vertices)
+            file.forEachLine { line ->
+                val edgeArgs = line.split(" ")
+                val vertex1 = edgeArgs[0].toInt()
+                val vertex2 = edgeArgs[1].toInt()
+                val cost = edgeArgs[2].toInt()
+
+                graph.addEdge(vertex1, vertex2, cost)
+            }
+
+            return graph
+        }
+    }
+
     private inner class VertexIterator(vertexSet: MutableSet<Vertex>): IIterator<Vertex> {
         private val setIterator = vertexSet.iterator()
-        private var currentVertex = setIterator.next()
 
-        override fun getCurrent(): Vertex {
-            return currentVertex
-        }
-
-        override fun isValid(): Boolean {
+        override fun hasNext(): Boolean {
             return setIterator.hasNext()
         }
 
-        override fun next() {
-            currentVertex = setIterator.next()
+        override fun next(): Vertex {
+            return setIterator.next()
         }
     }
 
@@ -45,10 +65,14 @@ class DirectedGraph(
     }
 
     override fun getIncomingEdgeIterator(vertex: Vertex): IIterator<Vertex> {
+        if (vertex !in inbound.keys)
+            throw NoSuchElementException()
         return VertexIterator(inbound[vertex]!!)
     }
 
     override fun getOutgoingEdgeIterator(vertex: Vertex): IIterator<Vertex> {
+        if (vertex !in outbound.keys)
+            throw NoSuchElementException()
         return VertexIterator(outbound[vertex]!!)
     }
 
@@ -78,7 +102,7 @@ class DirectedGraph(
     }
 
     override fun addVertex() {
-        val newVertex = factory.createVertex()
+        val newVertex = vertexFactory.createVertex()
         vertices.add(newVertex)
     }
 
