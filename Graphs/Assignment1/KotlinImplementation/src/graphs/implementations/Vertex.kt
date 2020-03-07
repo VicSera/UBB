@@ -3,7 +3,7 @@ package graphs.implementations
 typealias Vertex = Int
 
 class VertexFactory {
-    private var currentId = 1
+    private var currentId = 0
 
     fun createVertex(): Vertex {
         val vertex = currentId

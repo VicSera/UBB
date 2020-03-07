@@ -1,6 +1,5 @@
 package graphs.implementations
 
-import graphs.interfaces.IGraph
 import graphs.interfaces.IGraphFactory
 import graphs.interfaces.IIterator
 import graphs.interfaces.IMutableGraph
@@ -19,7 +18,7 @@ class DirectedGraph(
     private var cost = emptyMap<Edge, Int>().toMutableMap()
 
     init {
-        for (vertexNumber in 1.._numberOfVertices) {
+        for (vertexNumber in 0 until _numberOfVertices) {
             val vertex = vertexFactory.createVertex()
             vertices.add(vertex)
             inbound[vertex] = emptySet<Vertex>().toMutableSet()
@@ -30,12 +29,13 @@ class DirectedGraph(
     companion object GraphFactory: IGraphFactory {
         override fun buildFromFile(fileName: String): IMutableGraph {
             val file = File(fileName)
-            val firstLine = file.bufferedReader().readLine()
+            val lineReader = file.bufferedReader()
+            val firstLine = lineReader.readLine()
             val args = firstLine.split(" ")
             val vertices = args[0].toInt()
 
             val graph = DirectedGraph(VertexFactory(), vertices)
-            file.forEachLine { line ->
+            lineReader.forEachLine { line ->
                 val edgeArgs = line.split(" ")
                 val vertex1 = edgeArgs[0].toInt()
                 val vertex2 = edgeArgs[1].toInt()
