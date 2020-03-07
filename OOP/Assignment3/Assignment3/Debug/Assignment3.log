@@ -1,2 +1,10 @@
-﻿  UI.c
+﻿  Assignment3.c
+  Item.c
+D:\Programming\UBB\OOP\Assignment3\Assignment3\Item.c(5,28): warning C4013: 'malloc' undefined; assuming extern returning int
+D:\Programming\UBB\OOP\Assignment3\Assignment3\Item.c(19,6): warning C4013: 'free' undefined; assuming extern returning int
+  ItemRepository.c
+D:\Programming\UBB\OOP\Assignment3\Assignment3\ItemRepository.c(90,43): warning C4047: 'return': 'Item *' differs in levels of indirection from 'Item **'
+  ItemService.c
+  UI.c
+  Generating Code...
   Assignment3.vcxproj -> D:\Programming\UBB\OOP\Assignment3\Debug\Assignment3.exe
