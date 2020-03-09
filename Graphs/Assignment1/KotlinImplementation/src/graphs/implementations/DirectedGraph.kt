@@ -1,5 +1,6 @@
 package graphs.implementations
 
+import graphs.interfaces.IGraph
 import graphs.interfaces.IGraphFactory
 import graphs.interfaces.IIterator
 import graphs.interfaces.IMutableGraph
@@ -27,6 +28,12 @@ class DirectedGraph(
     }
 
     companion object GraphFactory: IGraphFactory {
+        override fun copy(graph: IGraph): IMutableGraph {
+            val newGraph = DirectedGraph(VertexFactory(), graph.numberOfVertices)
+
+            return newGraph
+        }
+
         override fun buildFromFile(fileName: String): IMutableGraph {
             val file = File(fileName)
             val lineReader = file.bufferedReader()
@@ -43,6 +50,8 @@ class DirectedGraph(
 
                 graph.addEdge(vertex1, vertex2, cost)
             }
+
+            lineReader.close()
 
             return graph
         }
