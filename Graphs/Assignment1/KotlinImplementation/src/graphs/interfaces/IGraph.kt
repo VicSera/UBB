@@ -1,6 +1,7 @@
 package graphs.interfaces
 
 import graphs.implementations.Vertex
+import java.io.File
 
 interface IGraph {
     val numberOfVertices: Int
@@ -18,4 +19,8 @@ interface IGraph {
     fun outDegree(vertex: Vertex): Int
 
     fun getCost(vertex1: Vertex, vertex2: Vertex): Int
+
+    fun copy(): IGraph
+
+    fun save(fileName: String)
 }

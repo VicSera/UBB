@@ -7,6 +7,10 @@ abstract class AbstractMenu: IMenu {
 
     protected abstract fun handleAddVertex()
 
+    protected abstract fun handleRemoveVertex()
+
+    protected abstract fun handleRemoveEdge()
+
     protected abstract fun printNumberOfVertices()
 
     protected abstract fun printVertices()

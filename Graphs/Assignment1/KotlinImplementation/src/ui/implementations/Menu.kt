@@ -8,11 +8,11 @@ class Menu(
 ): AbstractMenu() {
     override fun launch() {
         val options = listOf(
-            "Add vertex", "Add edge", "List vertices", "Get cost", "List inbound edges for a vertex",
+            "Add vertex", "Remove vertex", "Add edge", "Remove edge", "List vertices", "Get cost", "List inbound edges for a vertex",
             "List outbound edges for a vertex", "Count vertices", "Check edge existence"
         )
         val handlers = listOf(
-            ::handleAddVertex, ::handleAddEdge, ::printVertices, ::printCost, ::printInboundEdges,
+            ::handleAddVertex, ::handleRemoveVertex, ::handleAddEdge, ::handleRemoveEdge, ::printVertices, ::printCost, ::printInboundEdges,
             ::printOutboundEdges, ::printNumberOfVertices, ::printIsEdge
         )
 
@@ -45,8 +45,23 @@ class Menu(
         graph.addEdge(vertex1, vertex2, cost)
     }
 
+    override fun handleRemoveEdge() {
+        print("Vertex 1: ")
+        val vertex1 = readLine()!!.toInt()
+        print("Vertex 2: ")
+        val vertex2 = readLine()!!.toInt()
+
+        graph.removeEdge(vertex1, vertex2)
+    }
+
     override fun handleAddVertex() {
-        graph.addVertex()
+//        graph.addVertex()
+    }
+
+    override fun handleRemoveVertex() {
+        print("Vertex to remove: ")
+        val vertex = readLine()!!.toInt()
+        graph.removeVertex(vertex)
     }
 
     override fun printCost() {

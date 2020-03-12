@@ -28,12 +28,6 @@ class DirectedGraph(
     }
 
     companion object GraphFactory: IGraphFactory {
-        override fun copy(graph: IGraph): IMutableGraph {
-            val newGraph = DirectedGraph(VertexFactory(), graph.numberOfVertices)
-
-            return newGraph
-        }
-
         override fun buildFromFile(fileName: String): IMutableGraph {
             val file = File(fileName)
             val lineReader = file.bufferedReader()
@@ -86,7 +80,7 @@ class DirectedGraph(
     }
 
     override fun isEdge(vertex1: Vertex, vertex2: Vertex): Boolean {
-        return vertex2 in outbound[vertex1]!!
+        return Edge(vertex1, vertex2) in cost
     }
 
     override fun addEdge(vertex1: Vertex, vertex2: Vertex, vertexCost: Int) {
@@ -100,49 +94,80 @@ class DirectedGraph(
     }
 
     override fun removeEdge(vertex1: Vertex, vertex2: Vertex) {
+        if (!isEdge(vertex1, vertex2)) {
+            throw Exception("Edge $vertex1-$vertex2 doesn't exist")
+        }
+
         // Remove cost
         cost.remove(Edge(vertex1, vertex2))
 
         // Remove vertex2 from vertex1's outbound edges
-        outbound[vertex1]!!.remove(vertex2)
+        outbound[vertex1]?.remove(vertex2)
 
         // Remove vertex1 from vertex2's inbound edges
-        inbound[vertex2]!!.remove(vertex1)
+        inbound[vertex2]?.remove(vertex1)
     }
 
-    override fun addVertex() {
-        val newVertex = vertexFactory.createVertex()
-        vertices.add(newVertex)
+    override fun addVertex(vertex: Vertex) {
+        if (vertex in vertices) {
+            throw Exception("Vertex $vertex already exists")
+        }
+
+        vertices.add(vertex)
+        inbound[vertex] = emptySet<Vertex>().toMutableSet()
+        outbound[vertex] = emptySet<Vertex>().toMutableSet()
     }
 
     override fun removeVertex(vertex: Vertex) {
-        // Remove all costs associated to any edge containing the vertex
-        cost = cost.filter {(edge, _) ->
-            edge.first != vertex && edge.second != vertex
-        }.toMutableMap()
+        if (vertex !in vertices) {
+            throw Exception("Vertex $vertex doesn't exist")
+        }
 
         // Remove all inbound edges
-        inbound[vertex]!!.forEach { sourceVertex ->
-            outbound[sourceVertex]!!.remove(vertex)
+        inbound[vertex]?.forEach { sourceVertex ->
+            outbound[sourceVertex]?.remove(vertex)
+            cost.remove(Edge(sourceVertex, vertex))
         }
         inbound.remove(vertex)
 
         // Remove all outbound edges
-        outbound[vertex]!!.forEach { destinationVertex ->
-            inbound[destinationVertex]!!.remove(vertex)
+        outbound[vertex]?.forEach { destinationVertex ->
+            inbound[destinationVertex]?.remove(vertex)
+            cost.remove(Edge(vertex, destinationVertex))
         }
         outbound.remove(vertex)
+
+        vertices.remove(vertex)
     }
 
     override fun inDegree(vertex: Vertex): Int {
-        return inbound[vertex]!!.size
+        return inbound[vertex]?.size
+            ?: throw NoSuchElementException()
     }
 
     override fun outDegree(vertex: Vertex): Int {
-        return outbound[vertex]!!.size
+        return outbound[vertex]?.size
+            ?: throw NoSuchElementException()
     }
 
     override fun getCost(vertex1: Vertex, vertex2: Vertex): Int {
-        return cost[Edge(vertex1, vertex2)]!!
+        return cost[Edge(vertex1, vertex2)]
+            ?: throw NoSuchElementException()
+    }
+
+    override fun copy(): DirectedGraph {
+        val newGraph = DirectedGraph(VertexFactory(), numberOfVertices)
+
+
+        return newGraph
+    }
+
+    override fun save(fileName: String) {
+        val file = File(fileName)
+
+        file.writeText("$numberOfVertices ${cost.size}\n")
+        cost.forEach { (edge, edgeCost) ->
+            file.appendText("${edge.first} ${edge.second} $edgeCost")
+        }
     }
 }
