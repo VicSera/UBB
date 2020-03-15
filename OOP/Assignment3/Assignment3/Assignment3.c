@@ -10,14 +10,7 @@ int main()
 	ItemService* service = createService(repository);
 	UI* ui = createUI(service);
 
-	char* command = (char*)malloc(60 * sizeof(char));
-
-	while (1)
-	{
-		gets_s(command, 60);
-		
-		parseCommand(ui, command);
-	}
+	launch(ui);
 
 	return 0;
 }

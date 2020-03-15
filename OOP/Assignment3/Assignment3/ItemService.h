@@ -11,6 +11,8 @@ typedef struct _ItemService
 
 ItemService* createService(ItemRepository* repository);
 
+void freeService(ItemService* itemService);
+
 int addItem(ItemService* itemService, unsigned int catalogueNumber, char* state, char* type, unsigned int value);
 
 int deleteItem(ItemService* itemService, unsigned int catalogueNumber);

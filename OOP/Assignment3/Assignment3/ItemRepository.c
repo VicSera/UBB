@@ -10,6 +10,14 @@ ItemRepository* createRepository(unsigned int initialSize)
 	return repository;
 }
 
+void freeRepository(ItemRepository* itemRepository)
+{
+	for (unsigned int i = 0; i < itemRepository->count; ++i)
+		freeItem(itemRepository->items[i]);
+	free(itemRepository->items);
+	free(itemRepository);
+}
+
 int add(ItemRepository* itemRepository, Item* item)
 {
 	Item* itemWithSameId = getById(itemRepository, item->catalogueNumber);

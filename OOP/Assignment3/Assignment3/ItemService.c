@@ -8,28 +8,22 @@ ItemService* createService(ItemRepository* repository)
 	return service;
 }
 
+void freeService(ItemService* itemService)
+{
+	freeRepository(itemService->repository);
+	free(itemService);
+}
+
 int addItem(ItemService* itemService, unsigned int catalogueNumber, char* state, char* type, unsigned int value)
 {
-	Item* newItem = (Item*)malloc(sizeof(Item));
-	newItem->catalogueNumber = catalogueNumber;
-	newItem->state = (char*)malloc(30 * sizeof(char));
-	newItem->type = (char*)malloc(30 * sizeof(char));
-	strcpy(newItem->state, state);
-	strcpy(newItem->type,type);
-	newItem->value = value;
+	Item* newItem = createItem(catalogueNumber, state, type, value);
 
 	return add(itemService->repository, newItem);
 }
 
 int updateItem(ItemService* itemService, unsigned int catalogueNumber, char* state, char* type, unsigned int value)
 {
-	Item* updatedItem = (Item*)malloc(sizeof(Item));
-	updatedItem->catalogueNumber = catalogueNumber;
-	updatedItem->state = (char*)malloc(30 * sizeof(char));
-	updatedItem->type = (char*)malloc(30 * sizeof(char));
-	strcpy(updatedItem->state, state);
-	strcpy(updatedItem->type, type);
-	updatedItem->value = value;
+	Item* updatedItem = createItem(catalogueNumber, state, type, value);
 
 	return update(itemService->repository, updatedItem);
 }

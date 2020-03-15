@@ -3,6 +3,7 @@
 
 #include "ItemService.h"
 #include <stdio.h>
+#include <crtdbg.h>
 
 typedef struct _UI
 {
@@ -10,6 +11,10 @@ typedef struct _UI
 } UI;
 
 UI* createUI(ItemService* itemService);
+
+void freeAllMemory(UI* ui);
+
+void launch(UI* ui);
 
 void parseCommand(UI* ui, char* command);
 

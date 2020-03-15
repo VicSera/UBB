@@ -8,9 +8,27 @@ UI* createUI(ItemService* itemService)
 	return ui;
 }
 
+void freeAllMemory(UI* ui)
+{
+	freeService(ui->itemService);
+	free(ui);
+}
+
+void launch(UI* ui)
+{
+	char* command = (char*)malloc(60 * sizeof(char));
+
+	while (1)
+	{
+		gets_s(command, 60);
+
+		parseCommand(ui, command);
+	}
+}
+
 void parseCommand(UI* ui, char* command)
 {
-	char** arguments = (char**)malloc(5 * sizeof(char*));
+	char* arguments[10];
 	unsigned int argumentCount = 0;
 
 	arguments[argumentCount] = strtok(command, ", ");
@@ -29,7 +47,12 @@ void parseCommand(UI* ui, char* command)
 	else if (strcmp(arguments[0], "list") == 0)
 		display(ui, arguments, argumentCount);
 	else if (strcmp(arguments[0], "exit") == 0)
+	{
+		free(command);
+		freeAllMemory(ui);
+		_CrtDumpMemoryLeaks();
 		exit(0);
+	}
 }
 
 void print(Item** items, unsigned int count)

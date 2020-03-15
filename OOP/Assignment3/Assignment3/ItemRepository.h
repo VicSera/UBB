@@ -13,6 +13,8 @@ typedef struct _ItemRepository
 
 ItemRepository* createRepository(unsigned int initialSize);
 
+void freeRepository(ItemRepository* itemRepository);
+
 int add(ItemRepository* itemRepository, Item* item);
 
 int removeItem(ItemRepository* itemRepository, unsigned int catalogueNumber);
