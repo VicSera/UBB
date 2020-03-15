@@ -3,10 +3,7 @@
 
 using namespace std;
 
-SortedSetIterator::SortedSetIterator(const SortedSet& m) : set(m)
-{
-	currentIndex = 0;
-}
+SortedSetIterator::SortedSetIterator(const SortedSet& m) : set(m), currentIndex(0) { }
 
 
 void SortedSetIterator::first() {
