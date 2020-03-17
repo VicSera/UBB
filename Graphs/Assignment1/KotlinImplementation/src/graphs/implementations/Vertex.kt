@@ -2,8 +2,8 @@ package graphs.implementations
 
 typealias Vertex = Int
 
-class Factory {
-    private var currentId = 1
+class VertexFactory {
+    private var currentId = 0
 
     fun createVertex(): Vertex {
         val vertex = currentId

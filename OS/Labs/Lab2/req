@@ -1,0 +1,3 @@
+a user: rw
+b user: rwx group: rw
+c everybody: rw

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f6cc282-5c7f-42ad-ac0f-ecae1636f15b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphs/implementations/Edge.kt" afterDir="false" />
+    <list default="true" id="4f6cc282-5c7f-42ad-ac0f-ecae1636f15b" name="Default Changelist" comment="Fixed bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphs/implementations/DirectedGraph.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/implementations/DirectedGraph.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/implementations/Vertex.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/implementations/Vertex.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphs/interfaces/IGraph.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/interfaces/IGraph.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/interfaces/IGraphFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/interfaces/IGraphFactory.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphs/interfaces/IMutableGraph.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/interfaces/IMutableGraph.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/implementations/AbstractMenu.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/implementations/AbstractMenu.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/implementations/Menu.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/implementations/Menu.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
-        <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
       </list>
     </option>
   </component>
@@ -50,13 +50,16 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="graphs.implementations" />
       <recent name="graphs" />
       <recent name="graphs.interfaces" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -92,12 +95,70 @@
       <workItem from="1582542672852" duration="2245000" />
       <workItem from="1582730373708" duration="5508000" />
       <workItem from="1582879787267" duration="4055000" />
-      <workItem from="1583319040431" duration="7109000" />
+      <workItem from="1583319040431" duration="7597000" />
+      <workItem from="1583395163532" duration="2551000" />
+      <workItem from="1583425318602" duration="4568000" />
+      <workItem from="1583573666321" duration="735000" />
+      <workItem from="1583745054554" duration="2211000" />
+      <workItem from="1583755229910" duration="6158000" />
     </task>
+    <task id="LOCAL-00001" summary="Added more graph functionality">
+      <created>1583329285591</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583329285591</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Started work on the user interface. Created a Menu Interface and Abstract Class">
+      <created>1583396470323</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583396470323</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added graph from file functionality">
+      <created>1583491615643</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583491615643</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added graph from file functionality (2)">
+      <created>1583503195731</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583503195731</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fixed reading from file and modified initial id to be 0">
+      <created>1583574336030</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1583574336030</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added gitignore">
+      <created>1583755310975</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1583755310975</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added more graph functionality" />
+    <MESSAGE value="Started work on the user interface. Created a Menu Interface and Abstract Class" />
+    <MESSAGE value="Added graph from file functionality" />
+    <MESSAGE value="Added graph from file functionality (2)" />
+    <MESSAGE value="Fixed reading from file and modified initial id to be 0" />
+    <MESSAGE value="Added gitignore" />
+    <MESSAGE value="Fixed bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="555" y="185" width="848" height="677" key="#Project_Structure" timestamp="1582542776351">
@@ -108,42 +169,54 @@
       <screen x="0" y="27" width="1920" height="996" />
     </state>
     <state x="713" y="165" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.27.1920.996@0.27.1920.996" timestamp="1582543123934" />
-    <state x="475" y="93" width="1027" height="918" key="CommitChangelistDialog2" timestamp="1583329269987">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="1920" y="93" width="1920" height="918" key="CommitChangelistDialog2" timestamp="1583787866859">
+      <screen x="67" y="27" width="3773" height="1053" />
     </state>
-    <state x="475" y="93" width="1027" height="918" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1583329269987" />
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1583327553413">
+    <state x="475" y="93" width="1149" height="918" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583574335859" />
+    <state x="475" y="93" width="1027" height="918" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1583755310805" />
+    <state x="1920" y="93" width="1920" height="918" key="CommitChangelistDialog2/67.27.3773.1053@67.27.3773.1053" timestamp="1583787866859" />
+    <state width="1807" height="366" key="GridCell.Tab.0.bottom" timestamp="1583750521862">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1874" height="260" key="GridCell.Tab.0.bottom/0.27.1920.996@0.27.1920.996" timestamp="1582544312883" />
     <state width="1874" height="260" key="GridCell.Tab.0.bottom/0.27.3840.996@0.27.3840.996" timestamp="1583007764992" />
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1583327553413" />
-    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1583327553413">
+    <state width="1807" height="366" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583574400696" />
+    <state width="1807" height="366" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1583750521862" />
+    <state width="1807" height="366" key="GridCell.Tab.0.center" timestamp="1583750521862">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1874" height="260" key="GridCell.Tab.0.center/0.27.1920.996@0.27.1920.996" timestamp="1582544312882" />
     <state width="1874" height="260" key="GridCell.Tab.0.center/0.27.3840.996@0.27.3840.996" timestamp="1583007764992" />
-    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1583327553413" />
-    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1583327553413">
+    <state width="1807" height="366" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583574400695" />
+    <state width="1807" height="366" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1583750521862" />
+    <state width="1807" height="366" key="GridCell.Tab.0.left" timestamp="1583750521861">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1874" height="260" key="GridCell.Tab.0.left/0.27.1920.996@0.27.1920.996" timestamp="1582544312882" />
     <state width="1874" height="260" key="GridCell.Tab.0.left/0.27.3840.996@0.27.3840.996" timestamp="1583007764992" />
-    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1583327553413" />
-    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1583327553413">
+    <state width="1807" height="366" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583574400695" />
+    <state width="1807" height="366" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1583750521861" />
+    <state width="1807" height="366" key="GridCell.Tab.0.right" timestamp="1583750521862">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1874" height="260" key="GridCell.Tab.0.right/0.27.1920.996@0.27.1920.996" timestamp="1582544312883" />
     <state width="1874" height="260" key="GridCell.Tab.0.right/0.27.3840.996@0.27.3840.996" timestamp="1583007764992" />
-    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1583327553413" />
-    <state x="683" y="160" key="SettingsEditor" timestamp="1583319264338">
+    <state width="1807" height="366" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583574400696" />
+    <state width="1807" height="366" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1583750521862" />
+    <state x="815" y="230" key="SettingsEditor" timestamp="1583396180005">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
+    <state x="815" y="230" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583396180005" />
     <state x="683" y="160" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1583319264338" />
-    <state x="662" y="370" key="com.intellij.ide.util.TipDialog" timestamp="1583319043126">
+    <state x="662" y="370" key="com.intellij.ide.util.TipDialog" timestamp="1583755232642">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="616" y="351" key="com.intellij.ide.util.TipDialog/0.27.1920.996@0.27.1920.996" timestamp="1582879790470" />
-    <state x="662" y="370" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1583319043126" />
+    <state x="662" y="370" key="com.intellij.ide.util.TipDialog/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583573684718" />
+    <state x="662" y="370" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1583755232642" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1583425743573">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1583425743573" />
   </component>
 </project>
