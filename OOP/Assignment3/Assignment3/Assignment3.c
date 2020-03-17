@@ -4,9 +4,22 @@
 #include <stdlib.h>
 #include "UI.h"
 
+#include "Tests.h"
+
+#define RUN_TESTS 0
+
 int main()
 {
-	ItemRepository* repository = createRepository(25);
+
+#if RUN_TESTS
+	runVectorTests();
+	runRepositoryTests();
+	runServiceTests();
+
+	exit(0);
+#endif
+
+	ItemRepository* repository = createRepository();
 	ItemService* service = createService(repository);
 	UI* ui = createUI(service);
 

@@ -16,6 +16,9 @@
     <Filter Include="Source Files\Modules">
       <UniqueIdentifier>{3e476671-e336-422b-b0d7-f11bc8ffaaa8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Modules\Tests">
+      <UniqueIdentifier>{a530f1c3-e40f-4e36-8161-b8c4fceb5f1b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Assignment3.c">
@@ -33,6 +36,18 @@
     <ClCompile Include="UI.c">
       <Filter>Source Files\Modules</Filter>
     </ClCompile>
+    <ClCompile Include="Vector.c">
+      <Filter>Source Files\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="VectorTests.c">
+      <Filter>Source Files\Modules\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="RepositoryTests.c">
+      <Filter>Source Files\Modules\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceTests.c">
+      <Filter>Source Files\Modules\Tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Item.h">
@@ -46,6 +61,24 @@
     </ClInclude>
     <ClInclude Include="UI.h">
       <Filter>Source Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Source Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>Source Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorTests.h">
+      <Filter>Source Files\Modules\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests.h">
+      <Filter>Source Files\Modules\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="RepositoryTests.h">
+      <Filter>Source Files\Modules\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceTests.h">
+      <Filter>Source Files\Modules\Tests</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

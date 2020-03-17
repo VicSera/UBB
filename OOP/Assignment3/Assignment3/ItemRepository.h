@@ -2,25 +2,32 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include "Item.h"
+#include "Vector.h"
 #include <stdlib.h>
 
 typedef struct _ItemRepository 
 {
-	Item** items;
-	unsigned int count;
-	unsigned int maxSize;
+	Vector* itemVector;   // The current state
+	Vector* stateVector;  // The past states
+	unsigned int stateId;
 } ItemRepository;
 
-ItemRepository* createRepository(unsigned int initialSize);
+ItemRepository* createRepository();
 
 void freeRepository(ItemRepository* itemRepository);
 
-int add(ItemRepository* itemRepository, Item* item);
+int addItem(ItemRepository* itemRepository, Item* item);
 
 int removeItem(ItemRepository* itemRepository, unsigned int catalogueNumber);
 
-int update(ItemRepository* itemRepository, Item* item);
+int updateItem(ItemRepository* itemRepository, Item* item);
 
-Item* getById(ItemRepository* itemRepository, unsigned int catalogueNumber);
+Vector* getAllItems(ItemRepository* itemRepository);
 
-unsigned int getIndexById(ItemRepository* itemRepository, unsigned int catalogueNumber);
+Vector* getAllItemsCopy(ItemRepository* itemRepository);
+
+int undo(ItemRepository* itemRepository);
+
+int redo(ItemRepository* itemRepository);
+
+static void registerChanges(ItemRepository* itemRepository);

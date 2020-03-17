@@ -14,47 +14,81 @@ void freeService(ItemService* itemService)
 	free(itemService);
 }
 
-int addItem(ItemService* itemService, unsigned int catalogueNumber, char* state, char* type, unsigned int value)
+int serviceAddItem(ItemService* itemService, unsigned int catalogueNumber, char* state, char* type, unsigned int value)
 {
 	Item* newItem = createItem(catalogueNumber, state, type, value);
 
-	return add(itemService->repository, newItem);
+	int errorCode = addItem(itemService->repository, newItem);
+
+	if (errorCode != DONE)
+		freeItem(newItem);
+
+	return errorCode;
 }
 
-int updateItem(ItemService* itemService, unsigned int catalogueNumber, char* state, char* type, unsigned int value)
+int serviceUpdateItem(ItemService* itemService, unsigned int catalogueNumber, char* state, char* type, unsigned int value)
 {
 	Item* updatedItem = createItem(catalogueNumber, state, type, value);
 
-	return update(itemService->repository, updatedItem);
+	int errorCode = updateItem(itemService->repository, updatedItem);
+
+	if (errorCode != DONE)
+		freeItem(updatedItem);
+
+	return errorCode;
 }
 
-int deleteItem(ItemService* itemService, unsigned int catalogueNumber)
+int serviceDeleteItem(ItemService* itemService, unsigned int catalogueNumber)
 {
 	return removeItem(itemService->repository, catalogueNumber);
 }
 
-Item** getItems(ItemService* itemService, unsigned int* count)
+Vector* serviceGetItems(ItemService* itemService)
 {
-	*count = itemService->repository->count;
-	return itemService->repository->items;
+	return getAllItemsCopy(itemService->repository);
 }
 
-Item** getItemsByType(ItemService* itemService, char* type, unsigned int* count)
-{
-	Item** items = itemService->repository->items;
-	Item** filteredItems = (Item**)malloc(itemService->repository->count * sizeof(Item*));
-	*count = 0;
+Vector* serviceGetFilteredItems(ItemService* itemService, FilterFunction filter, void* filterParameter)
+{	
+	// Get a copy of all the items
+	Vector* vector = getAllItems(itemService->repository);
+	Vector* filteredVector = createVector(freeItem, copyItem);
 
-	for (unsigned int index = 0; index < itemService->repository->count; ++index)
+	for (unsigned int index = 0; index < vector->count; ++index)
 	{
-		if (strcmp(type, items[index]->type) == 0)
-			filteredItems[(*count)++] = items[index];
+		// Call the filter function with 
+		if (filter(vector->items[index], filterParameter))
+			addElement(filteredVector, copyItem(vector->items[index]));
 	}
 
-	Item** truncatedFilteredItems = (Item**)realloc(filteredItems, *count * sizeof(Item*));
+	return filteredVector;
+}
 
-	if (!truncatedFilteredItems)
-		free(filteredItems);
+int filterByType(Item* item, char* type)
+{
+	if (strcmp(item->type, type) == 0)
+		return TRUE;
+	return FALSE;
+}
 
-	return truncatedFilteredItems;
+int filterByTypeLength(Item* item, unsigned int* maxLength)
+{
+	if (strlen(item->type) >= maxLength)
+		return FALSE;
+	return TRUE;
+}
+
+int filterByMaxValue(Item* item, unsigned int* maxValue)
+{
+	return item->value < *maxValue;
+}
+
+int serviceUndo(ItemService* itemService)
+{
+	return undo(itemService->repository);
+}
+
+int serviceRedo(ItemService* itemService)
+{
+	return redo(itemService->repository);
 }

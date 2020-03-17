@@ -10,6 +10,10 @@ typedef struct _UI
 	ItemService* itemService;
 } UI;
 
+typedef void(*commandHandler)(UI*, char**, unsigned int);
+
+commandHandler getCommandHandler(char* command);
+
 UI* createUI(ItemService* itemService);
 
 void freeAllMemory(UI* ui);
@@ -18,12 +22,16 @@ void launch(UI* ui);
 
 void parseCommand(UI* ui, char* command);
 
-void print(Item** items, unsigned int count);
+void print(Vector* itemVector);
 
-void display(UI* ui, char** arguments, unsigned int argumentCount);
+void handleDisplay(UI* ui, char** arguments, unsigned int argumentCount);
 
 void handleAdd(UI* ui, char** arguments, unsigned int argumentCount);
 
 void handleRemove(UI* ui, char** arguments, unsigned int argumentCount);
 
 void handleUpdate(UI* ui, char** arguments, unsigned int argumentCount);
+
+void handleUndo(UI* ui, char** arguments, unsigned int argumentCount);
+
+void handleRedo(UI* ui, char** arguments, unsigned int argumentCount);

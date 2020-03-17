@@ -1,108 +1,130 @@
 #include "ItemRepository.h"
 
-ItemRepository* createRepository(unsigned int initialSize)
+ItemRepository* createRepository()
 {
 	ItemRepository* repository = (ItemRepository*)malloc(sizeof(ItemRepository));
-	repository->maxSize = initialSize;
-	repository->count = 0;
-	repository->items = (Item**)malloc(initialSize * sizeof(Item*));
+	
+	if (!repository)
+		return NULL;
+
+	repository->itemVector = createVector(freeItem, copyItem);
+
+	// Initialize the state vector and state id used for the undo/redo functionality
+	repository->stateVector = createVector(freeVector, copyVector);
+	repository->stateId = 0;
+	addElement(repository->stateVector, copyVector(repository->itemVector));
 
 	return repository;
 }
 
 void freeRepository(ItemRepository* itemRepository)
 {
-	for (unsigned int i = 0; i < itemRepository->count; ++i)
-		freeItem(itemRepository->items[i]);
-	free(itemRepository->items);
+	freeVector(itemRepository->itemVector);
+	freeVector(itemRepository->stateVector);
 	free(itemRepository);
 }
 
-int add(ItemRepository* itemRepository, Item* item)
+int addItem(ItemRepository* itemRepository, Item* item)
 {
-	Item* itemWithSameId = getById(itemRepository, item->catalogueNumber);
+	if (findPosition(itemRepository->itemVector, item->catalogueNumber) != NOT_FOUND)
+		return ALREADY_EXISTS;
 
-	// Check id unicity
-	if (itemWithSameId)
-	{
-		// There is already a number with this id
-		return -1;
-	}
+	int exitCode = addElement(itemRepository->itemVector, (void*)item);
 
-	// Check if number of items exceeds limit
-	if (itemRepository->count >= itemRepository->maxSize)
-	{
-		// Maximum capacity reached
-		return -2;
-	}
+	if (exitCode == DONE)
+		registerChanges(itemRepository);
 
-	itemRepository->items[itemRepository->count] = item;
-	++(itemRepository->count);
-
-	return 0;
+	return exitCode;
 }
 
-int update(ItemRepository* itemRepository, Item* item)
+int updateItem(ItemRepository* itemRepository, Item* item)
 {
-	unsigned int existingIndex = getIndexById(itemRepository, item->catalogueNumber);
+	unsigned int position = findPosition(itemRepository->itemVector, item->catalogueNumber);
 
-	if (existingIndex == -1)
-	{
-		// There is no existing value to update
-		return -1;
-	}
+	if (position == NOT_FOUND)
+		return NOT_FOUND;
 
-	free(itemRepository->items[existingIndex]);
-	itemRepository->items[existingIndex] = item;
-	return 0;
+	int exitCode = updateElement(itemRepository->itemVector, (void*)item, position);
+
+	if (exitCode == DONE)
+		registerChanges(itemRepository);
+
+	return exitCode;
 }
 
 int removeItem(ItemRepository* itemRepository, unsigned int catalogueNumber)
 {
-	unsigned int itemIndex = getIndexById(itemRepository, catalogueNumber);
+	unsigned int position = findPosition(itemRepository->itemVector, catalogueNumber);
 
-	if (itemIndex == -1)
-	{
-		// the given catalogueNumber does not exist
-		return -1;
-	}
+	if (position == NOT_FOUND)
+		return NOT_FOUND;
 
-	// Free the used memory
-	free(itemRepository->items[itemIndex]);
+	int exitCode = removeElement(itemRepository->itemVector, position);
 
-	// Shift all the other items one spot to the left
-	for (unsigned int index = itemIndex; index < itemRepository->count - 1; ++index)
-	{
-		itemRepository->items[index] = itemRepository->items[index + 1];
-	}
+	if (exitCode == DONE)
+		registerChanges(itemRepository);
 
-	--(itemRepository->count);
-
-	return 0;
+	return exitCode;
 }
 
-Item* getById(ItemRepository* itemRepository, unsigned int catalogueNumber)
+Vector* getAllItems(ItemRepository* itemRepository)
 {
-	for (unsigned int iterator = 0; iterator < itemRepository->count; ++iterator)
-	{
-		if (itemRepository->items[iterator]->catalogueNumber == catalogueNumber)
-		{
-			return itemRepository->items + iterator;
-		}
-	}
-
-	return 0;
+	return itemRepository->itemVector;
 }
 
-unsigned int getIndexById(ItemRepository* itemRepository, unsigned int catalogueNumber)
+Vector* getAllItemsCopy(ItemRepository* itemRepository)
 {
-	for (unsigned int iterator = 0; iterator < itemRepository->count; ++iterator)
-	{
-		if (itemRepository->items[iterator]->catalogueNumber == catalogueNumber)
-		{
-			return iterator;
-		}
-	}
-
-	return -1;
+	return copyVector(itemRepository->itemVector);
 }
+
+static int findPosition(Vector* itemVector, unsigned int id)
+{
+	Item** items = getItems(itemVector);
+	for (unsigned int index = 0; index < itemVector->count; ++index)
+		if (items[index]->catalogueNumber == id)
+			return index;
+	return NOT_FOUND;
+}
+
+static void registerChanges(ItemRepository* itemRepository)
+{
+	++itemRepository->stateId;
+
+	// Remove any states that could've been restored by using redo, which will be unaccessible
+	removeStartingFrom(itemRepository->stateVector, itemRepository->stateId);
+
+	addElement(itemRepository->stateVector, copyVector(itemRepository->itemVector));
+}
+
+int undo(ItemRepository* itemRepository)
+{
+	if (itemRepository->stateId == 0)
+		return OUT_OF_RANGE;
+
+	--itemRepository->stateId;
+
+	// Discard the currend list of items
+	freeVector(itemRepository->itemVector);
+
+	// Restore the previous state
+	itemRepository->itemVector = copyVector(getItems(itemRepository->stateVector)[itemRepository->stateId]);
+
+	return DONE;
+}
+
+int redo(ItemRepository* itemRepository)
+{
+	if (itemRepository->stateId == getCount(itemRepository->stateVector) - 1)
+		return OUT_OF_RANGE;
+
+	++itemRepository->stateId;
+
+	// Discard the currend list of items
+	freeVector(itemRepository->itemVector);
+
+	// Restore the previous state
+	itemRepository->itemVector = copyVector(getItems(itemRepository->stateVector)[itemRepository->stateId]);
+
+	return DONE;
+}
+

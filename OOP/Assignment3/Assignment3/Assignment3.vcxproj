@@ -151,13 +151,23 @@
     <ClCompile Include="Item.c" />
     <ClCompile Include="ItemRepository.c" />
     <ClCompile Include="ItemService.c" />
+    <ClCompile Include="RepositoryTests.c" />
+    <ClCompile Include="ServiceTests.c" />
     <ClCompile Include="UI.c" />
+    <ClCompile Include="Vector.c" />
+    <ClCompile Include="VectorTests.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="common.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="ItemRepository.h" />
     <ClInclude Include="ItemService.h" />
+    <ClInclude Include="RepositoryTests.h" />
+    <ClInclude Include="ServiceTests.h" />
+    <ClInclude Include="Tests.h" />
     <ClInclude Include="UI.h" />
+    <ClInclude Include="Vector.h" />
+    <ClInclude Include="VectorTests.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
