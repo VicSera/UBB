@@ -1,0 +1,13 @@
+USE ClimbingDB
+GO
+
+CREATE FUNCTION dbo.GET_FIRST_NAME (@FullName VARCHAR(255))
+RETURNS VARCHAR(255)
+AS
+BEGIN
+RETURN SUBSTRING(@FullName,1,(CHARINDEX(' ',@FullName + ' ')-1))
+END
+GO
+
+SELECT dbo.GET_FIRST_NAME(climber.full_name)
+FROM climber

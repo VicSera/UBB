@@ -1,0 +1,4 @@
+/home/victor/Programming/Uni/SecondYear/Sem1/ComputerNetworks/MultiplexChat/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/victor/Programming/Uni/SecondYear/Sem1/ComputerNetworks/MultiplexChat/cmake-build-debug/CMakeFiles/MultiplexChatServer.dir
+/home/victor/Programming/Uni/SecondYear/Sem1/ComputerNetworks/MultiplexChat/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/victor/Programming/Uni/SecondYear/Sem1/ComputerNetworks/MultiplexChat/cmake-build-debug/CMakeFiles/MultiplexChatClient.dir

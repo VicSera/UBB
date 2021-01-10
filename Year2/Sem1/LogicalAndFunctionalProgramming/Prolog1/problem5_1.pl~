@@ -1,0 +1,42 @@
+is_in_list([H|_],H).
+is_in_list([_|T],E) :- is_in_list(T,E).
+
+union_of([],[],[]).
+union_of([],[H2|T2],Out) :-
+    union_of([],T2,Out1),
+    Out = [H2|Out1].
+union_of([H1|T1],L2,Out) :-
+    \+is_in_list(L2,H1),
+    union_of(T1,L2,Out1),
+    Out = [H1|Out1].
+union_of([H1|T1],L2,Out) :-
+    is_in_list(L2,H1),
+    union_of(T1,L2,Out).
+
+pair_element_with_each_from_list(_,[],[]).
+pair_element_with_each_from_list(E,[H|T],Out) :-
+    pair_element_with_each_from_list(E,T,Out1),
+    Out = [[E,H]|Out1].
+
+concatenate_lists([],[],[]).
+concatenate_lists([H|T],[],Out) :-
+    concatenate_lists(T,[],Out1),
+    Out = [H|Out1].
+concatenate_lists([],[H|T],Out) :-
+    concatenate_lists([],T,Out1),
+    Out = [H|Out1].
+concatenate_lists([H1|T1],[H2|T2],Out) :-
+    concatenate_lists(T1,[H2|T2],Out1),
+    Out = [H1|Out1].
+
+pairs_of_elements_in([],_).
+pairs_of_elements_in([H|T],Out) :-
+    pairs_of_elements_in(T,Out1),
+    pair_element_with_each_from_list(H, T, Pairs),
+    concatenate_lists(Out,Pairs,Out2),
+    concatenate_lists(Out2,Out1,Out3),
+    Out = Out3.
+
+
+
+

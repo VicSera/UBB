@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/victor/Programming/Uni/SecondYear/Sem1/ComputerNetworks/MultiplexChatVictor/main.c
+stdio.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+stdlib.h
+-
+stdbool.h
+-
+memory.h
+-
+unistd.h
+-
+

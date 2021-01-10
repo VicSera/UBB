@@ -1,0 +1,103 @@
+Program 1
+Execution stack:
+	int i
+	while (i != int(10)) do {i = i + int(1)}
+Symbol table:
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	while (i != int(10)) do {i = i + int(1)}
+Symbol table:
+	i: int(0)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	while (i != int(10)) do {i = i + int(1)}
+Symbol table:
+	i: int(1)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	while (i != int(10)) do {i = i + int(1)}
+Symbol table:
+	i: int(2)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	while (i != int(10)) do {i = i + int(1)}
+Symbol table:
+	i: int(3)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	while (i != int(10)) do {i = i + int(1)}
+Symbol table:
+	i: int(4)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	while (i != int(10)) do {i = i + int(1)}
+Symbol table:
+	i: int(5)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	while (i != int(10)) do {i = i + int(1)}
+Symbol table:
+	i: int(6)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	while (i != int(10)) do {i = i + int(1)}
+Symbol table:
+	i: int(7)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	while (i != int(10)) do {i = i + int(1)}
+Symbol table:
+	i: int(8)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	while (i != int(10)) do {i = i + int(1)}
+Symbol table:
+	i: int(9)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	while (i != int(10)) do {i = i + int(1)}
+Symbol table:
+	i: int(10)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+Symbol table:
+	i: int(10)
+Output:
+Heap:
+-------------------------------

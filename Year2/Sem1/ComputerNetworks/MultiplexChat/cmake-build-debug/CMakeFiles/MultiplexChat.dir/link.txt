@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/MultiplexChat.dir/client.c.o  -o MultiplexChat 

@@ -1,0 +1,42 @@
+USE ClimbingDB
+GO
+
+DROP PROCEDURE _dropCragFK
+GO
+
+CREATE PROCEDURE _dropCragFK AS
+BEGIN
+ALTER TABLE crag
+DROP CONSTRAINT FK_crag_region
+END
+GO
+
+DROP PROCEDURE _addCragFK
+GO
+
+CREATE PROCEDURE _addCragFK AS
+BEGIN
+ALTER TABLE crag
+ADD CONSTRAINT FK_crag_region FOREIGN KEY (region_code) REFERENCES region(code)
+END
+GO
+
+DROP PROCEDURE addCragFK
+GO
+
+CREATE PROCEDURE addCragFK AS
+BEGIN
+EXEC _addCragFK
+EXEC newVersion '_addCragFK', '_dropCragFK' 
+END
+GO
+
+DROP PROCEDURE dropCragFK
+GO
+
+CREATE PROCEDURE dropCragFK AS
+BEGIN
+EXEC _dropCragFK
+EXEC newVersion '_dropCragFK', '_addCragFK'
+END
+GO

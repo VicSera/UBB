@@ -1,0 +1,21 @@
+     1                                  %ifndef _FACTORIAL_ASM_
+     2                                  %define _FACTORIAL_ASM_
+     3                                  
+     4                                  
+     5                                  ; factorial (int n) => n!
+     6                                  factorial:
+     7 00000000 6655                        push ebp
+     8 00000002 6689E5                      mov ebp, esp
+     9                                      
+    10 00000005 66B801000000                mov eax, 1
+    11 0000000B 66678B4D08                  mov ecx, [ebp + 8] ; n
+    12                                      
+    13                                      next_multiply:
+    14 00000010 66F7E1                          mul ecx
+    15 00000013 E2FB                            loop next_multiply
+    16                                      
+    17 00000015 665D                        pop ebp
+    18 00000017 C20400                      ret 4 ; STDCALL Convention
+    19                                  
+    20                                  
+    21                                  %endif

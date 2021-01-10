@@ -1,0 +1,29 @@
+     1                                  bits 32
+     2                                  global start
+     3                                  extern exit
+     4                                  import exit msvcrt.dll
+     5                                  segment data use32 class=data
+     6                                  ;a,b,c-byte; d-doubleword; e-qword
+     7 00000000 07                          a db 7
+     8 00000001 FE                          b db -2
+     9 00000002 FD                          c db -3
+    10 00000003 04000000                    d dd 4
+    11 00000007 0500000000000000            e dq 5
+    12                                  
+    13                                  segment code use32 class=code
+    14                                  ;2/(a+b*c-9)+e-d
+    15                                      start:
+    16 00000000 A0[01000000]                    mov al, [b]    ;al=b=-2
+    17 00000005 F62D[02000000]                  imul byte [c]  ;al=al*c=-2*(-3)=6
+    18 0000000B 660305[00000000]                add ax,  [a]    ;ax=ax+a=6+7=13
+    19 00000012 6683E809                        sub ax, 9      ;ax=ax-9=13-9=4
+    20 00000016 98                              cwde           ;Converts the word AX to the doubleword EAX in the signed interpretation
+    21 00000017 99                              cdq            ;Converts the doubleword EAX to the qword EDX:EAX in the signed interpretation
+    22 00000018 8B1D[07000000]                  mov ebx, [e]   ;ebx=3=5
+    23 0000001E 01D8                            add eax, ebx   ;eax=edx+ebx
+    24 00000020 11CA                            adc edx, ecx   ;edx=eax+ecx+CF
+    25 00000022 2B05[03000000]                  sub eax, [d]   ;edx=edx-d
+    26 00000028 83DA00                          sbb edx, 0 
+    27                                  
+    28 0000002B 6A00                            push dword 0
+    29 0000002D FF15[00000000]                  call [exit]

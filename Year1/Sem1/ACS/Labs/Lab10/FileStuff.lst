@@ -1,0 +1,107 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, fread, fopen, fclose, printf               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import fread msvcrt.dll
+    11                                  import fopen msvcrt.dll
+    12                                  import fclose msvcrt.dll
+    13                                  import printf msvcrt.dll
+    14                                  ; our data is declared here (the variables needed by our program)
+    15                                  segment data use32 class=data
+    16 00000000 696E70757400                file_name db 'input', 0
+    17 00000006 7200                        access_mode db 'r', 0
+    18 00000008 00000000                    file_desc dd 0
+    19                                      
+    20                                      len equ 100
+    21 0000000C 00<rept>                    buffer times len db 0
+    22                                      
+    23 00000070 25640A00                    format db '%d', 10, 0
+    24 00000074 00000000                    digit_count dd 0
+    25                                  
+    26                                  ; our code starts here
+    27                                  segment code use32 class=code
+    28                                      count_digits:
+    29 00000000 55                              push ebp
+    30 00000001 89E5                            mov ebp, esp
+    31                                          
+    32 00000003 BB00000000                      mov ebx, 0
+    33 00000008 8B7508                          mov esi, [ebp + 8]
+    34 0000000B 8B4D0C                          mov ecx, [ebp + 12]
+    35 0000000E FC                              cld
+    36                                          
+    37                                          count:
+    38 0000000F AC                                  lodsb ; get the current char in AL
+    39                                              
+    40 00000010 3C30                                cmp al, '0'
+    41 00000012 7C05                                jl next
+    42 00000014 3C39                                cmp al, '9'
+    43 00000016 7F01                                jg next
+    44                                              
+    45 00000018 43                                  inc ebx
+    46                                              
+    47                                              next:
+    48 00000019 E2F4                                loop count
+    49                                              
+    50 0000001B 89D8                            mov eax, ebx
+    51                                          
+    52 0000001D 5D                              pop ebp
+    53 0000001E C3                              ret
+    54                                  
+    55                                      start:
+    56                                          ; count digits in a file
+    57                                          
+    58                                          ; open file
+    59 0000001F 68[06000000]                    push dword access_mode
+    60 00000024 68[00000000]                    push dword file_name
+    61 00000029 FF15[00000000]                  call [fopen]
+    62 0000002F 83C404                          add esp, 4 * 1
+    63 00000032 A3[08000000]                    mov [file_desc], eax
+    64                                          
+    65 00000037 83F800                          cmp eax, 0
+    66 0000003A 745B                            je the_end
+    67                                          
+    68 0000003C BA00000000                      mov edx, 0
+    69                                          
+    70                                          ; read + count digits while eax > 0
+    71                                          do:
+    72                                              ; fread(buffer, 1, len, fd)
+    73 00000041 FF35[08000000]                      push dword [file_desc]
+    74 00000047 6A64                                push dword len
+    75 00000049 6A01                                push dword 1
+    76 0000004B 68[0C000000]                        push dword buffer
+    77 00000050 FF15[00000000]                      call [fread]
+    78 00000056 83C410                              add esp, 4 * 4
+    79                                              
+    80 00000059 83F800                              cmp eax, 0
+    81 0000005C 7416                                je close_file
+    82                                              
+    83 0000005E 50                                  push eax
+    84 0000005F 68[0C000000]                        push dword buffer
+    85 00000064 E897FFFFFF                          call count_digits
+    86 00000069 83C408                              add esp, 4 * 2
+    87                                              
+    88 0000006C 0105[74000000]                      add [digit_count], eax
+    89                                              
+    90 00000072 EBCD                                jmp do
+    91                                          
+    92                                              
+    93                                          ; close file
+    94                                          close_file:
+    95 00000074 FF35[08000000]                  push dword [file_desc]
+    96 0000007A FF15[00000000]                  call [fclose]
+    97 00000080 83C404                          add esp, 4 * 1
+    98                                          
+    99 00000083 FF35[74000000]                  push dword [digit_count]
+   100 00000089 68[70000000]                    push dword format
+   101 0000008E FF15[00000000]                  call [printf]
+   102 00000094 83C408                          add esp, 4 * 2
+   103                                      
+   104                                          the_end:
+   105                                          ; exit(0)
+   106 00000097 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+   107 00000099 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

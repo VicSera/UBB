@@ -1,0 +1,80 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, scanf, printf, match_words               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import scanf msvcrt.dll
+    11                                  import printf msvcrt.dll
+    12                                  ; our data is declared here (the variables needed by our program)
+    13                                  segment data use32 class=data
+    14 00000000 257300                      scanf_format db '%s', 0
+    15 00000003 257300                      printf_format db '%s', 0
+    16                                      
+    17 00000006 54686520737472696E-         print_match db 'The string %s is a substring of %s', 0
+    17 0000000F 672025732069732061-
+    17 00000018 20737562737472696E-
+    17 00000021 67206F6620257300   
+    18 00000029 54686520737472696E-         print_no_match db 'The string %s is NOT a substring of %s', 0
+    18 00000032 67202573206973204E-
+    18 0000003B 4F5420612073756273-
+    18 00000044 7472696E67206F6620-
+    18 0000004D 257300             
+    19                                      
+    20 00000050 00<rept>                    template times 20 db 0
+    21 00000064 00<rept>                    current_word times 20 db 0
+    22                                  
+    23                                  ; our code starts here
+    24                                  segment code use32 class=code
+    25                                      start:
+    26                                          ; scan the first word
+    27 00000000 68[50000000]                    push dword template
+    28 00000005 68[00000000]                    push dword scanf_format
+    29 0000000A FF15[00000000]                  call [scanf]
+    30 00000010 83C408                          add esp, 4 * 2
+    31                                          
+    32                                          read_word:
+    33                                              ; scan another word
+    34 00000013 68[64000000]                        push dword current_word
+    35 00000018 68[00000000]                        push dword scanf_format
+    36 0000001D FF15[00000000]                      call [scanf]
+    37 00000023 83C408                              add esp, 4 * 2
+    38                                              
+    39                                              ; check if word is == '$' so that the loop ends
+    40 00000026 803D[64000000]24                    cmp byte [current_word], '$'
+    41 0000002D 744B                                je the_end
+    42                                              
+    43                                              ; otherwise, check for a match between the current word and the template word (first one)
+    44                                              ; match_words(current_word, template)
+    45 0000002F 68[50000000]                        push dword template
+    46 00000034 68[64000000]                        push dword current_word
+    47 00000039 E8(00000000)                        call match_words
+    48 0000003E 83C408                              add esp, 4 * 2
+    49                                              
+    50                                              ; eax will now be 0 if the words don't match, or 1 if they do match
+    51 00000041 83F800                              cmp eax, 0
+    52 00000044 751A                                jne match
+    53                                              
+    54                                              no_match:
+    55 00000046 68[50000000]                            push dword template
+    56 0000004B 68[64000000]                            push dword current_word
+    57 00000050 68[29000000]                            push dword print_no_match
+    58 00000055 FF15[00000000]                          call [printf]
+    59 0000005B 83C40C                                  add esp, 4 * 3
+    60 0000005E EBB3                                    jmp read_word
+    61                                              match:
+    62 00000060 68[50000000]                            push dword template
+    63 00000065 68[64000000]                            push dword current_word
+    64 0000006A 68[06000000]                            push dword print_match
+    65 0000006F FF15[00000000]                          call [printf]
+    66 00000075 83C40C                                  add esp, 4 * 3
+    67 00000078 EB99                                    jmp read_word
+    68                                             
+    69                                          the_end:
+    70                                      
+    71                                          ; exit(0)
+    72 0000007A 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    73 0000007C FF15[00000000]                  call    [exit]       ; call exit to terminate the program

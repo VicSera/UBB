@@ -1,0 +1,316 @@
+Program 2
+Execution stack:
+	int v
+	ref(int) a
+v = int(10)
+new(a, int(22))
+Fork
+{
+HeapWrite(a, int(30))
+v = int(32)
+Print(v)
+Print(HeapRead(a))
+}
+Print(v)
+Print(HeapRead(a))
+Symbol table:
+Output:
+Heap:
+-------------------------------
+Program 2
+Execution stack:
+	ref(int) a
+v = int(10)
+new(a, int(22))
+Fork
+{
+HeapWrite(a, int(30))
+v = int(32)
+Print(v)
+Print(HeapRead(a))
+}
+Print(v)
+Print(HeapRead(a))
+Symbol table:
+	v: int(0)
+Output:
+Heap:
+-------------------------------
+Program 2
+Execution stack:
+	ref(int) a
+	v = int(10)
+new(a, int(22))
+Fork
+{
+HeapWrite(a, int(30))
+v = int(32)
+Print(v)
+Print(HeapRead(a))
+}
+Print(v)
+Print(HeapRead(a))
+Symbol table:
+	v: int(0)
+Output:
+Heap:
+-------------------------------
+Program 2
+Execution stack:
+	v = int(10)
+new(a, int(22))
+Fork
+{
+HeapWrite(a, int(30))
+v = int(32)
+Print(v)
+Print(HeapRead(a))
+}
+Print(v)
+Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[0]
+	v: int(0)
+Output:
+Heap:
+-------------------------------
+Program 2
+Execution stack:
+	v = int(10)
+	new(a, int(22))
+Fork
+{
+HeapWrite(a, int(30))
+v = int(32)
+Print(v)
+Print(HeapRead(a))
+}
+Print(v)
+Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[0]
+	v: int(0)
+Output:
+Heap:
+-------------------------------
+Program 2
+Execution stack:
+	new(a, int(22))
+Fork
+{
+HeapWrite(a, int(30))
+v = int(32)
+Print(v)
+Print(HeapRead(a))
+}
+Print(v)
+Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[0]
+	v: int(10)
+Output:
+Heap:
+-------------------------------
+Program 2
+Execution stack:
+	new(a, int(22))
+	Fork
+{
+HeapWrite(a, int(30))
+v = int(32)
+Print(v)
+Print(HeapRead(a))
+}
+Print(v)
+Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[0]
+	v: int(10)
+Output:
+Heap:
+-------------------------------
+Program 2
+Execution stack:
+	Fork
+{
+HeapWrite(a, int(30))
+v = int(32)
+Print(v)
+Print(HeapRead(a))
+}
+Print(v)
+Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(10)
+Output:
+Heap:
+	1: int(22)
+-------------------------------
+Program 2
+Execution stack:
+	Fork
+{
+HeapWrite(a, int(30))
+v = int(32)
+Print(v)
+Print(HeapRead(a))
+}
+	Print(v)
+Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(10)
+Output:
+Heap:
+	1: int(22)
+-------------------------------
+Program 2
+Execution stack:
+	Print(v)
+Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(10)
+Output:
+Heap:
+	1: int(22)
+-------------------------------
+Program 3
+Execution stack:
+	HeapWrite(a, int(30))
+v = int(32)
+Print(v)
+Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(10)
+Output:
+Heap:
+	1: int(22)
+-------------------------------
+Program 2
+Execution stack:
+	Print(v)
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(10)
+Output:
+Heap:
+	1: int(22)
+-------------------------------
+Program 3
+Execution stack:
+	HeapWrite(a, int(30))
+	v = int(32)
+Print(v)
+Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(10)
+Output:
+Heap:
+	1: int(22)
+-------------------------------
+Program 2
+Execution stack:
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(10)
+Output:
+	int(10)
+Heap:
+	1: int(30)
+-------------------------------
+Program 3
+Execution stack:
+	v = int(32)
+Print(v)
+Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(10)
+Output:
+	int(10)
+Heap:
+	1: int(30)
+-------------------------------
+Program 2
+Execution stack:
+Symbol table:
+	a: ref(int)[1]
+	v: int(10)
+Output:
+	int(10)
+	int(30)
+Heap:
+	1: int(30)
+-------------------------------
+Program 3
+Execution stack:
+	v = int(32)
+	Print(v)
+Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(10)
+Output:
+	int(10)
+	int(30)
+Heap:
+	1: int(30)
+-------------------------------
+Program 3
+Execution stack:
+	Print(v)
+Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(32)
+Output:
+	int(10)
+	int(30)
+Heap:
+	1: int(30)
+-------------------------------
+Program 3
+Execution stack:
+	Print(v)
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(32)
+Output:
+	int(10)
+	int(30)
+Heap:
+	1: int(30)
+-------------------------------
+Program 3
+Execution stack:
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(32)
+Output:
+	int(10)
+	int(30)
+	int(32)
+Heap:
+	1: int(30)
+-------------------------------
+Program 3
+Execution stack:
+Symbol table:
+	a: ref(int)[1]
+	v: int(32)
+Output:
+	int(10)
+	int(30)
+	int(32)
+	int(30)
+Heap:
+	1: int(30)
+-------------------------------

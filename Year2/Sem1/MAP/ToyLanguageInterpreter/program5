@@ -1,0 +1,216 @@
+Program 1
+Execution stack:
+	string varf
+	varf = string(test.in)
+Open(varf)
+int varc
+Read(varf, varc)
+Print(varc)
+Read(varf, varc)
+Print(varc)
+Close(varf)
+Symbol table:
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	varf = string(test.in)
+Open(varf)
+int varc
+Read(varf, varc)
+Print(varc)
+Read(varf, varc)
+Print(varc)
+Close(varf)
+Symbol table:
+	varf: string()
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	varf = string(test.in)
+	Open(varf)
+int varc
+Read(varf, varc)
+Print(varc)
+Read(varf, varc)
+Print(varc)
+Close(varf)
+Symbol table:
+	varf: string()
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	Open(varf)
+int varc
+Read(varf, varc)
+Print(varc)
+Read(varf, varc)
+Print(varc)
+Close(varf)
+Symbol table:
+	varf: string(test.in)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	Open(varf)
+	int varc
+Read(varf, varc)
+Print(varc)
+Read(varf, varc)
+Print(varc)
+Close(varf)
+Symbol table:
+	varf: string(test.in)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	int varc
+Read(varf, varc)
+Print(varc)
+Read(varf, varc)
+Print(varc)
+Close(varf)
+Symbol table:
+	varf: string(test.in)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	int varc
+	Read(varf, varc)
+Print(varc)
+Read(varf, varc)
+Print(varc)
+Close(varf)
+Symbol table:
+	varf: string(test.in)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	Read(varf, varc)
+Print(varc)
+Read(varf, varc)
+Print(varc)
+Close(varf)
+Symbol table:
+	varf: string(test.in)
+	varc: int(0)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	Read(varf, varc)
+	Print(varc)
+Read(varf, varc)
+Print(varc)
+Close(varf)
+Symbol table:
+	varf: string(test.in)
+	varc: int(0)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	Print(varc)
+Read(varf, varc)
+Print(varc)
+Close(varf)
+Symbol table:
+	varf: string(test.in)
+	varc: int(2)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	Print(varc)
+	Read(varf, varc)
+Print(varc)
+Close(varf)
+Symbol table:
+	varf: string(test.in)
+	varc: int(2)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	Read(varf, varc)
+Print(varc)
+Close(varf)
+Symbol table:
+	varf: string(test.in)
+	varc: int(2)
+Output:
+	int(2)
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	Read(varf, varc)
+	Print(varc)
+Close(varf)
+Symbol table:
+	varf: string(test.in)
+	varc: int(2)
+Output:
+	int(2)
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	Print(varc)
+Close(varf)
+Symbol table:
+	varf: string(test.in)
+	varc: int(1)
+Output:
+	int(2)
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	Print(varc)
+	Close(varf)
+Symbol table:
+	varf: string(test.in)
+	varc: int(1)
+Output:
+	int(2)
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	Close(varf)
+Symbol table:
+	varf: string(test.in)
+	varc: int(1)
+Output:
+	int(2)
+	int(1)
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+Symbol table:
+	varf: string(test.in)
+	varc: int(1)
+Output:
+	int(2)
+	int(1)
+Heap:
+-------------------------------

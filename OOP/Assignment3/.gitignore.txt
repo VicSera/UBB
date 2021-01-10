@@ -1,6 +1,0 @@
-Debug/*
-Assignment3/Debug/*
-Assignment3/Assignment3.vcxproj
-Assignment3/Assignment3.vcxproj.filters
-Assignment3/Assignment3.vcxproj.user
-.vs/*

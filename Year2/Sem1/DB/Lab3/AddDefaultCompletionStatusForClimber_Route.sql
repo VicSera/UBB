@@ -1,0 +1,54 @@
+USE ClimbingDB
+GO
+
+DROP PROCEDURE _addDefaultCompletionStatusToClimber_ClimbingRoute
+GO
+
+CREATE PROCEDURE _addDefaultCompletionStatusToClimber_ClimbingRoute AS
+BEGIN
+ALTER TABLE climber_climbingRoute
+ADD CONSTRAINT default_completion_status DEFAULT 'In progress' FOR completion_status
+END
+GO
+
+DROP PROCEDURE _dropDefaultCompletionStatusToClimber_ClimbingRoute
+GO
+
+CREATE PROCEDURE _dropDefaultCompletionStatusToClimber_ClimbingRoute AS
+BEGIN
+ALTER TABLE climber_climbingRoute
+DROP default_completion_status
+END
+GO
+
+EXEC _addDefaultCompletionStatusToClimber_ClimbingRoute
+GO
+
+EXEC _dropDefaultCompletionStatusToClimber_ClimbingRoute
+GO
+
+DROP PROCEDURE addDefaultCompletionStatusToClimber_ClimbingRoute
+GO
+
+CREATE PROCEDURE addDefaultCompletionStatusToClimber_ClimbingRoute AS
+BEGIN
+EXEC _addDefaultCompletionStatusToClimber_ClimbingRoute
+EXEC newVersion '_addDefaultCompletionStatusToClimber_ClimbingRoute', '_dropDefaultCompletionStatusToClimber_ClimbingRoute' 
+END
+GO
+
+DROP PROCEDURE dropDefaultCompletionStatusToClimber_ClimbingRoute
+GO
+
+CREATE PROCEDURE dropDefaultCompletionStatusToClimber_ClimbingRoute AS
+BEGIN
+EXEC _dropDefaultCompletionStatusToClimber_ClimbingRoute
+EXEC newVersion '_dropDefaultCompletionStatusToClimber_ClimbingRoute', '_addDefaultCompletionStatusToClimber_ClimbingRoute'
+END
+GO
+
+EXEC addDefaultCompletionStatusToClimber_ClimbingRoute
+GO
+
+EXEC dropDefaultCompletionStatusToClimber_ClimbingRoute
+GO
