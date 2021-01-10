@@ -1,0 +1,130 @@
+USE ClimbingDB
+GO
+
+DROP TABLE Tc
+GO
+DROP TABLE Tb
+GO
+DROP TABLE Ta
+GO
+CREATE TABLE Ta (
+	aid INT PRIMARY KEY,
+	a2 INT UNIQUE,
+	a3 INT,
+	a4 INT,
+	a5 INT
+)
+GO
+
+CREATE TABLE Tb (
+	bid INT PRIMARY KEY,
+	b2 INT,
+	b3 INT
+)
+GO
+
+CREATE TABLE Tc (
+	cid INT PRIMARY KEY,
+	aid INT FOREIGN KEY REFERENCES Ta(aid),
+	bid INT FOREIGN KEY REFERENCES Tb(bid)
+)
+GO
+
+CREATE OR ALTER PROCEDURE Pop_Ta AS
+BEGIN
+	DELETE FROM Tc
+	DELETE FROM Ta
+	DECLARE @i INT
+	SET @i = 0
+	WHILE @i < 100
+	BEGIN
+		INSERT INTO Ta (aid, a2, a3) VALUES (@i, 100 - @i, 100 - @i)
+		SET @i = @i + 1
+	END
+END
+GO
+
+CREATE OR ALTER PROCEDURE Pop_Tb AS
+BEGIN
+	DELETE FROM Tc
+	DELETE FROM Tb
+	DECLARE @i INT
+	SET @i = 0
+	WHILE @i < 100
+	BEGIN
+		INSERT INTO Tb (bid, b2, b3) VALUES (@i, 100 - @i, 100 - @i)
+		SET @i = @i + 1
+	END
+END
+GO
+
+CREATE OR ALTER PROCEDURE Pop_Tc AS
+BEGIN
+	DELETE FROM Tc
+	DECLARE @i INT
+	SET @i = 0
+	WHILE @i < 100
+	BEGIN
+		INSERT INTO Tc (cid, aid, bid) VALUES (@i, 99 - @i, @i)
+		SET @i = @i + 1
+	END
+END
+GO
+
+DELETE FROM Ta
+GO
+
+EXEC Pop_Ta
+GO
+
+DELETE FROM Tb
+GO
+
+EXEC Pop_Tb
+GO
+
+DELETE FROM Tc
+GO
+
+EXEC Pop_Tc
+GO
+
+---- a
+-- Clustered Index Scan
+SELECT Ta.a3 FROM TA
+GO
+
+-- Clustered Index Seek
+SELECT Ta.aid FROM Ta WHERE Ta.aid = 1
+GO
+
+-- Non-Clustered Index Scan
+SELECT Ta.aid FROM Ta
+GO
+
+-- Non-Clustered Index Seek
+SELECT * FROM Ta WHERE a2 = 90
+GO
+
+
+---- b
+CREATE NONCLUSTERED INDEX index_Tb_b2 ON dbo.Tb(b2)
+GO
+
+DROP INDEX Tb.index_Tb_b2
+GO
+
+------------------------------------- WITH INDEX --------- WITHOUT INDEX
+SELECT bid FROM Tb WHERE b2 = 99 -- 0.0001581 ---------- 0.0004793
+GO
+
+
+---- c
+CREATE OR ALTER VIEW ViewC AS
+SELECT Tc.bid, Tc.cid FROM Tc INNER JOIN Tb ON Tc.bid = Tb.bid
+GO
+
+SELECT * FROM ViewC
+GO
+----- With index: 0.000418 + 0.000267 + 0.0001581
+-- Without index: 0.000418 + 0.000267 + 0.0001581

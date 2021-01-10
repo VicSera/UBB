@@ -39,7 +39,7 @@ BEGIN
 	DECLARE @climberId INT
 	DECLARE @routeId INT
 	DECLARE @randomGrade INT
-	DECLARE @status INT
+	DECLARE @status VARCHAR(255)
 	SET @index = 1
 	WHILE @index < @numberOfEntries
 	BEGIN
