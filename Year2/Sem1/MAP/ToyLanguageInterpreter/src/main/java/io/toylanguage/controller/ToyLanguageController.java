@@ -10,6 +10,8 @@ import io.toylanguage.model.statement.Statement;
 import io.toylanguage.model.value.Value;
 import io.toylanguage.model.value.implementation.RefValue;
 import io.toylanguage.repository.ProgramStateRepository;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 
 import java.util.*;
 import java.util.concurrent.Callable;
@@ -18,10 +20,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 
-public class ToyLanguageController {
+public class ToyLanguageController implements Observable {
     ProgramStateRepository programStateRepository;
     private final Logger logger = new Logger();
     ExecutorService executor;
+    List<InvalidationListener> listeners = new LinkedList<>();
 
     public ToyLanguageController(ProgramStateRepository programStateRepository) {
         this.programStateRepository = programStateRepository;
@@ -55,9 +58,12 @@ public class ToyLanguageController {
         programStateRepository.setPrograms(programs);
     }
 
-    public void oneStep() {
-        List<ProgramState> programs = removeFinishedPrograms(programStateRepository.getPrograms());
-        programStateRepository.setPrograms(programs);
+    public void oneStep() throws ToyLanguageException {
+        List<ProgramState> programs = programStateRepository.getPrograms();
+
+        if (programs.size() == 0)
+            throw new ToyLanguageException("All processes finished!");
+
         garbageCollector(
                 getAddressesFromSymbolTable(combineSymbolTableValues(programs)),
                 programs.get(0).getHeap()
@@ -65,10 +71,12 @@ public class ToyLanguageController {
 
         try {
             stepWithEachProgram(programs);
+            notifyListeners();
         } catch (InterruptedException exception) {
             exception.printStackTrace();
         }
 
+        programStateRepository.setPrograms(removeFinishedPrograms(programs));
     }
 
     private void stepWithEachProgram(List<ProgramState> programs) throws InterruptedException {
@@ -76,10 +84,10 @@ public class ToyLanguageController {
                 .map((ProgramState program) -> (Callable<ProgramState>) program::step)
                 .collect(Collectors.toList());
 
-        List<ProgramState> threads = executor.invokeAll(callList).stream()
-                .map(futureCall -> {
+        List<ProgramState> createdProcesses = executor.invokeAll(callList).stream()
+                .map(futureResult -> {
                     try {
-                        return futureCall.get();
+                        return futureResult.get();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     } catch (ExecutionException e) {
@@ -90,10 +98,10 @@ public class ToyLanguageController {
                 .filter(Objects::nonNull)
                 .collect(Collectors.toList());
 
-        programs.addAll(threads);
-        programs.forEach(thread -> {
+        programs.addAll(createdProcesses);
+        programs.forEach(process -> {
             try {
-                programStateRepository.logProgramState(thread);
+                programStateRepository.logProgramState(process);
             } catch (ToyLanguageException exception) {
                 System.out.println(exception.getMessage());
             }
@@ -142,5 +150,19 @@ public class ToyLanguageController {
                     RefValue refValue = (RefValue) v;
                     return refValue.getAddress();
                 }).collect(Collectors.toList());
+    }
+
+    @Override
+    public void addListener(InvalidationListener invalidationListener) {
+        listeners.add(invalidationListener);
+    }
+
+    @Override
+    public void removeListener(InvalidationListener invalidationListener) {
+        listeners.remove(invalidationListener);
+    }
+
+    private void notifyListeners() {
+        listeners.forEach(listener -> listener.invalidated(this));
     }
 }

@@ -25,8 +25,8 @@ public class WhileStatement implements Statement {
 
         if (conditionResult.getType().equals(new BoolType())) {
             if (((BoolValue)conditionResult).getValue()) {
-                bodyStatement.execute(state);
                 state.getExecutionStack().push(this);
+                bodyStatement.execute(state);
             }
         } else {
             throw new ToyLanguageException("Condition is not a boolean type");

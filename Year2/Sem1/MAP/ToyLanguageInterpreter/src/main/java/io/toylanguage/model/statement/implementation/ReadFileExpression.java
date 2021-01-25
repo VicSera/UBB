@@ -45,10 +45,12 @@ public class ReadFileExpression implements Statement {
         }
 
         String fileNameString = ((StringValue)fileName).getValue();
-        BufferedReader reader = getBufferedReader(fileNameString, fileTable);
-        String line = getLineFromReader(reader);
-        int value = getIntFromString(line);
-        symbolTable.set(variableName, new IntValue(value));
+        synchronized (fileTable) {
+            BufferedReader reader = getBufferedReader(fileNameString, fileTable);
+            String line = getLineFromReader(reader);
+            int value = getIntFromString(line);
+            symbolTable.set(variableName, new IntValue(value));
+        }
 
         return null;
     }

@@ -34,16 +34,18 @@ public class HeapWrite implements Statement {
             throw new ToyLanguageException("Value is not of Ref type");
 
         int address = ((RefValue)value).getAddress();
-        if (!heap.containsKey(address))
-            throw new ToyLanguageException("The address associated to %s was not found on the heap"
-                    .formatted(variableName));
+        synchronized (heap) {
+            if (!heap.containsKey(address))
+                throw new ToyLanguageException("The address associated to %s was not found on the heap"
+                        .formatted(variableName));
 
-        RefValue refValue = (RefValue) value;
-        Value newValue = expression.evaluate(symbolTable, heap);
-        if (!newValue.getType().equals(refValue.getReferencedType()))
-            throw new ToyLanguageException("The expression evaluated to a different type than what was found on the heap");
+            RefValue refValue = (RefValue) value;
+            Value newValue = expression.evaluate(symbolTable, heap);
+            if (!newValue.getType().equals(refValue.getReferencedType()))
+                throw new ToyLanguageException("The expression evaluated to a different type than what was found on the heap");
 
-        heap.put(address, newValue);
+            heap.put(address, newValue);
+        }
 
         return null;
     }

@@ -5,12 +5,13 @@ import io.toylanguage.datastructure.aliases.TypeEnvironment;
 import io.toylanguage.example.ProgramExample;
 import io.toylanguage.example.ProgramExampleFactory;
 import io.toylanguage.exception.ToyLanguageException;
-import io.toylanguage.gui.models.FileModel;
 import io.toylanguage.gui.models.ReferenceModel;
 import io.toylanguage.gui.models.SymbolModel;
 import io.toylanguage.model.ProgramState;
 import io.toylanguage.model.value.Value;
 import io.toylanguage.repository.implementation.StandardProgramStateRepository;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,7 +29,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class MainScreen {
+public class MainScreen implements InvalidationListener {
     public Button chooseProgramButton;
 
     public Button oneStepButton;
@@ -63,8 +64,12 @@ public class MainScreen {
 
     private void initializeProgramListClick() {
         programListView.setOnMouseClicked(mouseEvent -> {
-            selectedProgramStateIndex = programListView.getSelectionModel().getSelectedIndex();
-            programStateChanged();
+            int selectedIndex = programListView.getSelectionModel().getSelectedIndex();
+            if (selectedIndex > -1 && selectedIndex < controller.getPrograms().size())
+            {
+                selectedProgramStateIndex = selectedIndex;
+                programStateChanged();
+            }
         });
     }
 
@@ -97,8 +102,13 @@ public class MainScreen {
 
     private void initialiseOneStepButton() {
         oneStepButton.setOnAction(actionEvent -> {
-            controller.oneStep();
-            programStateChanged();
+            try {
+                if (controller == null)
+                    throw new ToyLanguageException("Please pick a program!");
+                controller.oneStep();
+            } catch (ToyLanguageException exception) {
+                showError(exception);
+            }
         });
     }
 
@@ -118,6 +128,7 @@ public class MainScreen {
 
             repository = new StandardProgramStateRepository(programExample.getProgram(), programExample.getLogFile());
             controller = new ToyLanguageController(repository);
+            controller.addListener(this);
 
             selectedProgramStateIndex = 0;
 
@@ -209,5 +220,12 @@ public class MainScreen {
                         .map(programState -> "Program " + programState.getId().toString())
                         .collect(Collectors.toList())
         ));
+    }
+
+    @Override
+    public void invalidated(Observable observable) {
+        if (observable instanceof ToyLanguageController) {
+            programStateChanged();
+        }
     }
 }

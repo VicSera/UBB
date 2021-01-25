@@ -17,6 +17,7 @@ import io.toylanguage.model.type.implementation.StringType;
 import io.toylanguage.model.value.implementation.BoolValue;
 import io.toylanguage.model.value.implementation.IntValue;
 import io.toylanguage.model.value.implementation.StringValue;
+import javafx.stage.Stage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +46,8 @@ public class ProgramExampleFactory {
         programs.add(new ProgramExample(program9, "9", program9.toString(), "program9"));
         Statement program10 = program10();
         programs.add(new ProgramExample(program10, "10", program10.toString(), "program10"));
+        Statement program11 = program11();
+        programs.add(new ProgramExample(program11, "11", program11.toString(), "program11"));
 
         return programs;
     }
@@ -255,6 +258,50 @@ public class ProgramExampleFactory {
                 ))
                 .add(new PrintStatement(new VariableExpression("v")))
                 .add(new PrintStatement(new HeapRead(new VariableExpression("a"))))
+                .build();
+    }
+
+    public static Statement program11() {
+        return new StatementBuilder()
+                .add(new DeclarationStatement("i", new IntType()))
+                .add(new DeclarationStatement("v", new RefType(new IntType())))
+                .add(new HeapAllocation("v", new ValueExpression(new IntValue(0))))
+                .add(new WhileStatement(
+                        new SmallerThanExpression(new VariableExpression("i"), new ValueExpression(new IntValue(10))),
+                        new StatementBuilder()
+                                .add(new AssignmentStatement("i",
+                                        new AdditionExpression(new VariableExpression("i"), new ValueExpression(new IntValue(1)))))
+                                .add(new ForkStatement(
+                                        new StatementBuilder()
+                                                .add(new HeapWrite("v",
+                                                        new AdditionExpression(
+                                                                new HeapRead(new VariableExpression("v")),
+                                                                new ValueExpression(new IntValue(1))
+                                                        )))
+                                                .add(new HeapWrite("v",
+                                                        new AdditionExpression(
+                                                                new HeapRead(new VariableExpression("v")),
+                                                                new ValueExpression(new IntValue(1))
+                                                        )))
+                                                .add(new HeapWrite("v",
+                                                        new AdditionExpression(
+                                                                new HeapRead(new VariableExpression("v")),
+                                                                new ValueExpression(new IntValue(1))
+                                                        )))
+                                                .add(new HeapWrite("v",
+                                                        new AdditionExpression(
+                                                                new HeapRead(new VariableExpression("v")),
+                                                                new ValueExpression(new IntValue(1))
+                                                        )))
+                                                .add(new HeapWrite("v",
+                                                        new AdditionExpression(
+                                                                new HeapRead(new VariableExpression("v")),
+                                                                new ValueExpression(new IntValue(1))
+                                                        )))
+                                                .build()
+                                ))
+                                .build()
+                ))
                 .build();
     }
 }

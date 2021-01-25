@@ -19,12 +19,14 @@ public class HeapRead implements Expression {
 
     @Override
     public Value evaluate(SymbolTable symbolTable, Heap heap) throws ToyLanguageException {
-        Value value = expression.evaluate(symbolTable, heap);
-        if (!(value.getType() instanceof RefType))
-            throw new ToyLanguageException("Expression does not evaluate to a Ref type");
+        synchronized (heap) {
+            Value value = expression.evaluate(symbolTable, heap);
+            if (!(value.getType() instanceof RefType))
+                throw new ToyLanguageException("Expression does not evaluate to a Ref type");
 
-        int address = ((RefValue)value).getAddress();
-        return heap.get(address);
+            int address = ((RefValue)value).getAddress();
+            return heap.get(address);
+        }
     }
 
     @Override

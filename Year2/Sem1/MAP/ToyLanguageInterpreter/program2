@@ -1,0 +1,118 @@
+Program 1
+Execution stack:
+	int x
+	x = int(5)
+bool y
+y = bool(false) || bool(true) && bool(false)
+if (y) then {x = int(7)} else {x = int(6)}
+Print(x)
+Symbol table:
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	x = int(5)
+bool y
+y = bool(false) || bool(true) && bool(false)
+if (y) then {x = int(7)} else {x = int(6)}
+Print(x)
+Symbol table:
+	x: int(0)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	x = int(5)
+	bool y
+y = bool(false) || bool(true) && bool(false)
+if (y) then {x = int(7)} else {x = int(6)}
+Print(x)
+Symbol table:
+	x: int(0)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	bool y
+y = bool(false) || bool(true) && bool(false)
+if (y) then {x = int(7)} else {x = int(6)}
+Print(x)
+Symbol table:
+	x: int(5)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	bool y
+	y = bool(false) || bool(true) && bool(false)
+if (y) then {x = int(7)} else {x = int(6)}
+Print(x)
+Symbol table:
+	x: int(5)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	y = bool(false) || bool(true) && bool(false)
+if (y) then {x = int(7)} else {x = int(6)}
+Print(x)
+Symbol table:
+	x: int(5)
+	y: bool(false)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	y = bool(false) || bool(true) && bool(false)
+	if (y) then {x = int(7)} else {x = int(6)}
+Print(x)
+Symbol table:
+	x: int(5)
+	y: bool(false)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	if (y) then {x = int(7)} else {x = int(6)}
+Print(x)
+Symbol table:
+	x: int(5)
+	y: bool(false)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	if (y) then {x = int(7)} else {x = int(6)}
+	Print(x)
+Symbol table:
+	x: int(5)
+	y: bool(false)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	Print(x)
+Symbol table:
+	x: int(6)
+	y: bool(false)
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+Symbol table:
+	x: int(6)
+	y: bool(false)
+Output:
+	int(6)
+Heap:
+-------------------------------
