@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<AnchorPane prefHeight="800" prefWidth="1200" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.toylanguage.gui.MainScreen">
+    <VBox prefHeight="800" prefWidth="1200">
+        <HBox prefHeight="350" prefWidth="1200">
+            <VBox prefHeight="350" prefWidth="400" alignment="CENTER">
+                <Label>Execution Stack</Label>
+                <ListView prefHeight="340" prefWidth="400" fx:id="executionStackView"/>
+            </VBox>
+            <VBox prefHeight="350" prefWidth="400" alignment="CENTER">
+                <Label>Symbol Table</Label>
+                <TableView prefHeight="340" prefWidth="400" fx:id="symbolTableView">
+                    <columns>
+                        <TableColumn prefWidth="200" fx:id="symbolName" text="Name"/>
+                        <TableColumn prefWidth="200" fx:id="symbolValue" text="Value"/>
+                    </columns>
+                </TableView>
+            </VBox>
+            <VBox prefHeight="350" prefWidth="400" alignment="CENTER">
+                <Label prefWidth="400">Program List</Label>
+                <ListView prefHeight="340" prefWidth="400" fx:id="programListView"/>
+            </VBox>
+        </HBox>
+        <HBox prefHeight="350" prefWidth="1200">
+            <VBox prefHeight="350" prefWidth="400" alignment="CENTER">
+                <Label>Heap</Label>
+                <TableView prefHeight="340" prefWidth="400" fx:id="heapView">
+                    <columns>
+                        <TableColumn prefWidth="200" fx:id="referenceAddress" text="Name"/>
+                        <TableColumn prefWidth="200" fx:id="referenceValue" text="Address"/>
+                    </columns>
+                </TableView>
+            </VBox>
+            <VBox prefHeight="350" prefWidth="400" alignment="CENTER">
+                <Label>File Table</Label>
+                <ListView prefHeight="340" prefWidth="400" fx:id="fileListView"/>
+            </VBox>
+            <VBox prefHeight="350" prefWidth="400" alignment="CENTER">
+                <Label>Output</Label>
+                <ListView prefHeight="340" prefWidth="400" fx:id="outputView"/>
+            </VBox>
+        </HBox>
+        <HBox prefHeight="100" prefWidth="1200">
+            <Button prefHeight="100" prefWidth="600" fx:id="chooseProgramButton">Choose program</Button>
+            <Button prefHeight="100" prefWidth="600" fx:id="oneStepButton">One step</Button>
+        </HBox>
+    </VBox>
+</AnchorPane>

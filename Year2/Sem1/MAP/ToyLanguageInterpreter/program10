@@ -1,4 +1,4 @@
-Program 2
+Program 1
 Execution stack:
 	int v
 	ref(int) a
@@ -17,7 +17,7 @@ Symbol table:
 Output:
 Heap:
 -------------------------------
-Program 2
+Program 1
 Execution stack:
 	ref(int) a
 v = int(10)
@@ -36,7 +36,7 @@ Symbol table:
 Output:
 Heap:
 -------------------------------
-Program 2
+Program 1
 Execution stack:
 	ref(int) a
 	v = int(10)
@@ -55,7 +55,7 @@ Symbol table:
 Output:
 Heap:
 -------------------------------
-Program 2
+Program 1
 Execution stack:
 	v = int(10)
 new(a, int(22))
@@ -74,7 +74,7 @@ Symbol table:
 Output:
 Heap:
 -------------------------------
-Program 2
+Program 1
 Execution stack:
 	v = int(10)
 	new(a, int(22))
@@ -93,7 +93,7 @@ Symbol table:
 Output:
 Heap:
 -------------------------------
-Program 2
+Program 1
 Execution stack:
 	new(a, int(22))
 Fork
@@ -111,7 +111,7 @@ Symbol table:
 Output:
 Heap:
 -------------------------------
-Program 2
+Program 1
 Execution stack:
 	new(a, int(22))
 	Fork
@@ -129,7 +129,7 @@ Symbol table:
 Output:
 Heap:
 -------------------------------
-Program 2
+Program 1
 Execution stack:
 	Fork
 {
@@ -147,7 +147,7 @@ Output:
 Heap:
 	1: int(22)
 -------------------------------
-Program 2
+Program 1
 Execution stack:
 	Fork
 {
@@ -165,7 +165,7 @@ Output:
 Heap:
 	1: int(22)
 -------------------------------
-Program 2
+Program 1
 Execution stack:
 	Print(v)
 Print(HeapRead(a))
@@ -176,7 +176,7 @@ Output:
 Heap:
 	1: int(22)
 -------------------------------
-Program 3
+Program 2
 Execution stack:
 	HeapWrite(a, int(30))
 v = int(32)
@@ -189,7 +189,7 @@ Output:
 Heap:
 	1: int(22)
 -------------------------------
-Program 2
+Program 1
 Execution stack:
 	Print(v)
 	Print(HeapRead(a))
@@ -200,7 +200,7 @@ Output:
 Heap:
 	1: int(22)
 -------------------------------
-Program 3
+Program 2
 Execution stack:
 	HeapWrite(a, int(30))
 	v = int(32)
@@ -213,7 +213,7 @@ Output:
 Heap:
 	1: int(22)
 -------------------------------
-Program 2
+Program 1
 Execution stack:
 	Print(HeapRead(a))
 Symbol table:
@@ -224,7 +224,7 @@ Output:
 Heap:
 	1: int(30)
 -------------------------------
-Program 3
+Program 2
 Execution stack:
 	v = int(32)
 Print(v)
@@ -237,7 +237,7 @@ Output:
 Heap:
 	1: int(30)
 -------------------------------
-Program 2
+Program 1
 Execution stack:
 Symbol table:
 	a: ref(int)[1]
@@ -248,7 +248,7 @@ Output:
 Heap:
 	1: int(30)
 -------------------------------
-Program 3
+Program 2
 Execution stack:
 	v = int(32)
 	Print(v)
@@ -262,7 +262,7 @@ Output:
 Heap:
 	1: int(30)
 -------------------------------
-Program 3
+Program 2
 Execution stack:
 	Print(v)
 Print(HeapRead(a))
@@ -275,7 +275,7 @@ Output:
 Heap:
 	1: int(30)
 -------------------------------
-Program 3
+Program 2
 Execution stack:
 	Print(v)
 	Print(HeapRead(a))
@@ -288,7 +288,7 @@ Output:
 Heap:
 	1: int(30)
 -------------------------------
-Program 3
+Program 2
 Execution stack:
 	Print(HeapRead(a))
 Symbol table:
@@ -301,7 +301,7 @@ Output:
 Heap:
 	1: int(30)
 -------------------------------
-Program 3
+Program 2
 Execution stack:
 Symbol table:
 	a: ref(int)[1]

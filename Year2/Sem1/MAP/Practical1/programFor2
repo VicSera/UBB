@@ -1,0 +1,496 @@
+Program 1
+Execution stack:
+	ref(int) a
+	new(a, int(20))
+For(int v=int(0); v<int(3); v=v + int(1)) { Fork
+{
+Print(v)
+v = v * HeapRead(a)
+} }
+Print(HeapRead(a))
+Symbol table:
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	new(a, int(20))
+For(int v=int(0); v<int(3); v=v + int(1)) { Fork
+{
+Print(v)
+v = v * HeapRead(a)
+} }
+Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[0]
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	new(a, int(20))
+	For(int v=int(0); v<int(3); v=v + int(1)) { Fork
+{
+Print(v)
+v = v * HeapRead(a)
+} }
+Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[0]
+Output:
+Heap:
+-------------------------------
+Program 1
+Execution stack:
+	For(int v=int(0); v<int(3); v=v + int(1)) { Fork
+{
+Print(v)
+v = v * HeapRead(a)
+} }
+Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+Output:
+Heap:
+	1: int(20)
+-------------------------------
+Program 1
+Execution stack:
+	For(int v=int(0); v<int(3); v=v + int(1)) { Fork
+{
+Print(v)
+v = v * HeapRead(a)
+} }
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+Output:
+Heap:
+	1: int(20)
+-------------------------------
+Program 1
+Execution stack:
+	int v
+v = int(0)
+while (v < int(3)) do {Fork
+{
+Print(v)
+v = v * HeapRead(a)
+}
+v = v + int(1)}
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+Output:
+Heap:
+	1: int(20)
+-------------------------------
+Program 1
+Execution stack:
+	int v
+	v = int(0)
+while (v < int(3)) do {Fork
+{
+Print(v)
+v = v * HeapRead(a)
+}
+v = v + int(1)}
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+Output:
+Heap:
+	1: int(20)
+-------------------------------
+Program 1
+Execution stack:
+	v = int(0)
+while (v < int(3)) do {Fork
+{
+Print(v)
+v = v * HeapRead(a)
+}
+v = v + int(1)}
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(0)
+Output:
+Heap:
+	1: int(20)
+-------------------------------
+Program 1
+Execution stack:
+	v = int(0)
+	while (v < int(3)) do {Fork
+{
+Print(v)
+v = v * HeapRead(a)
+}
+v = v + int(1)}
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(0)
+Output:
+Heap:
+	1: int(20)
+-------------------------------
+Program 1
+Execution stack:
+	while (v < int(3)) do {Fork
+{
+Print(v)
+v = v * HeapRead(a)
+}
+v = v + int(1)}
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(0)
+Output:
+Heap:
+	1: int(20)
+-------------------------------
+Program 1
+Execution stack:
+	Fork
+{
+Print(v)
+v = v * HeapRead(a)
+}
+	v = v + int(1)
+	while (v < int(3)) do {Fork
+{
+Print(v)
+v = v * HeapRead(a)
+}
+v = v + int(1)}
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(0)
+Output:
+Heap:
+	1: int(20)
+-------------------------------
+Program 1
+Execution stack:
+	v = v + int(1)
+	while (v < int(3)) do {Fork
+{
+Print(v)
+v = v * HeapRead(a)
+}
+v = v + int(1)}
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(0)
+Output:
+Heap:
+	1: int(20)
+-------------------------------
+Program 2
+Execution stack:
+	Print(v)
+v = v * HeapRead(a)
+Symbol table:
+	a: ref(int)[1]
+	v: int(0)
+Output:
+Heap:
+	1: int(20)
+-------------------------------
+Program 1
+Execution stack:
+	while (v < int(3)) do {Fork
+{
+Print(v)
+v = v * HeapRead(a)
+}
+v = v + int(1)}
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(1)
+Output:
+Heap:
+	1: int(20)
+-------------------------------
+Program 2
+Execution stack:
+	Print(v)
+	v = v * HeapRead(a)
+Symbol table:
+	a: ref(int)[1]
+	v: int(0)
+Output:
+Heap:
+	1: int(20)
+-------------------------------
+Program 1
+Execution stack:
+	Fork
+{
+Print(v)
+v = v * HeapRead(a)
+}
+	v = v + int(1)
+	while (v < int(3)) do {Fork
+{
+Print(v)
+v = v * HeapRead(a)
+}
+v = v + int(1)}
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(1)
+Output:
+	int(0)
+Heap:
+	1: int(20)
+-------------------------------
+Program 2
+Execution stack:
+	v = v * HeapRead(a)
+Symbol table:
+	a: ref(int)[1]
+	v: int(0)
+Output:
+	int(0)
+Heap:
+	1: int(20)
+-------------------------------
+Program 1
+Execution stack:
+	v = v + int(1)
+	while (v < int(3)) do {Fork
+{
+Print(v)
+v = v * HeapRead(a)
+}
+v = v + int(1)}
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(1)
+Output:
+	int(0)
+Heap:
+	1: int(20)
+-------------------------------
+Program 2
+Execution stack:
+Symbol table:
+	a: ref(int)[1]
+	v: int(0)
+Output:
+	int(0)
+Heap:
+	1: int(20)
+-------------------------------
+Program 3
+Execution stack:
+	Print(v)
+v = v * HeapRead(a)
+Symbol table:
+	a: ref(int)[1]
+	v: int(1)
+Output:
+	int(0)
+Heap:
+	1: int(20)
+-------------------------------
+Program 1
+Execution stack:
+	while (v < int(3)) do {Fork
+{
+Print(v)
+v = v * HeapRead(a)
+}
+v = v + int(1)}
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(2)
+Output:
+	int(0)
+Heap:
+	1: int(20)
+-------------------------------
+Program 3
+Execution stack:
+	Print(v)
+	v = v * HeapRead(a)
+Symbol table:
+	a: ref(int)[1]
+	v: int(1)
+Output:
+	int(0)
+Heap:
+	1: int(20)
+-------------------------------
+Program 1
+Execution stack:
+	Fork
+{
+Print(v)
+v = v * HeapRead(a)
+}
+	v = v + int(1)
+	while (v < int(3)) do {Fork
+{
+Print(v)
+v = v * HeapRead(a)
+}
+v = v + int(1)}
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(2)
+Output:
+	int(0)
+	int(1)
+Heap:
+	1: int(20)
+-------------------------------
+Program 3
+Execution stack:
+	v = v * HeapRead(a)
+Symbol table:
+	a: ref(int)[1]
+	v: int(1)
+Output:
+	int(0)
+	int(1)
+Heap:
+	1: int(20)
+-------------------------------
+Program 1
+Execution stack:
+	v = v + int(1)
+	while (v < int(3)) do {Fork
+{
+Print(v)
+v = v * HeapRead(a)
+}
+v = v + int(1)}
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(2)
+Output:
+	int(0)
+	int(1)
+Heap:
+	1: int(20)
+-------------------------------
+Program 3
+Execution stack:
+Symbol table:
+	a: ref(int)[1]
+	v: int(20)
+Output:
+	int(0)
+	int(1)
+Heap:
+	1: int(20)
+-------------------------------
+Program 4
+Execution stack:
+	Print(v)
+v = v * HeapRead(a)
+Symbol table:
+	a: ref(int)[1]
+	v: int(2)
+Output:
+	int(0)
+	int(1)
+Heap:
+	1: int(20)
+-------------------------------
+Program 1
+Execution stack:
+	while (v < int(3)) do {Fork
+{
+Print(v)
+v = v * HeapRead(a)
+}
+v = v + int(1)}
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(3)
+Output:
+	int(0)
+	int(1)
+Heap:
+	1: int(20)
+-------------------------------
+Program 4
+Execution stack:
+	Print(v)
+	v = v * HeapRead(a)
+Symbol table:
+	a: ref(int)[1]
+	v: int(2)
+Output:
+	int(0)
+	int(1)
+Heap:
+	1: int(20)
+-------------------------------
+Program 1
+Execution stack:
+	Print(HeapRead(a))
+Symbol table:
+	a: ref(int)[1]
+	v: int(3)
+Output:
+	int(0)
+	int(1)
+	int(2)
+Heap:
+	1: int(20)
+-------------------------------
+Program 4
+Execution stack:
+	v = v * HeapRead(a)
+Symbol table:
+	a: ref(int)[1]
+	v: int(2)
+Output:
+	int(0)
+	int(1)
+	int(2)
+Heap:
+	1: int(20)
+-------------------------------
+Program 1
+Execution stack:
+Symbol table:
+	a: ref(int)[1]
+	v: int(3)
+Output:
+	int(0)
+	int(1)
+	int(2)
+	int(20)
+Heap:
+	1: int(20)
+-------------------------------
+Program 4
+Execution stack:
+Symbol table:
+	a: ref(int)[1]
+	v: int(40)
+Output:
+	int(0)
+	int(1)
+	int(2)
+	int(20)
+Heap:
+	1: int(20)
+-------------------------------

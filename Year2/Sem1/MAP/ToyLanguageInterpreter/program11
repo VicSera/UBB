@@ -1,0 +1,2017 @@
+Program 12
+Execution stack:
+	int i
+	ref(int) v
+new(v, int(0))
+while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+Output:
+Heap:
+-------------------------------
+Program 12
+Execution stack:
+	ref(int) v
+new(v, int(0))
+while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	i: int(0)
+Output:
+Heap:
+-------------------------------
+Program 12
+Execution stack:
+	ref(int) v
+	new(v, int(0))
+while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	i: int(0)
+Output:
+Heap:
+-------------------------------
+Program 12
+Execution stack:
+	new(v, int(0))
+while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[0]
+	i: int(0)
+Output:
+Heap:
+-------------------------------
+Program 12
+Execution stack:
+	new(v, int(0))
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[0]
+	i: int(0)
+Output:
+Heap:
+-------------------------------
+Program 12
+Execution stack:
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(0)
+Output:
+Heap:
+	1: int(0)
+-------------------------------
+Program 12
+Execution stack:
+	i = i + int(1)
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(0)
+Output:
+Heap:
+	1: int(0)
+-------------------------------
+Program 12
+Execution stack:
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(1)
+Output:
+Heap:
+	1: int(0)
+-------------------------------
+Program 12
+Execution stack:
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(1)
+Output:
+Heap:
+	1: int(0)
+-------------------------------
+Program 13
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(1)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(0)
+-------------------------------
+Program 12
+Execution stack:
+	i = i + int(1)
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(1)
+Output:
+Heap:
+	1: int(0)
+-------------------------------
+Program 13
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(1)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(0)
+-------------------------------
+Program 12
+Execution stack:
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(2)
+Output:
+Heap:
+	1: int(1)
+-------------------------------
+Program 13
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(1)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(1)
+-------------------------------
+Program 12
+Execution stack:
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(2)
+Output:
+Heap:
+	1: int(1)
+-------------------------------
+Program 13
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(1)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(1)
+-------------------------------
+Program 14
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(2)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(1)
+-------------------------------
+Program 12
+Execution stack:
+	i = i + int(1)
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(2)
+Output:
+Heap:
+	1: int(2)
+-------------------------------
+Program 13
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(1)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(2)
+-------------------------------
+Program 14
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(2)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(2)
+-------------------------------
+Program 12
+Execution stack:
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(3)
+Output:
+Heap:
+	1: int(3)
+-------------------------------
+Program 13
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(1)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(3)
+-------------------------------
+Program 14
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(2)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(3)
+-------------------------------
+Program 12
+Execution stack:
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(3)
+Output:
+Heap:
+	1: int(4)
+-------------------------------
+Program 13
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(1)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(4)
+-------------------------------
+Program 14
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(2)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(4)
+-------------------------------
+Program 15
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(3)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(4)
+-------------------------------
+Program 12
+Execution stack:
+	i = i + int(1)
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(3)
+Output:
+Heap:
+	1: int(5)
+-------------------------------
+Program 13
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(1)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(5)
+-------------------------------
+Program 14
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(2)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(5)
+-------------------------------
+Program 15
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(3)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(5)
+-------------------------------
+Program 12
+Execution stack:
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(4)
+Output:
+Heap:
+	1: int(7)
+-------------------------------
+Program 13
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(1)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(7)
+-------------------------------
+Program 14
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(2)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(7)
+-------------------------------
+Program 15
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(3)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(7)
+-------------------------------
+Program 12
+Execution stack:
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(4)
+Output:
+Heap:
+	1: int(9)
+-------------------------------
+Program 13
+Execution stack:
+Symbol table:
+	i: int(1)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(9)
+-------------------------------
+Program 14
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(2)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(9)
+-------------------------------
+Program 15
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(3)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(9)
+-------------------------------
+Program 16
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(4)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(9)
+-------------------------------
+Program 12
+Execution stack:
+	i = i + int(1)
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(4)
+Output:
+Heap:
+	1: int(10)
+-------------------------------
+Program 14
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(2)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(10)
+-------------------------------
+Program 15
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(3)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(10)
+-------------------------------
+Program 16
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(4)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(10)
+-------------------------------
+Program 12
+Execution stack:
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(5)
+Output:
+Heap:
+	1: int(12)
+-------------------------------
+Program 14
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(2)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(12)
+-------------------------------
+Program 15
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(3)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(12)
+-------------------------------
+Program 16
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(4)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(12)
+-------------------------------
+Program 12
+Execution stack:
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(5)
+Output:
+Heap:
+	1: int(14)
+-------------------------------
+Program 14
+Execution stack:
+Symbol table:
+	i: int(2)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(14)
+-------------------------------
+Program 15
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(3)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(14)
+-------------------------------
+Program 16
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(4)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(14)
+-------------------------------
+Program 17
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(5)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(14)
+-------------------------------
+Program 12
+Execution stack:
+	i = i + int(1)
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(5)
+Output:
+Heap:
+	1: int(15)
+-------------------------------
+Program 15
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(3)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(15)
+-------------------------------
+Program 16
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(4)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(15)
+-------------------------------
+Program 17
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(5)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(15)
+-------------------------------
+Program 12
+Execution stack:
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(6)
+Output:
+Heap:
+	1: int(17)
+-------------------------------
+Program 15
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(3)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(17)
+-------------------------------
+Program 16
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(4)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(17)
+-------------------------------
+Program 17
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(5)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(17)
+-------------------------------
+Program 12
+Execution stack:
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(6)
+Output:
+Heap:
+	1: int(19)
+-------------------------------
+Program 15
+Execution stack:
+Symbol table:
+	i: int(3)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(19)
+-------------------------------
+Program 16
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(4)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(19)
+-------------------------------
+Program 17
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(5)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(19)
+-------------------------------
+Program 18
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(6)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(19)
+-------------------------------
+Program 12
+Execution stack:
+	i = i + int(1)
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(6)
+Output:
+Heap:
+	1: int(20)
+-------------------------------
+Program 16
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(4)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(20)
+-------------------------------
+Program 17
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(5)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(20)
+-------------------------------
+Program 18
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(6)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(20)
+-------------------------------
+Program 12
+Execution stack:
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(7)
+Output:
+Heap:
+	1: int(22)
+-------------------------------
+Program 16
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(4)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(22)
+-------------------------------
+Program 17
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(5)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(22)
+-------------------------------
+Program 18
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(6)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(22)
+-------------------------------
+Program 12
+Execution stack:
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(7)
+Output:
+Heap:
+	1: int(24)
+-------------------------------
+Program 16
+Execution stack:
+Symbol table:
+	i: int(4)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(24)
+-------------------------------
+Program 17
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(5)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(24)
+-------------------------------
+Program 18
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(6)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(24)
+-------------------------------
+Program 19
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(7)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(24)
+-------------------------------
+Program 12
+Execution stack:
+	i = i + int(1)
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(7)
+Output:
+Heap:
+	1: int(25)
+-------------------------------
+Program 17
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(5)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(25)
+-------------------------------
+Program 18
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(6)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(25)
+-------------------------------
+Program 19
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(7)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(25)
+-------------------------------
+Program 12
+Execution stack:
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(8)
+Output:
+Heap:
+	1: int(27)
+-------------------------------
+Program 17
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(5)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(27)
+-------------------------------
+Program 18
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(6)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(27)
+-------------------------------
+Program 19
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(7)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(27)
+-------------------------------
+Program 12
+Execution stack:
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(8)
+Output:
+Heap:
+	1: int(29)
+-------------------------------
+Program 17
+Execution stack:
+Symbol table:
+	i: int(5)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(29)
+-------------------------------
+Program 18
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(6)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(29)
+-------------------------------
+Program 19
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(7)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(29)
+-------------------------------
+Program 20
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(8)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(29)
+-------------------------------
+Program 12
+Execution stack:
+	i = i + int(1)
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(8)
+Output:
+Heap:
+	1: int(30)
+-------------------------------
+Program 18
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(6)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(30)
+-------------------------------
+Program 19
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(7)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(30)
+-------------------------------
+Program 20
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(8)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(30)
+-------------------------------
+Program 12
+Execution stack:
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(9)
+Output:
+Heap:
+	1: int(32)
+-------------------------------
+Program 18
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(6)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(32)
+-------------------------------
+Program 19
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(7)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(32)
+-------------------------------
+Program 20
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(8)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(32)
+-------------------------------
+Program 12
+Execution stack:
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(9)
+Output:
+Heap:
+	1: int(34)
+-------------------------------
+Program 18
+Execution stack:
+Symbol table:
+	i: int(6)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(34)
+-------------------------------
+Program 19
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(7)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(34)
+-------------------------------
+Program 20
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(8)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(34)
+-------------------------------
+Program 21
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(9)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(34)
+-------------------------------
+Program 12
+Execution stack:
+	i = i + int(1)
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(9)
+Output:
+Heap:
+	1: int(35)
+-------------------------------
+Program 19
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(7)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(35)
+-------------------------------
+Program 20
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(8)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(35)
+-------------------------------
+Program 21
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(9)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(35)
+-------------------------------
+Program 12
+Execution stack:
+	Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(10)
+Output:
+Heap:
+	1: int(37)
+-------------------------------
+Program 19
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(7)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(37)
+-------------------------------
+Program 20
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(8)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(37)
+-------------------------------
+Program 21
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(9)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(37)
+-------------------------------
+Program 12
+Execution stack:
+	while (i < int(10)) do {i = i + int(1)
+Fork
+{
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+}}
+Symbol table:
+	v: ref(int)[1]
+	i: int(10)
+Output:
+Heap:
+	1: int(39)
+-------------------------------
+Program 19
+Execution stack:
+Symbol table:
+	i: int(7)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(39)
+-------------------------------
+Program 20
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(8)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(39)
+-------------------------------
+Program 21
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(9)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(39)
+-------------------------------
+Program 22
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(10)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(39)
+-------------------------------
+Program 12
+Execution stack:
+Symbol table:
+	v: ref(int)[1]
+	i: int(10)
+Output:
+Heap:
+	1: int(40)
+-------------------------------
+Program 20
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(8)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(40)
+-------------------------------
+Program 21
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(9)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(40)
+-------------------------------
+Program 22
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(10)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(40)
+-------------------------------
+Program 20
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(8)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(42)
+-------------------------------
+Program 21
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(9)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(42)
+-------------------------------
+Program 22
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(10)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(42)
+-------------------------------
+Program 20
+Execution stack:
+Symbol table:
+	i: int(8)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(44)
+-------------------------------
+Program 21
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(9)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(44)
+-------------------------------
+Program 22
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(10)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(44)
+-------------------------------
+Program 21
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(9)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(45)
+-------------------------------
+Program 22
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(10)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(45)
+-------------------------------
+Program 21
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(9)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(46)
+-------------------------------
+Program 22
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(10)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(46)
+-------------------------------
+Program 21
+Execution stack:
+Symbol table:
+	i: int(9)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(48)
+-------------------------------
+Program 22
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(10)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(48)
+-------------------------------
+Program 22
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(10)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(48)
+-------------------------------
+Program 22
+Execution stack:
+	HeapWrite(v, HeapRead(v) + int(1))
+Symbol table:
+	i: int(10)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(49)
+-------------------------------
+Program 22
+Execution stack:
+Symbol table:
+	i: int(10)
+	v: ref(int)[1]
+Output:
+Heap:
+	1: int(50)
+-------------------------------
