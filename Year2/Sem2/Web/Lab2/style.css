@@ -1,0 +1,37 @@
+* {
+    font-family: "Times New Roman", serif;
+}
+
+img {
+    opacity: 1;
+}
+
+img:hover {
+    opacity: 0.5;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom right, blue, purple);
+    padding: 15px;
+    color: white;
+    box-shadow: 2px 2px 5px black;
+}
+
+nav button {
+    padding: 10px;
+    margin: 10px;
+}
+
+nav button.active {
+    background-color: aqua;
+    border-radius: 30px;
+}
+
+nav button:hover {
+    background-color: grey;
+    border-radius: 30px;
+}

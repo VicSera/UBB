@@ -1,0 +1,32 @@
+body {
+    background-color: #671a67;
+}
+
+main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#board {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+
+    display: grid;
+    grid-template-columns: 33.3% 33.4% 33.3%;
+    grid-template-rows: 33.3% 33.4% 33.3%;
+}
+
+.cell {
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+}

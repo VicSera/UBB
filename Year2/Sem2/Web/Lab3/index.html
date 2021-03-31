@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function processInput() {
+            const text = document.getElementById("inp").value;
+            document.getElementById("result").innerText =
+                'Length: ' + text.length.toString() + '; Character at position 3: ' + text.charAt(3);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="processInput()">Process input</button>
+    <label for="inp">Input:</label>
+    <input id="inp" name="inp" type="text">
+    <div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0 25px 0;
+    font-weight: 200;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+}
+
+header div {
+    display: inline-flex;
+    flex: available;
+}
+
+
+.logo-div {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.logo {
+    color: #4a4a4a;
+}
+
+.light {
+    color: grey;
+    font-size: 1.3rem;
+}
+
+.search-bar-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.under-search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.search-bar-div {
+    border-radius: 5px;
+    box-shadow: 0 2px 3px grey;
+}
+
+.search-bar {
+    flex-grow: 2;
+    background-color: white;
+    height: 4.3rem;
+    width: 65rem;
+    border: 1px solid grey;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    padding: 10px;
+    margin: 0;
+}
+
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    color: white;
+    background-color: rgba(0,120,215,.8);
+    width: 7rem;
+    height: 4.3rem;
+    border-radius: 0 5px 5px 0;
+}
+
+.sign-in, .settings {
+    padding-bottom: 20px;
+    border: none;
+    background-color: transparent;
+}
+
+.fa.fa-cog {
+    font-size: 2.4rem;
+    color: #515151;
+}

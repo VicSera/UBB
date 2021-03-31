@@ -1,0 +1,17 @@
+div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #4d4dec;
+
+    transition: all 3s;
+}
+
+div:hover {
+    top: 100%;
+    left: 100%;
+    background-color: #f54747;
+    transform: translate(-100%, -100%);
+}

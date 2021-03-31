@@ -1,0 +1,82 @@
+nav {
+    font-weight: 640;
+    font-family: "Segoe UI", "Segoe WP", Arial, Sans-Serif, sans-serif !important;
+    font-size: 1.3rem !important;
+    line-height: 3.2;
+}
+
+.blue {
+    color: #146fb1;
+}
+
+.green {
+    color: green;
+}
+
+.nav-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-top > div {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-top > div > span {
+    margin-left: 10px;
+}
+
+.nav-bottom {
+    position: relative;
+}
+
+.no-overflow {
+    display: flex;
+    justify-content: left;
+    text-align: center;
+    color: #4f4f4f;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.end-blur {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    background: linear-gradient(to right, transparent 50%, #f4f4f2);
+}
+
+.arrow-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(70%, 0);
+}
+
+.nav-regions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-section {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.no-overflow > div, .nav-regions > div {
+    padding: 0 10px 0 10px;
+}
+
+.no-overflow > div:nth-child(-n + 3) {
+    border-right: 1px solid #c1c1c1;
+}
+
+hr {
+    border-top: 1px solid #c1c1c1 !important;
+}

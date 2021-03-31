@@ -148,7 +148,6 @@ void testAdd() {
 	assert(s.size() == 20000);
 }
 
-
 void testRemove(Relation r) {
 	cout << "Test remove" << endl;
 	SortedSet s(r);
