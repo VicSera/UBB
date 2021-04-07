@@ -1,0 +1,39 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+table, th, td {
+    margin: 0;
+    text-align: center;
+    padding: 0;
+}
+
+th {
+    position: relative;
+    background: grey;
+    z-index: 550;
+}
+
+td {
+    position: relative;
+    z-index: 500;
+}
+
+tr {
+    height: 50px;
+}
+
+tr:nth-child(even) td {
+    background: #c3c1c1;
+}
+
+tbody {
+    transition: transform 5s;
+}
+
+tbody:hover {
+    transform: translate(0, -100%);
+}

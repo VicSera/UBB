@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="xo.js"></script>
-    <title>Title</title>
+    <script src="computer.js"></script>
+    <title>TicTacToe</title>
+    <link rel="icon" href="icon.png">
 </head>
 <body>
     <main>
-        <div>
-            <span>Turn: X</span>
+        <div id="info">
+            <span id="turn">Next move: X</span>
         </div>
         <div id="board">
-            <div class="cell" id="top-left"></div>
-            <div class="cell" id="top-center"></div>
-            <div class="cell" id="top-right"></div>
+            <div class="cell" onclick="cellClicked(0)"></div>
+            <div class="cell" onclick="cellClicked(1)"></div>
+            <div class="cell" onclick="cellClicked(2)"></div>
 
-            <div class="cell" id="middle-left"></div>
-            <div class="cell" id="middle-center"></div>
-            <div class="cell" id="middle-right"></div>
+            <div class="cell" onclick="cellClicked(3)"></div>
+            <div class="cell" onclick="cellClicked(4)"></div>
+            <div class="cell" onclick="cellClicked(5)"></div>
 
-            <div class="cell" id="bottom-left"></div>
-            <div class="cell" id="bottom-center"></div>
-            <div class="cell" id="bottom-right"></div>
+            <div class="cell" onclick="cellClicked(6)"></div>
+            <div class="cell" onclick="cellClicked(7)"></div>
+            <div class="cell" onclick="cellClicked(8)"></div>
         </div>
+        <button id="resetButton" onclick="clearBoard()">Clear board</button>
     </main>
 </body>
 </html>

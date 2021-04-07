@@ -1,0 +1,10 @@
+C:\Programming\UBB\Year2\Sem2\DBMS\Lab\ClimbingDBApp\ClimbingDBApp\bin\Debug\ClimbingDBApp.exe.config
+C:\Programming\UBB\Year2\Sem2\DBMS\Lab\ClimbingDBApp\ClimbingDBApp\bin\Debug\ClimbingDBApp.exe
+C:\Programming\UBB\Year2\Sem2\DBMS\Lab\ClimbingDBApp\ClimbingDBApp\bin\Debug\ClimbingDBApp.pdb
+C:\Programming\UBB\Year2\Sem2\DBMS\Lab\ClimbingDBApp\ClimbingDBApp\obj\Debug\ClimbingDBApp.csprojAssemblyReference.cache
+C:\Programming\UBB\Year2\Sem2\DBMS\Lab\ClimbingDBApp\ClimbingDBApp\obj\Debug\ClimbingDBApp.Properties.Resources.resources
+C:\Programming\UBB\Year2\Sem2\DBMS\Lab\ClimbingDBApp\ClimbingDBApp\obj\Debug\ClimbingDBApp.csproj.GenerateResource.cache
+C:\Programming\UBB\Year2\Sem2\DBMS\Lab\ClimbingDBApp\ClimbingDBApp\obj\Debug\ClimbingDBApp.csproj.CoreCompileInputs.cache
+C:\Programming\UBB\Year2\Sem2\DBMS\Lab\ClimbingDBApp\ClimbingDBApp\obj\Debug\ClimbingDBApp.exe
+C:\Programming\UBB\Year2\Sem2\DBMS\Lab\ClimbingDBApp\ClimbingDBApp\obj\Debug\ClimbingDBApp.pdb
+C:\Programming\UBB\Year2\Sem2\DBMS\Lab\ClimbingDBApp\ClimbingDBApp\obj\Debug\ClimbingDBApp.App.MainForm.resources
