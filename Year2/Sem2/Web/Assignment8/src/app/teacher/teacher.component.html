@@ -1,0 +1,35 @@
+<h2>Courses:</h2>
+<h3 id="selected-course">Selected course: {{selectedCourseName}}</h3>
+<div id="course-buttons">
+  <button *ngFor="let course of courses" (click)="selectCourse(course.id, course.name)">
+    {{ course.name }}
+  </button>
+</div>
+<hr>
+<h2>Groups:</h2>
+<h3 id="selected-group">Selected group: {{selectedGroup}}</h3>
+<div id="group-buttons">
+  <button *ngFor="let group of groups" (click)="selectGroup(group.id)">
+    {{ group.id }}
+  </button>
+</div>
+<hr>
+<h2>Students:</h2>
+<h3 id="pagination">Showing students {{startingIndex}} - {{endingIndex}}</h3>
+<button id="prevPage" [disabled]="startingIndex === 0" (click)="prevStudentPage()">Previous</button>
+<button id="nextPage" [disabled]="startingIndex + studentsPerPage >= studentGrades.length"
+        (click)="nextStudentPage()">Next</button>
+<div id="student-board">
+  <div class="student-div" *ngFor="let studentGrade of visibleStudentGrades">
+    <h3>{{studentGrade.username}}</h3>
+    <input type="number" [id]="getInputId(studentGrade.id)">
+    <button (click)="addGradeFieldSubmitted(studentGrade.id, selectedCourse, getInputId(studentGrade.id))">+</button>
+    <ul>
+      <li *ngFor="let grade of studentGrade.grades">
+        {{grade.value}}
+        <button (click)="removeGrade(grade.gradeId)">X</button>
+      </li>
+    </ul>
+  </div>
+</div>
+<hr>

@@ -52,8 +52,7 @@ class Controller:
         }
 
     def solver(self, config):
-        map = Map(config["map-size"], config["map-size"])
-        map.randomMap(config["map-fill"])
+        map = config["map"]
         population = self.__repository.createPopulation(config)
         iterations = config["number-of-iterations"]
         mutationProbability = config["mutation-chance"]

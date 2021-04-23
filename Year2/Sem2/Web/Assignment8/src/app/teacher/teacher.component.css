@@ -1,0 +1,10 @@
+#student-board {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.student-div {
+  display: inline;
+}

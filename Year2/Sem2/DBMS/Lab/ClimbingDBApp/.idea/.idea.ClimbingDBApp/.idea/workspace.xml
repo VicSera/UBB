@@ -23,15 +23,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d28ffc73-cf0f-4ae5-a9b1-91a3966150b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../Web/Assignment4/computer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Web/Assignment4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Web/Assignment4/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Web/Assignment4/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Web/Assignment4/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Web/Assignment4/xo.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Web/Assignment4/xo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/controller/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/controller/controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/domain/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/domain/drone.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/domain/environment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/domain/move.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/domain/path.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/domain/population.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/domain/sensor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/repository/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/repository/repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/ui/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/ui/draw.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/ui/menu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/util/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/util/colors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/util/environmentUtils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/util/functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Web/Assignment5/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Web/Assignment5/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Web/Assignment5/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AI/Assignment3/Assignment3/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AI/Assignment3/Assignment3/controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AI/Assignment3/Assignment3/domain.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AI/Assignment3/Assignment3/domain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AI/Assignment3/Assignment3/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AI/Assignment3/Assignment3/gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AI/Assignment3/Assignment3/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AI/Assignment3/Assignment3/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ClimbingDBApp/.idea/dataSources/a933c946-ef3d-429d-8971-2720efdc8e8b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClimbingDBApp/.idea/dataSources/a933c946-ef3d-429d-8971-2720efdc8e8b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ClimbingDBApp/.idea/dataSources/a933c946-ef3d-429d-8971-2720efdc8e8b/storage_v2/_src_/database/ClimbingDB.ay6wSg/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClimbingDBApp/.idea/dataSources/a933c946-ef3d-429d-8971-2720efdc8e8b/storage_v2/_src_/database/ClimbingDB.ay6wSg/schema/dbo.sYMBAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ClimbingDBApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClimbingDBApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/App.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/App/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/App/MainForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/App/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/App/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/ClimbingDBApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/ClimbingDBApp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/bin/Debug/ClimbingDBApp.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/bin/Debug/ClimbingDBApp.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/bin/Debug/ClimbingDBApp.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/bin/Debug/ClimbingDBApp.exe.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/bin/Debug/ClimbingDBApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/bin/Debug/ClimbingDBApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="XML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
@@ -46,7 +88,6 @@
       <list>
         <option value="$PROJECT_DIR$/ClimbingDBApp/Form1.cs" />
         <option value="$PROJECT_DIR$/start-local-db.yaml" />
-        <option value="$PROJECT_DIR$/ClimbingDBApp/App/Program.cs" />
         <option value="$PROJECT_DIR$/ClimbingDBApp/App/Form1.Designer.cs" />
         <option value="$PROJECT_DIR$/ClimbingDBApp/Sql/CreateTables.sql" />
         <option value="$PROJECT_DIR$/ClimbingDBApp/Sql/PopulateTables/PopulateClimber.sql" />
@@ -63,7 +104,10 @@
         <option value="$PROJECT_DIR$/ClimbingDBApp/Sql/PopulateTables/PopulateOutdoorEvents.sql" />
         <option value="$PROJECT_DIR$/ClimbingDBApp/Sql/PopulateTables/PopulateRegions.sql" />
         <option value="$PROJECT_DIR$/ClimbingDBApp/App/MainForm.Designer.cs" />
+        <option value="$PROJECT_DIR$/ClimbingDBApp/App/Program.cs" />
+        <option value="$PROJECT_DIR$/Application.config.xml" />
         <option value="$PROJECT_DIR$/ClimbingDBApp/App/MainForm.cs" />
+        <option value="$PROJECT_DIR$/ClimbingDBApp/App.config" />
       </list>
     </option>
   </component>
@@ -133,6 +177,8 @@
       <workItem from="1616879286105" duration="110000" />
       <workItem from="1617209647400" duration="3061000" />
       <workItem from="1617274977681" duration="4510000" />
+      <workItem from="1618417486329" duration="1826000" />
+      <workItem from="1618484554498" duration="1184000" />
     </task>
     <task id="LOCAL-00001" summary="Add AI and DBMS labs">
       <created>1617216649776</created>
@@ -173,86 +219,90 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="913" y="357" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1616075257556" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1617281816519">
+    <state x="977" y="448" key="#xdebugger.evaluate" timestamp="1618418570645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617281816519" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1617281816518">
+    <state x="977" y="448" key="#xdebugger.evaluate/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618418570645" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1618488549554">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617281816518" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1617281816518">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618488549554" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1618488549554">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617281816518" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1617281816518">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618488549554" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1618488549554">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617281816518" />
-    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1617216670580">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618488549554" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1618488549554">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617216670580" />
-    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1617216670580">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618488549554" />
+    <state width="1877" height="500" key="GridCell.Tab.1.bottom" timestamp="1618471061655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617216670580" />
-    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1617216670580">
+    <state width="1877" height="500" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618471061655" />
+    <state width="1877" height="500" key="GridCell.Tab.1.center" timestamp="1618471061655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617216670580" />
-    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1617216670580">
+    <state width="1877" height="500" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618471061655" />
+    <state width="1877" height="500" key="GridCell.Tab.1.left" timestamp="1618471061655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617216670580" />
-    <state width="1877" height="375" key="GridCell.Tab.2.bottom" timestamp="1617216670580">
+    <state width="1877" height="500" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618471061655" />
+    <state width="1877" height="500" key="GridCell.Tab.1.right" timestamp="1618471061655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617216670580" />
-    <state width="1877" height="375" key="GridCell.Tab.2.center" timestamp="1617216670580">
+    <state width="1877" height="500" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618471061655" />
+    <state width="1877" height="500" key="GridCell.Tab.2.bottom" timestamp="1618471061655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617216670580" />
-    <state width="1877" height="375" key="GridCell.Tab.2.left" timestamp="1617216670580">
+    <state width="1877" height="500" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618471061655" />
+    <state width="1877" height="500" key="GridCell.Tab.2.center" timestamp="1618471061655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617216670580" />
-    <state width="1877" height="375" key="GridCell.Tab.2.right" timestamp="1617216670580">
+    <state width="1877" height="500" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618471061655" />
+    <state width="1877" height="500" key="GridCell.Tab.2.left" timestamp="1618471061655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617216670580" />
-    <state width="1877" height="375" key="GridCell.Tab.3.bottom" timestamp="1617216670580">
+    <state width="1877" height="500" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618471061655" />
+    <state width="1877" height="500" key="GridCell.Tab.2.right" timestamp="1618471061655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617216670580" />
-    <state width="1877" height="375" key="GridCell.Tab.3.center" timestamp="1617216670580">
+    <state width="1877" height="500" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618471061655" />
+    <state width="1877" height="500" key="GridCell.Tab.3.bottom" timestamp="1618471061656">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617216670580" />
-    <state width="1877" height="375" key="GridCell.Tab.3.left" timestamp="1617216670580">
+    <state width="1877" height="500" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618471061656" />
+    <state width="1877" height="500" key="GridCell.Tab.3.center" timestamp="1618471061656">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617216670580" />
-    <state width="1877" height="375" key="GridCell.Tab.3.right" timestamp="1617216670580">
+    <state width="1877" height="500" key="GridCell.Tab.3.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618471061656" />
+    <state width="1877" height="500" key="GridCell.Tab.3.left" timestamp="1618471061656">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617216670580" />
-    <state width="1877" height="375" key="GridCell.Tab.4.bottom" timestamp="1617216670580">
+    <state width="1877" height="500" key="GridCell.Tab.3.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618471061656" />
+    <state width="1877" height="500" key="GridCell.Tab.3.right" timestamp="1618471061656">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.4.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617216670580" />
-    <state width="1877" height="375" key="GridCell.Tab.4.center" timestamp="1617216670580">
+    <state width="1877" height="500" key="GridCell.Tab.3.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618471061656" />
+    <state width="1877" height="500" key="GridCell.Tab.4.bottom" timestamp="1618471061656">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.4.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617216670580" />
-    <state width="1877" height="375" key="GridCell.Tab.4.left" timestamp="1617216670580">
+    <state width="1877" height="500" key="GridCell.Tab.4.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618471061656" />
+    <state width="1877" height="500" key="GridCell.Tab.4.center" timestamp="1618471061656">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.4.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617216670580" />
-    <state width="1877" height="375" key="GridCell.Tab.4.right" timestamp="1617216670580">
+    <state width="1877" height="500" key="GridCell.Tab.4.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618471061656" />
+    <state width="1877" height="500" key="GridCell.Tab.4.left" timestamp="1618471061656">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.4.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617216670580" />
+    <state width="1877" height="500" key="GridCell.Tab.4.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618471061656" />
+    <state width="1877" height="500" key="GridCell.Tab.4.right" timestamp="1618471061656">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="500" key="GridCell.Tab.4.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618471061656" />
     <state width="225" height="455" key="HiddenNamespacesPopup" timestamp="1616070894308">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -277,10 +327,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617216149924" />
-    <state x="750" y="333" width="419" height="362" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1617214451305">
+    <state x="750" y="333" width="419" height="376" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1618484665817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="750" y="333" width="419" height="362" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617214451305" />
+    <state x="750" y="333" width="419" height="376" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618484665817" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

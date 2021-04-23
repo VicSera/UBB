@@ -1,10 +1,7 @@
-# -*- coding: utf-8 -*-
 from copy import deepcopy
 from random import *
 import numpy as np
 
-# the glass gene can be replaced with int or float, or other types
-# depending on your problem's representation
 from utils import directions
 
 
@@ -31,6 +28,9 @@ class Map:
 class Gene:
     def __init__(self):
         self.value = randrange(0, 3, 1)
+
+    def repair(self, value):
+        self.value = value
 
 class Individual:
     def __init__(self, size = 0, chromosome = None):
@@ -64,6 +64,8 @@ class Individual:
         return path
 
     def computeFitness(self, envMap: Map, initialPos: tuple):
+        if self.__f is not None:
+            return
         def invalidMove(pos: tuple, envMap: Map):
             return pos[0] < 0 or pos[0] > 19 or pos[1] < 0 or pos[1] > 19 or envMap.surface[pos[0]][pos[1]] == 1
 
@@ -71,23 +73,35 @@ class Individual:
             counter = 0
             for direction in directions:
                 posCopy = deepcopy(pos)
-                while not invalidMove(posCopy, envMap) and (posCopy not in marked or not marked[posCopy]):
-                    marked[posCopy] = True
-                    counter += 1
+                while not invalidMove(posCopy, envMap):
+                    if posCopy not in marked or not marked[posCopy]:
+                        marked[posCopy] = True
+                        counter += 1
                     posCopy = (posCopy[0] + direction[0], posCopy[1] + direction[1])
             return counter
+
+
+        def geneCorrection(currentPos, envMap):
+            for index, direction in enumerate(directions):
+                nextPos = (currentPos[0] + direction[0], currentPos[1] + direction[1])
+                if not invalidMove(nextPos, envMap):
+                    return index
+            return 0
+
 
         marked = {}
         self.__f = getMarkedCells(initialPos, envMap, marked)
         currentPos = initialPos
 
         for gene in self.__chromosome:
-            currentPos = (currentPos[0] + directions[gene.value][0], currentPos[1] + directions[gene.value][1])
-            if invalidMove(currentPos, envMap):
-                self.__f -= 100
+            nextPos = (currentPos[0] + directions[gene.value][0], currentPos[1] + directions[gene.value][1])
+            if invalidMove(nextPos, envMap):
+                gene.repair(geneCorrection(currentPos, envMap))
+                nextPos = (currentPos[0] + directions[gene.value][0], currentPos[1] + directions[gene.value][1])
+            currentPos = nextPos
             self.__f += getMarkedCells(currentPos, envMap, marked)
 
-        penalty = (abs(currentPos[0] - initialPos[0]) + abs(currentPos[1] - initialPos[1])) * 10
+        penalty = (abs(currentPos[0] - initialPos[0]) + abs(currentPos[1] - initialPos[1])) * 50
         self.__f -= penalty
 
     
@@ -105,14 +119,17 @@ class Individual:
 
             for rank in range(len(self.chromosome)):
                 if rank < len(self.chromosome) / 2:
-                    leftChromosome.append(self.chromosome[rank])
-                    rightChromosome.append(otherParent.chromosome[rank])
+                    leftChromosome.append(deepcopy(self.chromosome[rank]))
+                    rightChromosome.append(deepcopy(otherParent.chromosome[rank]))
                 else:
-                    rightChromosome.append(self.chromosome[rank])
-                    leftChromosome.append(otherParent.chromosome[rank])
+                    rightChromosome.append(deepcopy(self.chromosome[rank]))
+                    leftChromosome.append(deepcopy(otherParent.chromosome[rank]))
+
+            offspring1.chromosome = leftChromosome
+            offspring2.chromosome = rightChromosome
         else:
-            offspring1.chromosome = self.chromosome
-            offspring2.chromosome = otherParent.chromosome
+            offspring1.chromosome = deepcopy(self.chromosome)
+            offspring2.chromosome = deepcopy(otherParent.chromosome)
         
         return offspring1, offspring2
     
@@ -140,11 +157,9 @@ class Population:
             individual.computeFitness(map, self.__initialPos)
 
     def selection(self, k = 0):
-        def sortingKey(individual):
-            return individual.fitness
-
-        self.__individuals.sort(key = sortingKey, reverse = True)
-        return self.__individuals[:k]
+        self.__individuals.sort(key = lambda individual: individual.fitness,
+                                reverse = True)
+        return deepcopy(list(self.__individuals[:k]))
 
                 
     

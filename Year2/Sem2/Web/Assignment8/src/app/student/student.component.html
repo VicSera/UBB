@@ -1,0 +1,12 @@
+<h1>Welcome {{authenticationService.loadUser().username}}!</h1>
+<h2>Grades:</h2>
+<div id="grade-board">
+  <div *ngFor="let courseGradeDTO of courseGradeDTOs">
+    <h3>{{ courseGradeDTO.name }}</h3>
+    <ul>
+      <li *ngFor="let grade of courseGradeDTO.grades">
+        {{ grade }}
+      </li>
+    </ul>
+  </div>
+</div>

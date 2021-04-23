@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace ClimbingDBApp.App
 {
@@ -9,15 +10,27 @@ namespace ClimbingDBApp.App
     {
         private SqlConnection connection;
         private DataSet dataSet;
-        private SqlDataAdapter climberDataAdapter;
-        private SqlDataAdapter gymDataAdapter;
-        private SqlCommandBuilder climberCommandBuilder;
-        private BindingSource climberBindingSource;
-        private BindingSource gymBindingSource;
+        private SqlDataAdapter childDataAdapter;
+        private SqlDataAdapter parentDataAdapter;
+        private SqlCommandBuilder commandBuilder;
+        private BindingSource childBindingSource;
+        private BindingSource parentBindingSource;
+
+        private string parentTableName;
+        private string childTableName;
+        private string parentTablePK;
+        private string childTableFK;
+        private string foreignKeyName;
         
         public MainForm()
         {
             InitializeComponent();
+
+            parentTableName = ConfigurationManager.AppSettings.Get("parentTableName");
+            childTableName = ConfigurationManager.AppSettings.Get("childTableName");
+            parentTablePK = ConfigurationManager.AppSettings.Get("parentTablePK");
+            childTableFK = ConfigurationManager.AppSettings.Get("childTableFK");
+            foreignKeyName = ConfigurationManager.AppSettings.Get("foreignKeyName");
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -25,34 +38,34 @@ namespace ClimbingDBApp.App
             connection = new SqlConnection(@"Server = localhost,1433; Initial Catalog = ClimbingDB; " +
                                            "User ID=sa; Password=2{#9y*kPgG}KLz]B");
             dataSet = new DataSet();
-            climberDataAdapter = new SqlDataAdapter("SELECT * FROM climber", connection);
-            gymDataAdapter = new SqlDataAdapter("SELECT * FROM gym", connection);
-            climberCommandBuilder = new SqlCommandBuilder(climberDataAdapter);
+            childDataAdapter = new SqlDataAdapter($"SELECT * FROM {childTableName}", connection);
+            parentDataAdapter = new SqlDataAdapter($"SELECT * FROM {parentTableName}", connection);
+            commandBuilder = new SqlCommandBuilder(childDataAdapter);
 
-            climberDataAdapter.Fill(dataSet, "climber");
-            gymDataAdapter.Fill(dataSet, "gym");
+            childDataAdapter.Fill(dataSet, childTableName);
+            parentDataAdapter.Fill(dataSet, parentTableName);
             
-            var climberToGymRelation = new DataRelation(
-                "FK_climber_gym_id", dataSet.Tables["gym"].Columns["id"],
-                dataSet.Tables["climber"].Columns["gym_id"]);
-            dataSet.Relations.Add(climberToGymRelation);
+            var relation = new DataRelation(
+                foreignKeyName, dataSet.Tables[parentTableName].Columns[parentTablePK],
+                dataSet.Tables[childTableName].Columns[childTableFK]);
+            dataSet.Relations.Add(relation);
 
-            gymBindingSource = new BindingSource
+            parentBindingSource = new BindingSource
             {
-                DataSource = dataSet, DataMember = "gym"
+                DataSource = dataSet, DataMember = parentTableName
             };
-            climberBindingSource = new BindingSource
+            childBindingSource = new BindingSource
             {
-                DataSource = gymBindingSource, DataMember = "FK_climber_gym_id",
+                DataSource = parentBindingSource, DataMember = foreignKeyName,
             };
 
-            gymDataGrid.DataSource = gymBindingSource;
-            climberDataGrid.DataSource = climberBindingSource;
+            gymDataGrid.DataSource = parentBindingSource;
+            climberDataGrid.DataSource = childBindingSource;
         }
 
         private void updateButton_Click(object sender, EventArgs e)
         {
-            climberDataAdapter.Update(dataSet, "climber");
+            childDataAdapter.Update(dataSet, childTableName);
         }
     }
 }

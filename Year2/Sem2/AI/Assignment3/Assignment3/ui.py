@@ -105,7 +105,7 @@ class Menu:
         displayMap(self.__config)
 
     def __setupParameters(self):
-        self.__config["initial-position"] = (int(input("Initial X: "), int(input("Initial Y: "))))
+        self.__config["initial-position"] = (int(input("Initial X: ")), int(input("Initial Y: ")))
         self.__config["number-of-iterations"] = int(input("Number of iterations: "))
         self.__config["population-size"] = int(input("Population size: "))
         self.__config["individual-size"] = int(input("Battery size: "))
