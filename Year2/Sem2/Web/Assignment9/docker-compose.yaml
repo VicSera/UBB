@@ -1,0 +1,16 @@
+version: "3"
+services:
+  db:
+    image: mariadb
+    container_name: imglkr-db
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: imglkr-db
+      MYSQL_USER: imglkr
+      MYSQL_PASSWORD: imglkr
+    volumes:
+      - "db-data:/var/lib/postgresql/data"
+volumes:
+  db-data:
