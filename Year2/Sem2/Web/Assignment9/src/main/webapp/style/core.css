@@ -10,13 +10,18 @@ input {
 }
 
 img {
-    max-width: 250px;
-    max-height: 250px;
+    max-height: 300px;
 }
 
 * {
     box-sizing: border-box;
+    outline: none;
+    font-family: Georgia, serif;
 }
 
 .image-list {
+}
+
+.inline {
+    display: inline !important;
 }

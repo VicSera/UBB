@@ -23,45 +23,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d28ffc73-cf0f-4ae5-a9b1-91a3966150b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/controller/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/controller/controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/domain/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/domain/drone.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/domain/environment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/domain/move.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/domain/path.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/domain/population.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/domain/sensor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/repository/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/repository/repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/ui/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/ui/draw.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/ui/menu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/util/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/util/colors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/util/environmentUtils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../AI/Assignment4/util/functions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Web/Assignment5/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Web/Assignment5/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Web/Assignment5/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../AI/Assignment3/Assignment3/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AI/Assignment3/Assignment3/controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../AI/Assignment3/Assignment3/domain.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AI/Assignment3/Assignment3/domain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../AI/Assignment3/Assignment3/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AI/Assignment3/Assignment3/gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../AI/Assignment3/Assignment3/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AI/Assignment3/Assignment3/ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ClimbingDBApp/.idea/dataSources/a933c946-ef3d-429d-8971-2720efdc8e8b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClimbingDBApp/.idea/dataSources/a933c946-ef3d-429d-8971-2720efdc8e8b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ClimbingDBApp/.idea/dataSources/a933c946-ef3d-429d-8971-2720efdc8e8b/storage_v2/_src_/database/ClimbingDB.ay6wSg/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClimbingDBApp/.idea/dataSources/a933c946-ef3d-429d-8971-2720efdc8e8b/storage_v2/_src_/database/ClimbingDB.ay6wSg/schema/dbo.sYMBAA.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ClimbingDBApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClimbingDBApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/App.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/App/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/App/MainForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/App/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/App/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/ClimbingDBApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/ClimbingDBApp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/bin/Debug/ClimbingDBApp.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/bin/Debug/ClimbingDBApp.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/bin/Debug/ClimbingDBApp.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/bin/Debug/ClimbingDBApp.exe.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/bin/Debug/ClimbingDBApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/bin/Debug/ClimbingDBApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/deadlock/lock1.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/deadlock/lock2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/dirtyRead/dirtyRead.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/dirtyRead/updateWithRollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/nonRepeatableRead/twoReads.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/nonRepeatableRead/updateName.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/p1.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/p2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/phantomRead/insertClimber.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/phantomRead/twoReads.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Web/Assignment9/src/main/webapp/style/flex-body.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AI/Assignment7/Assignment7/homework/inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AI/Assignment7/Assignment7/homework/inference.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AI/Assignment7/Assignment7/homework/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AI/Assignment7/Assignment7/homework/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AI/Assignment7/Assignment7/homework/train_Batch.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AI/Assignment7/Assignment7/homework/train_Batch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Web/Assignment9/src/main/webapp/images.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Web/Assignment9/src/main/webapp/images.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Web/Assignment9/src/main/webapp/style/core.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Web/Assignment9/src/main/webapp/style/core.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Web/Assignment9/src/main/webapp/style/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Web/Assignment9/src/main/webapp/style/login.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,6 +157,7 @@
       <workItem from="1617274977681" duration="4510000" />
       <workItem from="1618417486329" duration="1826000" />
       <workItem from="1618484554498" duration="1184000" />
+      <workItem from="1621420618718" duration="628000" />
     </task>
     <task id="LOCAL-00001" summary="Add AI and DBMS labs">
       <created>1617216649776</created>

@@ -11,6 +11,7 @@
 <head>
     <title>Images</title>
     <link rel="stylesheet" type="text/css" href="style/core.css">
+    <link rel="stylesheet" type="text/css" href="style/flex-body.css">
 </head>
 <body>
     <form method="get" action="uploadImage.jsp">
@@ -27,20 +28,19 @@
                 Uploaded by: ${image.username} |
                 <c:choose>
                     <c:when test="${image.liked}">
-                        <form method="post" action="${pageContext.request.contextPath}/dislike-image-servlet?imageId=${image.id}">
-                            <button>Dislike this!</button>
+                        <form class="inline" method="post" action="${pageContext.request.contextPath}/dislike-image-servlet?imageId=${image.id}">
+                            <button>Remove like</button>
                         </form>
                     </c:when>
                     <c:otherwise>
-                        <form method="post" action="${pageContext.request.contextPath}/like-image-servlet?imageId=${image.id}">
+                        <form class="inline" method="post" action="${pageContext.request.contextPath}/like-image-servlet?imageId=${image.id}">
                             <button>Like this!</button>
                         </form>
                     </c:otherwise>
                 </c:choose>
-                ${image.likes} people like this
+                ${image.likes} like(s)
                 <br>
-                <img src="${pageContext.request.contextPath}/get-image-servlet?id=${image.id}"
-                     alt="image" width="500px" height="500px"/>
+                <img src="${pageContext.request.contextPath}/get-image-servlet?id=${image.id}" alt="image"/>
             </div>
             <hr>
         </c:forEach>
