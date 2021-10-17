@@ -1,0 +1,13 @@
+!borrow kode.collections.List
+
+funk mean(arr: List<Int>): Float {
+    mut sum: Int = 0
+
+    with element in arr ->
+        sum += element
+
+    return sum / arr.size()
+}
+
+test(mean([1, 2, 3, 4, 5]) == 3)
+log(mean([1, 2, 3, 4, 5]))

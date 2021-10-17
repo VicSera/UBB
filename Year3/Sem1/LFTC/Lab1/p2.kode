@@ -1,0 +1,11 @@
+funk max(a: Int, b: Int, c: Int): Int {
+    if a > b & a > c ->
+        return a
+    if b > c ->
+        return b
+    return c
+}
+
+test(max(5, 9, 12) == 12)
+log(max(5, 9, 12))
+

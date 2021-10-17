@@ -1,0 +1,11 @@
+// this is a comment
+
+// function declarations without parameters can omit empty parentheses
+// functions that don't return anything have no return type
+funk requestPassword {
+    imm expectedPassword: String = "12345"
+    mut inputPassword: String
+
+    while expectedPassword != inputPassword ->
+        inputPassword = input("Please input your password: ")
+}

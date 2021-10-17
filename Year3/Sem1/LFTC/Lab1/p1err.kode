@@ -1,0 +1,11 @@
+// Incorrectly placed quotes
+funk lexicalError1 {
+    imm string = "I am a string that contains a " and this is a lexical error"
+}
+
+// variable names have to respect the camelCase convention
+funk lexicalError2 {
+    mut UppercaseVariable = 17
+
+    return UppercaseVariable + 15
+}

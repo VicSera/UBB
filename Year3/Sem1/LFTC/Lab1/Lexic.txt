@@ -1,0 +1,31 @@
+a. Special symbols:
+    - arithmetic operators + - * / ^
+    - comparison operators < > <= >= == !=
+    - separators [ ] { } : space -> < >
+    - reserved words:
+        if else while funk char bool int program input output mut imm borrow pack
+
+b. Identifiers
+    identifier := letter [{letter | digit}]
+    letter := "A" | "B" | ... | "Z" | "a" | "b" | ... | "z"
+    digit := "0" | "1" |...| "9"
+
+c. Constants
+    1. integer:
+        int_constant := [sign] int
+        int := digit{int} // we can allow integer constants to be written with leading zeroes for padding reasons
+        sign := "+" | "-"
+
+    2. character
+        character_constant := 'char'
+        char := letter | digit
+
+    3. string
+        string_constant := "string"
+        string := char {string}
+
+    4. boolean
+        boolean_constant := "true" | "false"
+
+    5. real
+        real_constant := int_constant (("." int ["r"]) | "r")
