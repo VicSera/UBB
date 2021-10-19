@@ -1,17 +1,21 @@
-package store
+package store.impl
 
 import entity.Product
 import entity.Sale
 import exception.InventoryException
 import exception.MoneyException
+import store.Store
 
-abstract class AbstractStore(
+/**
+ * Base implementation of the [Store] interface
+ */
+abstract class BaseStore(
     inventory: Map<Product, Int>
 ) : Store {
-    var money = 0f
+    protected var money = 0f
     protected val inventory = inventory.toMutableMap()
     protected val registeredSales: MutableList<Sale> = emptyList<Sale>().toMutableList()
-    private val initialInventory: Map<Product, Int> = inventory.toMap()
+    protected val initialInventory: Map<Product, Int> = inventory.toMap()
 
     override suspend fun registerSale(sale: Sale) {
         val previousQuantity = inventory.getValue(sale.product)

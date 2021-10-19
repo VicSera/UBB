@@ -1,0 +1,42 @@
+Hardware
+    CPU: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+    RAM: 64.0 GB
+
+Locking strategies
+Two locking strategies were used, both with a single mutex but with different granularity.
+The first one (called MUTEX_WRAPS_EVERYTHING) performs an entire sale registration inside its lock.
+The other one (called MUTEX_WHEN_NECESSARY) only performs read/write operations on the registered sales, money sum and inventory inside the lock,
+and performs initializations and calculations outside its mutex lock.
+
+Test parameters
+Each strategy was tested against similar amounts of data, but randomized each time.
+Test data: 200 types of products
+           200-400 products of each type
+           50 registered sales for each product type
+           1-3 products (of the same type) sold per registered sale
+Number of threads used: 5, 20, 50
+
+Test results (as printed by the program):
+Run I
+MUTEX_WRAPS_EVERYTHING with 5 threads finished in 4494 milliseconds
+MUTEX_WRAPS_EVERYTHING with 20 threads finished in 4014 milliseconds
+MUTEX_WRAPS_EVERYTHING with 50 threads finished in 4209 milliseconds
+MUTEX_WHEN_NECESSARY with 5 threads finished in 4482 milliseconds
+MUTEX_WHEN_NECESSARY with 20 threads finished in 4531 milliseconds
+MUTEX_WHEN_NECESSARY with 50 threads finished in 4204 milliseconds
+
+Run II
+MUTEX_WRAPS_EVERYTHING with 5 threads finished in 4545 milliseconds
+MUTEX_WRAPS_EVERYTHING with 20 threads finished in 4122 milliseconds
+MUTEX_WRAPS_EVERYTHING with 50 threads finished in 4198 milliseconds
+MUTEX_WHEN_NECESSARY with 5 threads finished in 4459 milliseconds
+MUTEX_WHEN_NECESSARY with 20 threads finished in 4491 milliseconds
+MUTEX_WHEN_NECESSARY with 50 threads finished in 4272 milliseconds
+
+Run III
+MUTEX_WRAPS_EVERYTHING with 5 threads finished in 4656 milliseconds
+MUTEX_WRAPS_EVERYTHING with 20 threads finished in 3842 milliseconds
+MUTEX_WRAPS_EVERYTHING with 50 threads finished in 4194 milliseconds
+MUTEX_WHEN_NECESSARY with 5 threads finished in 4441 milliseconds
+MUTEX_WHEN_NECESSARY with 20 threads finished in 4525 milliseconds
+MUTEX_WHEN_NECESSARY with 50 threads finished in 4242 milliseconds

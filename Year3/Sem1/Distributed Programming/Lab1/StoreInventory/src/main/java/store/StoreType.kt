@@ -1,5 +1,5 @@
 package store
 
 enum class StoreType {
-    UNSAFE, DUMB_SAFE, SMART_SAFE
+    UNSAFE, MUTEX_WRAPS_EVERYTHING, MUTEX_WHEN_NECESSARY
 }
