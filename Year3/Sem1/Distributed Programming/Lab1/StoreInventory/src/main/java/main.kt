@@ -27,19 +27,15 @@ fun benchmark(numberOfThreads: Int, storeType: StoreType): Long {
 
     return measureTimeMillis {
         runBlocking {
-//            withContext(dispatcher) {
-//                coroutineScope {
-                    sales.forEach {
-                        launch(dispatcher) {
-                            store.registerSale(it)
-                            try {
-                                store.checkState()
-                            } catch (exception: CheckStateException) {
-                                println(exception.toString())
-                            }
-                        }
-//                    }
-//                }
+            sales.forEach {
+                launch(dispatcher) {
+                    store.registerSale(it)
+                    try {
+                        store.checkState()
+                    } catch (exception: CheckStateException) {
+                        println(exception.toString())
+                    }
+                }
             }
         }
     }
