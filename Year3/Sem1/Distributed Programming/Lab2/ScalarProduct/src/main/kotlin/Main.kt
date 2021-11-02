@@ -26,14 +26,13 @@ fun main() {
             consumer(vector1.size)
         }
     }
-
 }
 
 fun producer(vector1: List<Int>, vector2: List<Int>) {
     println("Started producer")
     vector1.zip(vector2).forEach {
         mutex.withLock {
-            println("Producer got lock")
+            println("Producer got the lock")
             while (lastProduct != null)
                 condition.await()
 
@@ -41,7 +40,7 @@ fun producer(vector1: List<Int>, vector2: List<Int>) {
             lastProduct = it.first * it.second
 
             condition.signalAll()
-            println("Producer released lock")
+            println("Producer released the lock")
         }
     }
 }
@@ -51,7 +50,7 @@ fun consumer(count: Int) {
     var sum = 0
     repeat(count) {
         mutex.withLock {
-            println("Consumer got lock")
+            println("Consumer got the lock")
             while (lastProduct == null)
                 condition.await()
 
@@ -60,7 +59,7 @@ fun consumer(count: Int) {
             lastProduct = null
 
             condition.signalAll()
-            println("Consumer released lock")
+            println("Consumer released the lock")
         }
     }
 
