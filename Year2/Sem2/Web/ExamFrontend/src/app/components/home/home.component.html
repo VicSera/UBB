@@ -1,0 +1,23 @@
+<h1>Welcome!</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name/Title</th>
+      <th>Contents/Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let elem of listElems">
+      <td>elem.id</td>
+      <ng-container *ngIf="isDocument(elem); else movie">
+        <td>elem.name</td>
+        <td>elem.contents</td>
+      </ng-container>
+      <ng-template #movie>
+        <td>elem.title</td>
+        <td>elem.duration</td>
+      </ng-template>
+    </tr>
+  </tbody>
+</table>

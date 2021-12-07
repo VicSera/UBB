@@ -1,0 +1,15 @@
+version: "3"
+services:
+  local-database:
+    image: postgres
+    container_name: exam-database
+    environment:
+      POSTGRES_USER: exam-user
+      POSTGRES_PASSWORD: exam-password
+      POSTGRES_DB: exam-db
+    ports:
+      - 5432:5432
+    volumes:
+      - "db-data:/var/lib/postgresql/data"
+volumes:
+  db-data:

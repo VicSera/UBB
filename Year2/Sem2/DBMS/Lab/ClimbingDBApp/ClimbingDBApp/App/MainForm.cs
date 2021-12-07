@@ -2,7 +2,6 @@
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Configuration;
 
 namespace ClimbingDBApp.App
 {
@@ -25,12 +24,11 @@ namespace ClimbingDBApp.App
         public MainForm()
         {
             InitializeComponent();
-
-            parentTableName = ConfigurationManager.AppSettings.Get("parentTableName");
-            childTableName = ConfigurationManager.AppSettings.Get("childTableName");
-            parentTablePK = ConfigurationManager.AppSettings.Get("parentTablePK");
-            childTableFK = ConfigurationManager.AppSettings.Get("childTableFK");
-            foreignKeyName = ConfigurationManager.AppSettings.Get("foreignKeyName");
+            parentTableName = "gym";
+            childTableName = "climber";
+            parentTablePK = "id";
+            childTableFK = "gym_id";
+            foreignKeyName = "FK_climber_gym_id";
         }
 
         private void MainForm_Load(object sender, EventArgs e)

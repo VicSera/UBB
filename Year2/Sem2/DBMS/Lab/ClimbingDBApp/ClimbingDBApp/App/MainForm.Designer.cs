@@ -60,7 +60,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Climbers";
+            this.label1.Text = "Child table";
             // 
             // label2
             // 
@@ -68,7 +68,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 23);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Gyms";
+            this.label2.Text = "Parent table";
             // 
             // updateButton
             // 

@@ -1,0 +1,10 @@
+C:\Programming\UBB\Year2\Sem2\DBMS\Exam\PracticalExamDBMS\PracticalExamDBMS\bin\Debug\PracticalExamDBMS.exe.config
+C:\Programming\UBB\Year2\Sem2\DBMS\Exam\PracticalExamDBMS\PracticalExamDBMS\bin\Debug\PracticalExamDBMS.exe
+C:\Programming\UBB\Year2\Sem2\DBMS\Exam\PracticalExamDBMS\PracticalExamDBMS\bin\Debug\PracticalExamDBMS.pdb
+C:\Programming\UBB\Year2\Sem2\DBMS\Exam\PracticalExamDBMS\PracticalExamDBMS\obj\Debug\PracticalExamDBMS.csprojAssemblyReference.cache
+C:\Programming\UBB\Year2\Sem2\DBMS\Exam\PracticalExamDBMS\PracticalExamDBMS\obj\Debug\PracticalExamDBMS.Properties.Resources.resources
+C:\Programming\UBB\Year2\Sem2\DBMS\Exam\PracticalExamDBMS\PracticalExamDBMS\obj\Debug\PracticalExamDBMS.csproj.GenerateResource.cache
+C:\Programming\UBB\Year2\Sem2\DBMS\Exam\PracticalExamDBMS\PracticalExamDBMS\obj\Debug\PracticalExamDBMS.csproj.CoreCompileInputs.cache
+C:\Programming\UBB\Year2\Sem2\DBMS\Exam\PracticalExamDBMS\PracticalExamDBMS\obj\Debug\PracticalExamDBMS.exe
+C:\Programming\UBB\Year2\Sem2\DBMS\Exam\PracticalExamDBMS\PracticalExamDBMS\obj\Debug\PracticalExamDBMS.pdb
+C:\Programming\UBB\Year2\Sem2\DBMS\Exam\PracticalExamDBMS\PracticalExamDBMS\obj\Debug\PracticalExamDBMS.Form1.resources

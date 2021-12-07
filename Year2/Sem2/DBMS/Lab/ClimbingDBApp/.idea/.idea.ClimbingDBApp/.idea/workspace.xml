@@ -23,23 +23,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d28ffc73-cf0f-4ae5-a9b1-91a3966150b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Lab3/deadlock/lock1.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/deadlock/lock2.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/dirtyRead/dirtyRead.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/dirtyRead/updateWithRollback.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/nonRepeatableRead/twoReads.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/nonRepeatableRead/updateName.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/p1.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/p2.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/phantomRead/insertClimber.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/phantomRead/twoReads.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Web/Assignment9/src/main/webapp/style/flex-body.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../AI/Assignment7/Assignment7/homework/inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AI/Assignment7/Assignment7/homework/inference.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../AI/Assignment7/Assignment7/homework/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AI/Assignment7/Assignment7/homework/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../AI/Assignment7/Assignment7/homework/train_Batch.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AI/Assignment7/Assignment7/homework/train_Batch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Web/Assignment9/src/main/webapp/images.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Web/Assignment9/src/main/webapp/images.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Web/Assignment9/src/main/webapp/style/core.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Web/Assignment9/src/main/webapp/style/core.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Web/Assignment9/src/main/webapp/style/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Web/Assignment9/src/main/webapp/style/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/.idea/.idea.PracticalExamDBMS/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/.idea/.idea.PracticalExamDBMS/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/.idea/.idea.PracticalExamDBMS/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/.idea/.idea.PracticalExamDBMS/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/.idea/.idea.PracticalExamDBMS/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/.idea/.idea.PracticalExamDBMS/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/App.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/Form1.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/Form1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/Form1.resx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/PracticalExamDBMS.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/Properties/Resources.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/Properties/Resources.resx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/Properties/Settings.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/Properties/Settings.settings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/bin/Debug/PracticalExamDBMS.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/bin/Debug/PracticalExamDBMS.exe.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/bin/Debug/PracticalExamDBMS.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/obj/Debug/PracticalExamDBMS.Form1.resources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/obj/Debug/PracticalExamDBMS.Properties.Resources.resources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/obj/Debug/PracticalExamDBMS.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/obj/Debug/PracticalExamDBMS.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/obj/Debug/PracticalExamDBMS.csproj.GenerateResource.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/obj/Debug/PracticalExamDBMS.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/obj/Debug/PracticalExamDBMS.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/obj/Debug/PracticalExamDBMS.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Exam/PracticalExamDBMS/PracticalExamDBMS/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ClimbingDBApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClimbingDBApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/App/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/App/MainForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/App/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/App/MainForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/bin/Debug/ClimbingDBApp.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/bin/Debug/ClimbingDBApp.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/bin/Debug/ClimbingDBApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/bin/Debug/ClimbingDBApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ClimbingDBApp/obj/Debug/ClimbingDBApp.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +106,8 @@
         <option value="$PROJECT_DIR$/ClimbingDBApp/App/MainForm.Designer.cs" />
         <option value="$PROJECT_DIR$/ClimbingDBApp/App/Program.cs" />
         <option value="$PROJECT_DIR$/Application.config.xml" />
-        <option value="$PROJECT_DIR$/ClimbingDBApp/App/MainForm.cs" />
         <option value="$PROJECT_DIR$/ClimbingDBApp/App.config" />
+        <option value="$PROJECT_DIR$/ClimbingDBApp/App/MainForm.cs" />
       </list>
     </option>
   </component>
@@ -158,6 +180,7 @@
       <workItem from="1618417486329" duration="1826000" />
       <workItem from="1618484554498" duration="1184000" />
       <workItem from="1621420618718" duration="628000" />
+      <workItem from="1622798913578" duration="1698000" />
     </task>
     <task id="LOCAL-00001" summary="Add AI and DBMS labs">
       <created>1617216649776</created>
@@ -202,21 +225,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="977" y="448" key="#xdebugger.evaluate/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618418570645" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1618488549554">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1622802831831">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1622802831831" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618488549554" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1618488549554">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1622802831831">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1622802831831" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618488549554" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1618488549554">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1622802831831">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1622802831831" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618488549554" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1618488549554">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1622802831831">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1622802831831" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1618488549554" />
     <state width="1877" height="500" key="GridCell.Tab.1.bottom" timestamp="1618471061655">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -286,9 +313,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="225" height="455" key="HiddenNamespacesPopup/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1616070894308" />
-    <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size" timestamp="1617280136931">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1368" y="262" key="Rider.ProjectTemplateDialog.Size" timestamp="1622799518211">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="-1368" y="262" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1622799518211" />
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1617280136931" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1616070150759">
       <screen x="0" y="0" width="1920" height="1040" />

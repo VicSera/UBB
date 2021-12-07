@@ -1,0 +1,11 @@
+﻿version: "3"
+services:
+  local-database: 
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mssql-db
+    environment:
+      ACCEPT_EULA: Y
+      SA_USER: cdbapp
+      SA_PASSWORD: 2{#9y*kPgG}KLz]B
+    ports:
+    - 1433:1433
