@@ -1,0 +1,13 @@
+package strategy.impl
+
+import Polynomial
+import strategy.MultiplicationStrategy
+
+class ParallelOn2Multiplication: MultiplicationStrategy
+{
+    override fun multiply(p1: Polynomial, p2: Polynomial): Polynomial
+    {
+        return p1.coefficientMap.map { (power, coefficient) -> p2.multiplyByElement(coefficient, power) }
+            .reduce { acc, polynomial -> acc.add(polynomial) }
+    }
+}
