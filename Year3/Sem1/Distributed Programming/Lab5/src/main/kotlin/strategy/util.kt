@@ -28,6 +28,14 @@ fun d(coefficient1: Int, coefficient2: Int, p1: Polynomial, p2: Polynomial): Int
             (p2.coefficientForPower(coefficient1) + p2.coefficientForPower(coefficient2))
 }
 
+fun computeCoefficient(power: Int, di: List<Int>, dst: List<List<DEntry>>): Int {
+    val t1 = dst[power].sumOf { it.d }
+    val t2 = dst[power].sumOf { di[it.s] + di[it.t] }
+    val t3 = if (power % 2 == 0) di[power / 2] else 0
+
+    return t1 - t2 + t3
+}
+
 class DEntry(
     val s: Int,
     val t: Int,

@@ -1,4 +1,5 @@
 import strategy.MultiplicationStrategy
+import strategy.impl.ParallelKaratsubaMultiplication
 import strategy.impl.ParallelOn2Multiplication
 import strategy.impl.SequentialKaratsubaMultiplication
 import strategy.impl.SequentialOn2Multiplication
@@ -11,8 +12,9 @@ fun main()
     println("Benchmarking multiplication:\n$p1 *\n$p2")
 
     benchmark(SequentialOn2Multiplication(), p1, p2)
-    benchmark(ParallelOn2Multiplication(), p1, p2)
+    benchmark(ParallelOn2Multiplication(3), p1, p2)
     benchmark(SequentialKaratsubaMultiplication(), p1, p2)
+    benchmark(ParallelKaratsubaMultiplication(3), p1, p2)
 }
 
 fun benchmark(strategy: MultiplicationStrategy, p1: Polynomial, p2: Polynomial) {
@@ -21,5 +23,5 @@ fun benchmark(strategy: MultiplicationStrategy, p1: Polynomial, p2: Polynomial) 
         println("$strategy: $result")
     }
 
-    println("Strategy $strategy took $millis milliseconds to complete")
+    println("Strategy $strategy took $millis milliseconds to complete\n")
 }

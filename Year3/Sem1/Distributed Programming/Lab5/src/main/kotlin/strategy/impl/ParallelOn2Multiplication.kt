@@ -11,11 +11,11 @@ import kotlinx.coroutines.sync.withLock
 import strategy.MultiplicationStrategy
 import java.util.concurrent.Executors
 
-class ParallelOn2Multiplication: MultiplicationStrategy
+class ParallelOn2Multiplication(private val nThreads: Int): MultiplicationStrategy
 {
     override fun multiply(p1: Polynomial, p2: Polynomial): Polynomial
     {
-        val pool = Executors.newFixedThreadPool(2).asCoroutineDispatcher()
+        val pool = Executors.newFixedThreadPool(nThreads).asCoroutineDispatcher()
         var result = Polynomial()
         val mutex = Mutex()
 
