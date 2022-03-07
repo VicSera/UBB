@@ -1,0 +1,4 @@
+export const LOGIN_TRIGGERED = 'LOGIN_TRIGGERED';
+export const LOGIN_SUCCEEDED = 'LOGIN_SUCCEEDED';
+export const LOGIN_FAILED = 'LOGIN_FAILED';
+export const LOGOUT = 'LOGOUT';

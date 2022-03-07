@@ -1,7 +1,13 @@
 import strategy.toPowerString
 
-data class Polynomial(val coefficientMap: Map<Int, Int>) {
-    val maxPower = coefficientMap.keys.maxOrNull() ?: 0
+class Polynomial(_coefficientMap: Map<Int, Int> = emptyMap()) {
+    val coefficientMap = _coefficientMap.toSortedMap { x, y -> y.compareTo(x) }
+    val degree = coefficientMap.keys.maxOrNull() ?: 0
+
+
+    fun coefficientForPower(power: Int): Int {
+        return coefficientMap[power] ?: 0
+    }
 
     fun multiplyByElement(coefficient: Int, power: Int): Polynomial {
         val coefficients = coefficientMap.map { elem -> (elem.key + power) to (elem.value * coefficient) }.toMap()

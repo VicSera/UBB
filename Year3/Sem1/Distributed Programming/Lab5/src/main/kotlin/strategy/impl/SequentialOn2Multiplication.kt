@@ -10,4 +10,8 @@ class SequentialOn2Multiplication: MultiplicationStrategy
         return p1.coefficientMap.map { (power, coefficient) -> p2.multiplyByElement(coefficient, power) }
             .reduce { acc, polynomial -> acc.add(polynomial) }
     }
+
+    override fun toString(): String {
+        return "Sequential O(n\u00B2)"
+    }
 }
