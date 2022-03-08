@@ -2,6 +2,7 @@ package service;
 
 import domain.*;
 import repository.*;
+import validation.ValidationException;
 
 import java.time.LocalDate;
 import java.time.temporal.WeekFields;
@@ -57,11 +58,15 @@ public class Service {
                 valNota =  valNota - 2.5 * (predata - deadline);
             }
             Nota nota = new Nota(new Pair(idStudent, idTema), valNota, predata, feedback);
-            Nota result = notaXmlRepo.save(nota);
-
-            if (result == null) {
-                return 1;
+            try {
+                Nota result = notaXmlRepo.save(nota);
+                if (result == null) {
+                    return 1;
+                }
+            } catch (ValidationException ve) {
+                ve.printStackTrace();
             }
+
             return 0;
         }
     }
