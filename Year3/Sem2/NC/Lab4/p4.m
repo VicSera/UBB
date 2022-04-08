@@ -20,5 +20,3 @@ for i = 1 : n
     break
   endif
 endfor
-
-table
